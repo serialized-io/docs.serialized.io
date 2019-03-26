@@ -46,6 +46,7 @@
 * [Reactions](reference/reactions/README.md)
   * [List reaction definitions](reference/reactions/list-reaction-definitions.md)
   * [Create reaction definitions](reference/reactions/create-reaction-definition.md)
+  * [Delete reaction definitions](reference/reactions/delete-reaction-definition.md)
   
 ## Tools
 
