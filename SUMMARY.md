@@ -26,7 +26,6 @@
   * [Reading new events since last received event](concepts/event-feed/reading-new-events-since-last-received-event.md)
   * [Reading events created within two points in time](concepts/event-feed/reading-events-created-within-two-points-in-time.md)
 * [Projection](concepts/examples.md)
-* [Reaction](concepts/reaction.md)
 
 ## Reference
 
@@ -43,11 +42,13 @@
   * [Get current sequence number](reference/feeds/get-sequence-number.md)
   * [Get feed of events](reference/feeds/get-feed.md)
 * [Reactions API](reference/reactions/README.md)
-  * [Create reaction definition](reference/reactions/create-reaction-definition.md)
-  * [Get reaction definition](reference/reactions/get-reaction-definition.md)
-  * [Update reaction definition](reference/reactions/update-reaction-definition.md)
-  * [Delete reaction definition](reference/reactions/delete-reaction-definition.md)
-  * [List reaction definitions](reference/reactions/list-reaction-definitions.md)
+  * [Actions](reference/reactions/reaction.md)
+  * [Reference](reference/reactions/reference/README.md)
+    * [Create reaction definition](reference/reactions/reference/create-reaction-definition.md)
+    * [Get reaction definition](reference/reactions/reference/get-reaction-definition.md)
+    * [Update reaction definition](reference/reactions/reference/update-reaction-definition.md)
+    * [Delete reaction definition](reference/reactions/reference/delete-reaction-definition.md)
+    * [List reaction definitions](reference/reactions/reference/list-reaction-definitions.md)
 * [Projections API](reference/projections/README.md)
   * [Reference](reference/projections/reference/README.md)
     * [Create projection definition](reference/projections/reference/create-projection-definition.md)

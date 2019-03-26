@@ -5,7 +5,7 @@ description: >-
   other external service.
 ---
 
-# Reaction
+# Actions
 
 Reactions are configured to react to a specific event and trigger an action whenever that event is processed by the event reactor. An example could be sending a confirmation email to a customer when an order has been successfully placed.
 
