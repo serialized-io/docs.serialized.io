@@ -7,7 +7,7 @@ description: >-
 
 # Projecting events
 
-## Creating a projection definition
+## Creating your first projection definition
 
 The first part of projecting data is creating a projection definition. A definition defines what events should be processed and how they should be processed into a data structure that is more suitable for the client to query. 
 
