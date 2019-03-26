@@ -49,6 +49,12 @@
   * [Update reaction definition](reference/reactions/update-reaction-definition.md)
   * [Delete reaction definition](reference/reactions/delete-reaction-definition.md)
   * [List reaction definitions](reference/reactions/list-reaction-definitions.md)
+* [Projections](reference/projections/README.md)
+  * [Create projection definition](reference/projections/create-projection-definition.md)
+  * [Get projection definition](reference/projections/get-projection-definition.md)
+  * [Update projection definition](reference/projections/update-projection-definition.md)
+  * [Get projections overview](reference/projections/get-projections-overview.md)
+  * [List projection definitions](reference/projections/list-projection-definitions.md)
   
 ## Tools
 
