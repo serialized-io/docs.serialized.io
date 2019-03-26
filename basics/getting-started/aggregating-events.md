@@ -38,7 +38,7 @@ curl -i https://api.serialized.io/projections/definitions \
 {% endtab %}
 {% endtabs %}
 
-#### Query an aggregated projection <a id="query-an-aggregated-projection"></a>
+## Query an aggregated projection
 
 Since aggregated projections are combinations of multiple aggregates they don’t have any id’s. We query them directly by their name:
 
