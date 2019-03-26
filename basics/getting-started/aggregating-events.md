@@ -1,6 +1,13 @@
+---
+description: >-
+  Projections can also be configured to merge events from different aggregates
+  which makes it easy to build simple reporting functionality. Below is an
+  example of an aggregated projection that counts th
+---
+
 # Aggregating events
 
-Projections can also be configured to merge events from different aggregates which makes it easy to build simple reporting functionality. Below is an example of an aggregated projection that counts the amount of paid orders and their total amount.
+## Creating aggregated projections
 
 We use a `POST` command to create a new projection definition:
 
