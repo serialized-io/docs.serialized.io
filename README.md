@@ -1,10 +1,6 @@
-# Serialized API reference
-
-## Welcome to Serialized
+# Welcome to Serialized
 
 Serialized is a fully-hosted platform for developing applications using CQRS and Event Sourcing.
-
-Serialized is the result from years of experience building systems using Event Sourcing and CQRS and
 
 ## How to get started?
 
@@ -17,4 +13,10 @@ We officially support and maintain a Java client and a Go client.
 ### Examples
 
 Serialized provides a variety of example projects using various modern programming languages and for different use cases. Visit the [Serialized](https://github.com/serialized-io) organization on GitHub to see more.
+
+## How to use this guide?
+
+### Use the search option
+
+Use the **Search** bar in the right-hand top corner to search against the site’s content. The search feature will try to match your search term to the existing content, bringing up suggestions for pages that matches what you're looking for.
 
