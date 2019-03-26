@@ -53,6 +53,7 @@
   * [Create projection definition](reference/projections/create-projection-definition.md)
   * [Get projection definition](reference/projections/get-projection-definition.md)
   * [Update projection definition](reference/projections/update-projection-definition.md)
+  * [Delete projection definition](reference/projections/delete-projection-definition.md)
   * [Get projections overview](reference/projections/get-projections-overview.md)
   * [List projection definitions](reference/projections/list-projection-definitions.md)
   
