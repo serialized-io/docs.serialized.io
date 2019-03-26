@@ -1,6 +1,6 @@
 # Get feed of events
 
-{% api-method method="get" host="https://api.serialized.io" path="/feeds/_all" %}
+{% api-method method="get" host="https://api.serialized.io" path="/feeds/{name}" %}
 {% api-method-summary %}
 Get feed of events
 {% endapi-method-summary %}
@@ -20,6 +20,12 @@ Access key for the project
 Secret access key for the project
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-path-parameters %}
+{% api-method-parameter name="name" type="string" required=true %}
+The feed name
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="since" type="number" required=false %}

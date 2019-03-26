@@ -15,8 +15,6 @@
   * [Loading an aggregate](concepts/event-sourcing/loading-an-aggregate.md)
   * [Deleting aggregates](concepts/event-sourcing/deleting-aggregates.md)
 * [Event Feed](concepts/event-feed/README.md)
-  * [List event feeds](concepts/event-feed/list-event-feeds.md)
-  * [Read events by aggregate type](concepts/event-feed/read-events-by-aggregate-type.md)
   * [Using the \_all feed](concepts/event-feed/using-the-_all-feed.md)
   * [Reading all events since the beginning](concepts/event-feed/reading-all-events-since-the-beginning.md)
   * [Reading new events since last received event](concepts/event-feed/reading-new-events-since-last-received-event.md)
