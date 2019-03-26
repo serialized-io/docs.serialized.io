@@ -1,6 +1,6 @@
 # Table of contents
 
-* [API reference](README.md)
+* [Serialized API reference](README.md)
 
 ## Basics
 

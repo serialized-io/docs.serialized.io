@@ -1,4 +1,4 @@
-# API reference
+# Serialized API reference
 
 ## Welcome to Serialized
 
