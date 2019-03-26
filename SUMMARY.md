@@ -56,6 +56,11 @@
   * [Delete projection definition](reference/projections/delete-projection-definition.md)
   * [Get projections overview](reference/projections/get-projections-overview.md)
   * [List projection definitions](reference/projections/list-projection-definitions.md)
+  * [List single projections](reference/projections/list-single-projections.md)
+  * [Delete/recreate single projections](reference/projections/delete-single-projections.md)
+  * [List aggregated projections](reference/projections/list-aggregated-projections.md)
+  * [Get aggregated projection](reference/projections/get-aggregated-projections.md)
+  * [Delete/recreate aggregated projections](reference/projections/delete-aggregated-projections.md)
   
 ## Tools
 
