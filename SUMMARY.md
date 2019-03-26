@@ -39,6 +39,7 @@
   * [Delete all aggregates by type](reference/event-sourcing/delete-all-aggregates-by-type.md)
 * [Feeds](reference/feeds/README.md)
   * [List feeds](reference/feeds/list-feeds.md)
+  * [Get feed of all events](reference/feeds/get-all-feed.md)
   * [Get current global sequence number](reference/feeds/get-global-sequence-number.md)
 
 ## Tools
