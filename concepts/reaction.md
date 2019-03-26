@@ -182,9 +182,7 @@ Examples:
 "-PT-6H+3M" - parses as "+6 hours and -3 minutes"
 ```
 
-
-
-#### Supported date/time formats <a id="supported-date-time-formats"></a>
+#### Supported date/time formats  <a id="supported-date-time-formats"></a>
 
 The date or timestamp in the field specified as the `triggerTimeField` must be in any of the following formats:
 

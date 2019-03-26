@@ -8,10 +8,10 @@ description: >-
 
 ## Using Projects
 
-Projects are the main entry point for all Serialized APIs. Your API keys are connected to a single project and your data is stored in a single project. 
+Projects are the main entry point for all Serialized APIs. Your API keys are connected to a single project and your data is stored in a single project.
 
 {% hint style="info" %}
- You can create multiple projects for different use cases.
+You can create multiple projects for different use cases.
 {% endhint %}
 
 ## Use cases for multiple projects
@@ -20,7 +20,7 @@ There are many scenarios where using multiple projects can be useful.
 
 ### Different environments
 
-You can use different projects for separating data in different development environments \(development, test, production\). 
+You can use different projects for separating data in different development environments \(development, test, production\).
 
 ### Different teams
 

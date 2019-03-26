@@ -1,6 +1,5 @@
 # Delete all aggregates by type
 
-
 {% api-method method="delete" host="https://api.serialized.io" path="/aggregates/{aggregateType}" %}
 {% api-method-summary %}
 Delete all aggregates by type
@@ -17,7 +16,6 @@ Stores all events in the request atomically. All events must refer to the same a
 The aggregate type
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
-
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -26,18 +24,29 @@ The aggregate type
 Events successfully stored.
 {% endapi-method-response-example-description %}
 
+```
+
+```
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
 Invalid aggregate type name
 {% endapi-method-response-example-description %}
+
+```
+
+```
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=409 %}
 {% api-method-response-example-description %}
 Conflict due to expected version mismatch
 {% endapi-method-response-example-description %}
+
+```
+
+```
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=422 %}
@@ -45,6 +54,9 @@ Conflict due to expected version mismatch
 Invalid request body
 {% endapi-method-response-example-description %}
 
+```
+
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -57,3 +69,4 @@ todo
 ```
 {% endtab %}
 {% endtabs %}
+

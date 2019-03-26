@@ -1,6 +1,6 @@
 # Deleting aggregates
 
-Deleting data might be considered unorthodox in the world of event sourcing. However, we chose the pragmatic way allowing API users to delete aggregates, including all events, either by a single aggregateId or by aggregate type. The HTTP `DELETE` request will return a `deleteToken` valid for ten minutes. 
+Deleting data might be considered unorthodox in the world of event sourcing. However, we chose the pragmatic way allowing API users to delete aggregates, including all events, either by a single aggregateId or by aggregate type. The HTTP `DELETE` request will return a `deleteToken` valid for ten minutes.
 
 {% code-tabs %}
 {% code-tabs-item title="Example deletion of an aggregate" %}
@@ -9,7 +9,7 @@ curl -i \
   --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
   --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
   -X DELETE https://api.serialized.io/aggregates/order
-  
+
 HTTP/1.1 200 OK
 Content-Type: application/json
 Date: Tue, 12 Jun 2018 15:27:25 GMT

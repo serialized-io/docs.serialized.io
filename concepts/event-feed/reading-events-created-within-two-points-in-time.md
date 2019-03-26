@@ -1,7 +1,5 @@
 # Reading events created within two points in time
 
-
-
 It’s possible to get all events within a given period by specifying the from/to date/time range.
 
 ```text

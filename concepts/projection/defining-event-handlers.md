@@ -34,8 +34,7 @@ The above example can also be simplified to:
 { "function": "merge" }
 ```
 
-since the default values for `targetSelector` and `eventSelector` are `$.event` and `$.projection`, respectively.  
-
+since the default values for `targetSelector` and `eventSelector` are `$.event` and `$.projection`, respectively.
 
 ## **Supported handler functions**
 
@@ -229,8 +228,6 @@ Increases a number by one.
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-
-
 ### **dec**
 
 Decreases a number by one.
@@ -262,6 +259,4 @@ Functions can also provide two filters: `targetFilter` and `eventFilter`.
 To add a filter to a selector you provide a `[?]` in the selector text, as described in the JsonPath documentation. The filter for the selector is then applied for the given function. This is useful for matching on ids in nested lists or to apply conditional logic for when/how to process events.
 
 All Filter Operators that are described [here](https://github.com/json-path/JsonPath) are supported.
-
-
 

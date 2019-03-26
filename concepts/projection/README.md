@@ -10,5 +10,3 @@ description: >-
 https://api.serialized.io/projections
 ```
 
-
-

@@ -6,5 +6,3 @@ Simply pass a zero, or exclude the parameter from the request to receive everyth
 ?since=0
 ```
 
-
-

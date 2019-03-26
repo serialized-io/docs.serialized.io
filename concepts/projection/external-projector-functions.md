@@ -28,7 +28,7 @@ An example of a complete projection definition could look like this:
 }
 ```
 
-###  Event Projection API
+### Event Projection API
 
 ```text
 https://api.serialized.io/projections
@@ -36,7 +36,7 @@ https://api.serialized.io/projections
 
 The Event Projection API makes it easy to use your events to build models that can be used to present your event data.
 
-### Projection definitions <a id="projection-definitions"></a>
+### Projection definitions  <a id="projection-definitions"></a>
 
 ```text
 https://api.serialized.io/projections/definitions
@@ -44,13 +44,13 @@ https://api.serialized.io/projections/definitions
 
 Projection definitions dictates how events should be projected. When you create a projection definition all events from the beginning of time will be automatically processed to build up the projections. When you update your projection definition, all events will be re-processed and generate new projections.
 
-### List all projections <a id="list-all-projections"></a>
+### List all projections  <a id="list-all-projections"></a>
 
 ```text
 https://api.serialized.io/projections
 ```
 
-### Single projections <a id="single-projections"></a>
+### Single projections  <a id="single-projections"></a>
 
 Single projections creates one projection document per aggregate id in your events, which makes it suitable for “flattening” the events for a particular aggregate making it easier to query.
 
@@ -66,7 +66,7 @@ https://api.serialized.io/projections/single/orders
 https://api.serialized.io/projections/single/orders/4e82e594-6409-4f82-bf64-3a6d82a469e9
 ```
 
-### Aggregated projections <a id="aggregated-projections"></a>
+### Aggregated projections  <a id="aggregated-projections"></a>
 
 Aggregated projections creates one combined projection from all aggregates in the same event feed. This makes it easy to implement things such as statistics and other kind of reports.
 
@@ -76,7 +76,7 @@ The projected result will be available below the path `/aggregated/<projection-n
 https://api.serialized.io/projections/aggregated/order-totals
 ```
 
-### Defining an event handler <a id="defining-an-event-handler"></a>
+### Defining an event handler  <a id="defining-an-event-handler"></a>
 
 Your projection definition consists of a number of event handlers that are applied to your events in sequence, to modify the current state of a projection. Each event handler defines processing logic for a particular event type and includes a number of options for filtering/matching event data and producing different outputs. This is how you can easily create and adapt client-specific views based on your events.
 
@@ -93,7 +93,7 @@ Event handlers are defined in the `handlers` section of your projection definiti
 }
 ```
 
-#### JsonPath Templating <a id="jsonpath-templating"></a>
+#### JsonPath Templating  <a id="jsonpath-templating"></a>
 
 To create useful projections we need to merge the event data with the projection data in different ways. We provide templating support built on [JsonPath](http://goessner.net/articles/JsonPath) to support this out-of-the-box.
 
@@ -129,7 +129,7 @@ since the default values for `targetSelector` and `eventSelector` are `$.event` 
 
 We provide a number of handler functions that modify the state in different ways.
 
-**`merge`**
+`merge`
 
 Merges two JSON objects.
 
@@ -138,7 +138,7 @@ Merges two JSON objects.
 | `targetSelector` | `Object` |
 | `eventSelector` | `Object` |
 
-**`push`**
+`push`
 
 Adds anything to the end of an array.
 
@@ -162,7 +162,7 @@ Example:
 }
 ```
 
-**`prepend`**
+`prepend`
 
 Adds anything to the beginning of an array.
 
@@ -186,7 +186,7 @@ Example:
 }
 ```
 
-**`set`**
+`set`
 
 Replaces the value of an existing key.
 
@@ -210,7 +210,7 @@ Example:
 }
 ```
 
-**`remove`**
+`remove`
 
 Removes an existing key or an array element matching filter expression.
 
@@ -233,10 +233,9 @@ Example:
     }
   ]
 }
-
 ```
 
-**`add`**
+`add`
 
 Sums two numbers together.
 
@@ -258,10 +257,9 @@ Example:
     }
   ]
 }
-
 ```
 
-**`subtract`**
+`subtract`
 
 Subtracts two numbers.
 
@@ -270,7 +268,7 @@ Subtracts two numbers.
 | `targetSelector` | `Number` |
 | `eventSelector` | `Number` |
 
-**`inc`**
+`inc`
 
 Increases a number by one.
 
@@ -290,10 +288,9 @@ Example:
     }
   ]
 }
-
 ```
 
-**`dec`**
+`dec`
 
 Decreases a number by one.
 
@@ -331,7 +328,7 @@ To test your projection definitions you can use our online tool [here](https://c
 
 More examples can be found [here](https://github.com/serialized-io/samples-java/tree/master/order-service/src/main/resources/projections).
 
-#### Customized external projector functions <a id="customized-external-projector-functions"></a>
+#### Customized external projector functions  <a id="customized-external-projector-functions"></a>
 
 For greater flexibility you can write your own projector code and deploy it as a function wherever you prefer. [AWS Labmda](https://aws.amazon.com/lambda/), [Google Cloud Functions](https://cloud.google.com/functions/) and [Azure Functions](https://azure.microsoft.com/services/functions) are all viable alternatives.
 
@@ -364,6 +361,4 @@ An example of a complete projection definition could look like this:
 ## **Request to the external function**
 
 **&lt;todo&gt;**
-
-
 
