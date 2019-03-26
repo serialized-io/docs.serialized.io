@@ -27,14 +27,15 @@
   * [Reading events created within two points in time](concepts/event-feed/reading-events-created-within-two-points-in-time.md)
 * [Projection](concepts/examples.md)
 
-## Reference
+## APIS
 
 * [Event Sourcing API](reference/event-sourcing/README.md)
-  * [Loading aggregate events](reference/event-sourcing/load-all-events-for-an-aggregate.md)
-  * [Store events](reference/event-sourcing/store-events.md)
-  * [Check if an aggregate exists](reference/event-sourcing/check-if-an-aggregate-exists.md)
-  * [Delete an aggregate](reference/event-sourcing/delete-an-aggregate.md)
-  * [Delete all aggregates by type](reference/event-sourcing/delete-all-aggregates-by-type.md)
+  * [Reference](reference/event-sourcing/reference/README.md)
+    * [Loading aggregate events](reference/event-sourcing/reference/load-all-events-for-an-aggregate.md)
+    * [Store events](reference/event-sourcing/reference/store-events.md)
+    * [Check if an aggregate exists](reference/event-sourcing/reference/check-if-an-aggregate-exists.md)
+    * [Delete an aggregate](reference/event-sourcing/reference/delete-an-aggregate.md)
+    * [Delete all aggregates by type](reference/event-sourcing/reference/delete-all-aggregates-by-type.md)
 * [Feeds API](reference/feeds/README.md)
   * [Reference](reference/feeds/reference/README.md)
     * [List feeds](reference/feeds/reference/list-feeds.md)
