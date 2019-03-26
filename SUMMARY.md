@@ -15,14 +15,6 @@
   * [Reacting to events](basics/getting-started/reacting-to-events.md)
   * [Subscribing to event feeds](basics/getting-started/subscribing-to-event-feeds.md)
 
-## ADVANCED
-
-* [Create projection definitions](advanced/create-projection-definitions.md)
-* [List all projections](advanced/list-all-projections.md)
-* [Event handlers](advanced/event-handlers.md)
-* [External projector functions](advanced/external-projector-functions.md)
-* [Examples](advanced/examples.md)
-
 ## Concepts
 
 * [Event Sourcing](concepts/event-sourcing/README.md)
@@ -57,17 +49,20 @@
   * [Delete reaction definition](reference/reactions/delete-reaction-definition.md)
   * [List reaction definitions](reference/reactions/list-reaction-definitions.md)
 * [Projections API](reference/projections/README.md)
-  * [Create projection definition](reference/projections/create-projection-definition.md)
-  * [Get projection definition](reference/projections/get-projection-definition.md)
-  * [Update projection definition](reference/projections/update-projection-definition.md)
-  * [Delete projection definition](reference/projections/delete-projection-definition.md)
-  * [Get projections overview](reference/projections/get-projections-overview.md)
-  * [List projection definitions](reference/projections/list-projection-definitions.md)
-  * [List single projections](reference/projections/list-single-projections.md)
-  * [Delete/recreate single projections](reference/projections/delete-single-projections.md)
-  * [List aggregated projections](reference/projections/list-aggregated-projections.md)
-  * [Get aggregated projection](reference/projections/get-aggregated-projection.md)
-  * [Delete/recreate aggregated projections](reference/projections/delete-aggregated-projections.md)
+  * [Reference](reference/projections/reference/README.md)
+    * [Create projection definition](reference/projections/reference/create-projection-definition.md)
+    * [Get projection definition](reference/projections/reference/get-projection-definition.md)
+    * [Update projection definition](reference/projections/reference/update-projection-definition.md)
+    * [Delete projection definition](reference/projections/reference/delete-projection-definition.md)
+    * [Get projections overview](reference/projections/reference/get-projections-overview.md)
+    * [List projection definitions](reference/projections/reference/list-projection-definitions.md)
+    * [List single projections](reference/projections/reference/list-single-projections.md)
+    * [Delete/recreate single projections](reference/projections/reference/delete-single-projections.md)
+    * [List aggregated projections](reference/projections/reference/list-aggregated-projections.md)
+    * [Get aggregated projection](reference/projections/reference/get-aggregated-projection.md)
+    * [Delete/recreate aggregated projections](reference/projections/reference/delete-aggregated-projections.md)
+  * [Event handlers](reference/projections/event-handlers.md)
+  * [External projector functions](reference/projections/external-projector-functions.md)
 
 ## Tools
 
