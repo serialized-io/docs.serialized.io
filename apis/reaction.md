@@ -285,5 +285,7 @@ Example code of a Java/Jersey/Dropwizard server end-point verifying the signatur
     }
 ```
 
+## Automatic retries
 
+Serialized Reactions have a built-in retry mechanism and will be retried several times over the course of a day. A 2xx response is required for success, whereas a 4xx or 5xx response will be treated as an error and retried.
 
