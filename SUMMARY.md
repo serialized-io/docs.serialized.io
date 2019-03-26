@@ -44,10 +44,11 @@
   * [Get current sequence number](reference/feeds/get-sequence-number.md)
   * [Get feed of events](reference/feeds/get-feed.md)
 * [Reactions](reference/reactions/README.md)
-  * [List reaction definitions](reference/reactions/list-reaction-definitions.md)
   * [Create reaction definition](reference/reactions/create-reaction-definition.md)
-  * [Delete reaction definition](reference/reactions/delete-reaction-definition.md)
   * [Get reaction definition](reference/reactions/get-reaction-definition.md)
+  * [Update reaction definition](reference/reactions/update-reaction-definition.md)
+  * [Delete reaction definition](reference/reactions/delete-reaction-definition.md)
+  * [List reaction definitions](reference/reactions/list-reaction-definitions.md)
   
 ## Tools
 

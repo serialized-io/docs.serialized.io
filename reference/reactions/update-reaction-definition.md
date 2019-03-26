@@ -1,16 +1,23 @@
-# Create reaction definition
+# Update reaction definition
 
-{% api-method method="post" host="https://api.serialized.io" path="/reactions/definitions" %}
+{% api-method method="put" host="https://api.serialized.io" path="/reactions/definitions/{reactionName}" %}
 {% api-method-summary %}
-Create reaction definition
+Update reaction definition
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a new reaction definition
+Update a reaction definition
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
+
+{% api-method-path-parameters %}
+{% api-method-parameter name="reactionName" type="string" required=true %}
+The reaction name
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
 {% api-method-body-parameters %}
 
 {% api-method-parameter name="reactionName" type="string" required=true %}
