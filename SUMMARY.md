@@ -4,7 +4,7 @@
 
 ## Basics
 
-* [Accounts](basics/untitled.md)
+* [Accounts](basics/accounts.md)
 * [Projects](basics/projects/README.md)
   * [Multi-tenant projects](basics/projects/multi-tenant-projects.md)
 * [Authentication](basics/authentication.md)
