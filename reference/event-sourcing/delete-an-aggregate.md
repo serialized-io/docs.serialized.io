@@ -3,11 +3,11 @@
 
 {% api-method method="delete" host="https://api.serialized.io" path="/aggregates/{aggregateType}/{aggregateId}" %}
 {% api-method-summary %}
-Permanently delete an aggregate, including all events.
+Delete an aggregate
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Stores all events in the request atomically. All events must refer to the same aggregate id.
+Permanently delete an aggregate, including all events.
 {% endapi-method-description %}
 
 {% api-method-spec %}
