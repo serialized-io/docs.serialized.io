@@ -50,3 +50,24 @@ Example of a Reaction posting a notification to Slack:
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+Given this event:
+
+```javascript
+{
+  "eventId": "ca37d05c-a852-4de5-961f-16fb35e8cd7b",
+  "eventType": "OrderPlacedEvent",
+  "data": {  
+    "orderNumber": "12312345",
+    "customer": {
+      "email": "customer@example.com"
+    }
+  }
+}
+```
+
+the message to Slack will look like this:
+
+`A new order with number 12312345 was placed by customer@example.com!`
+
+
+
