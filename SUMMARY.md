@@ -12,7 +12,6 @@
 ## Concepts
 
 * [Event Sourcing](concepts/event-sourcing/README.md)
-  * [Storing events](concepts/event-sourcing/storing-events.md)
   * [Loading an aggregate](concepts/event-sourcing/loading-an-aggregate.md)
   * [Deleting aggregates](concepts/event-sourcing/deleting-aggregates.md)
 * [Event Feed](concepts/event-feed/README.md)
