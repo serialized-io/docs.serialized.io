@@ -42,6 +42,7 @@
   * [Get current sequence number](reference/feeds/get-sequence-number.md)
   * [Get feed of events](reference/feeds/get-feed.md)
 * [Reactions API](reference/reactions/README.md)
+  * [Configuring execution time](reference/reactions/configuring-execution-time.md)
   * [Actions](reference/reactions/reaction.md)
   * [Reference](reference/reactions/reference/README.md)
     * [Create reaction definition](reference/reactions/reference/create-reaction-definition.md)
