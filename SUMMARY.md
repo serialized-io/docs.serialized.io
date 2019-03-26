@@ -12,6 +12,7 @@
   * [Working with aggregates](basics/getting-started/working-with-aggregates.md)
   * [Projections](basics/getting-started/projections.md)
   * [Reacting to events](basics/getting-started/reacting-to-events.md)
+  * [Subscribing to event feeds](basics/getting-started/subscribing-to-event-feeds.md)
 
 ## Projections
 
