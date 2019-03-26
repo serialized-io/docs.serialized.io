@@ -10,6 +10,7 @@ Overview showing number of batches, aggregates and events per aggregate type.
 {% endapi-method-description %}
 
 {% api-method-spec %}
+{% api-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -17,7 +18,7 @@ Overview showing number of batches, aggregates and events per aggregate type.
 Success
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -27,7 +28,7 @@ Success
 Invalid aggregate type name or aggregate id
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -37,7 +38,7 @@ Invalid aggregate type name or aggregate id
 If the aggregate does not exist
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}

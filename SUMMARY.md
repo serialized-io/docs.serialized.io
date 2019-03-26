@@ -37,7 +37,6 @@
   * [Check if an aggregate exists](reference/event-sourcing/check-if-an-aggregate-exists.md)
   * [Delete an aggregate](reference/event-sourcing/delete-an-aggregate.md)
   * [Delete all aggregates by type](reference/event-sourcing/delete-all-aggregates-by-type.md)
-
 * [Feeds](reference/feeds/README.md)
   * [List feeds](reference/feeds/list-feeds.md)
 

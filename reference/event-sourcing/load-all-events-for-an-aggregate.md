@@ -22,7 +22,6 @@ The aggregate id
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
-
 {% api-method-parameter name="since" type="number" required=false %}
 Version number to start from
 {% endapi-method-parameter %}
@@ -30,7 +29,6 @@ Version number to start from
 {% api-method-parameter name="limit" type="number" required=false %}
 Version limit. Default is 1000.
 {% endapi-method-parameter %}
-
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
@@ -40,7 +38,7 @@ Version limit. Default is 1000.
 Success
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -50,7 +48,7 @@ Success
 Invalid aggregate type name or aggregate id
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -60,7 +58,7 @@ Invalid aggregate type name or aggregate id
 If the aggregate does not exist
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
