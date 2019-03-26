@@ -25,6 +25,12 @@ The aggregate type
 {% api-method-parameter name="events" type="array" required=true %}
 
 {% endapi-method-parameter %}
+
+
+{% api-method-parameter name="expectedVersion" type="number" required=false %}
+
+{% endapi-method-parameter %}
+
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
