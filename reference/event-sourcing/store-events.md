@@ -68,9 +68,6 @@ Conflict due to expected version mismatch
 Invalid request body
 {% endapi-method-response-example-description %}
 
-```
-
-```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
