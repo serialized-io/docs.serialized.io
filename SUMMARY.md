@@ -14,7 +14,7 @@
 * [Getting started](projections/getting-started.md)
 * [Create projection definitions](projections/create-projection-definitions.md)
 * [List all projections](projections/list-all-projections.md)
-* [Defining event handlers](projections/defining-event-handlers.md)
+* [Event handlers](projections/event-handlers/README.md)
 * [External projector functions](projections/external-projector-functions.md)
 * [Examples](projections/examples.md)
 

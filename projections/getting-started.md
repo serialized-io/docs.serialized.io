@@ -4,5 +4,4 @@ description: >-
   to present your event data.
 ---
 
-# Projections Overview
 
