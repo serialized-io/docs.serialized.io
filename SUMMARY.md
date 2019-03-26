@@ -8,9 +8,6 @@
 * [Projects](basics/projects/README.md)
   * [Multi-tenant projects](basics/projects/multi-tenant-projects.md)
 * [Authentication](basics/authentication.md)
-* [Aggregates](basics/untitled-1.md)
-* [Projections](basics/projections.md)
-* [Reactions](basics/reactions.md)
 
 ## APIs
 
