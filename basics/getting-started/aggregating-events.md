@@ -1,15 +1,14 @@
 ---
 description: >-
-  Projections can also be configured to merge events from different aggregates
-  which makes it easy to build simple reporting functionality. Below is an
-  example of an aggregated projection that counts th
+  Projections can also be configured to merge events from different feeds which
+  makes it easy to build things such as reporting features or similar.
 ---
 
 # Aggregating events
 
-## Creating aggregated projections
+## Creating your first aggregated projections
 
-We use a `POST` command to create a new projection definition:
+To illustrate aggregated projections we will create an aggregated projection that counts the amount of paid orders and their total amount. We use a `POST` command to create a new projection definition:
 
 {% tabs %}
 {% tab title="cURL" %}
