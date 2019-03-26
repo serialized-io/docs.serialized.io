@@ -1,2 +1,2 @@
-# Test page
+# Delete all aggregates by type
 
