@@ -9,8 +9,8 @@
   * [Multi-tenant projects](basics/projects/multi-tenant-projects.md)
 * [Authentication](basics/authentication.md)
 * [Getting started](basics/getting-started/README.md)
-  * [Projections](basics/getting-started/projections.md)
   * [Working with aggregates](basics/getting-started/working-with-aggregates.md)
+  * [Projections](basics/getting-started/projections.md)
 
 ## Projections
 
