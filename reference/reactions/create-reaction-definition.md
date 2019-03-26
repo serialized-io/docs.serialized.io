@@ -44,7 +44,7 @@ Trigger time offset. Defined in the ISO-8601 duration format (PnDTnHnMn.nS). May
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="action" type="object" required=true %}
-Action to invoke
+Action to invoke. See examples below.
 {% endapi-method-parameter %}
 
 {% endapi-method-body-parameters %}
