@@ -45,8 +45,9 @@
   * [Get feed of events](reference/feeds/get-feed.md)
 * [Reactions](reference/reactions/README.md)
   * [List reaction definitions](reference/reactions/list-reaction-definitions.md)
-  * [Create reaction definitions](reference/reactions/create-reaction-definition.md)
-  * [Delete reaction definitions](reference/reactions/delete-reaction-definition.md)
+  * [Create reaction definition](reference/reactions/create-reaction-definition.md)
+  * [Delete reaction definition](reference/reactions/delete-reaction-definition.md)
+  * [Get reaction definition](reference/reactions/get-reaction-definition.md)
   
 ## Tools
 
