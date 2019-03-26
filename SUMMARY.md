@@ -33,7 +33,7 @@
 
 * [Event Sourcing](reference/event-sourcing/README.md)
   * [Store events](reference/event-sourcing/store-events.md)
-  * [Delete all aggregates by type](reference/event-sourcing/test-page.md)
+  * [Delete all aggregates by type](reference/event-sourcing/delete-all-aggregates-by-type.md)
 
 ## Tools
 
