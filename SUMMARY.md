@@ -9,7 +9,7 @@
   * [Multi-tenant projects](basics/projects/multi-tenant-projects.md)
 * [Authentication](basics/authentication.md)
 
-## APIs
+## Concepts
 
 * [Event Sourcing](apis/event-sourcing/README.md)
   * [Storing events](apis/event-sourcing/storing-events.md)
@@ -28,6 +28,11 @@
   * [Defining event handlers](apis/projection/defining-event-handlers.md)
   * [External projector functions](apis/projection/external-projector-functions.md)
 * [Reaction](apis/reaction.md)
+
+## Reference
+
+* [Event Sourcing](apis-1/event-sourcing/README.md)
+  * [Store events](apis-1/event-sourcing/store-events.md)
 
 ## Tools
 
