@@ -43,7 +43,10 @@
   * [Get current global sequence number](reference/feeds/get-global-sequence-number.md)
   * [Get current sequence number](reference/feeds/get-sequence-number.md)
   * [Get feed of events](reference/feeds/get-feed.md)
-
+* [Reactions](reference/reactions/README.md)
+  * [List reaction definitions](reference/reactions/list-reaction-definitions.md)
+  * [Create reaction definitions](reference/reactions/create-reaction-definition.md)
+  
 ## Tools
 
 * [Projection Tester](https://console.serialized.io/projection-tester)
