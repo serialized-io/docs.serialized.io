@@ -11,6 +11,12 @@ Get current global sequence number at head for all feeds
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="name" type="string" required=true %}
+The feed name
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
 {% api-method-headers %}
 {% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
 Access key for the project
@@ -20,13 +26,6 @@ Access key for the project
 Secret access key for the project
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-path-parameters %}
-{% api-method-parameter name="name" type="string" required=true %}
-The feed name
-{% endapi-method-parameter %}
-
-{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -35,7 +34,7 @@ The feed name
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}

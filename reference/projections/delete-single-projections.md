@@ -15,7 +15,6 @@ Delete/recreate single projections
 {% api-method-parameter name="projectionName" type="string" required=true %}
 The projection name
 {% endapi-method-parameter %}
-
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
@@ -25,17 +24,20 @@ The projection name
 Projection definition successfully deleted.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
 Projection definition not found
 {% endapi-method-response-example-description %}
+
+```
+
+```
 {% endapi-method-response-example %}
-
-
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}

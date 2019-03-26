@@ -1,2 +1,2 @@
-# Event Sourcing
+# Event Sourcing API
 

@@ -12,7 +12,6 @@ Update projection definition
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-
 {% api-method-parameter name="projectionName" type="string" required=true %}
 Name of the projection type
 {% endapi-method-parameter %}
@@ -24,9 +23,7 @@ Name of the feed
 {% api-method-parameter name="handlers" type="array" required=true %}
 Handlers for the reaction. See examples below.
 {% endapi-method-parameter %}
-
 {% endapi-method-body-parameters %}
-
 {% endapi-method-request %}
 
 {% api-method-response %}

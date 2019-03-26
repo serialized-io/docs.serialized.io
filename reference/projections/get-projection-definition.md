@@ -11,6 +11,12 @@ Get projection definition
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="projectionName" type="string" required=true %}
+The projection name
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
 {% api-method-headers %}
 {% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
 Access key for the project
@@ -20,13 +26,6 @@ Access key for the project
 Secret access key for the project
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-path-parameters %}
-{% api-method-parameter name="projectionName" type="string" required=true %}
-The projection name
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
 {% endapi-method-request %}
 
 {% api-method-response %}

@@ -1,12 +1,12 @@
 # Get feed of all events
 
-{% api-method method="get" host="https://api.serialized.io" path="/feeds/_all" %}
+{% api-method method="get" host="https://api.serialized.io" path="/feeds/\_all" %}
 {% api-method-summary %}
 Get feed of all events
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Get all events for all aggregates for all types (feed names). The payload is returned with the event batches in insertion order, each with a unique sequence number.
+Get all events for all aggregates for all types \(feed names\). The payload is returned with the event batches in insertion order, each with a unique sequence number.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -37,10 +37,7 @@ ISO 8601 date-time string to start from, eg. 2017-07-21T17:32:28. Must be used i
 {% api-method-parameter name="to" type="number" required=false %}
 ISO 8601 data-time string to stop at, eg. 2017-07-21T17:32:28. Must be used in combination with 'from' parameter.
 {% endapi-method-parameter %}
-
-
 {% endapi-method-query-parameters %}
-
 {% endapi-method-request %}
 
 {% api-method-response %}

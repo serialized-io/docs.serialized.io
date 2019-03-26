@@ -11,6 +11,12 @@ List all single projections
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="projectionName" type="string" required=true %}
+The projection name
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
 {% api-method-headers %}
 {% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
 Access key for the project
@@ -20,12 +26,6 @@ Access key for the project
 Secret access key for the project
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-path-parameters %}
-{% api-method-parameter name="projectionName" type="string" required=true %}
-The projection name
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="sort" type="number" required=false %}
@@ -39,10 +39,7 @@ Number of entries to skip
 {% api-method-parameter name="limit" type="number" required=false %}
 Max number of entries to include in response. Default is 100.
 {% endapi-method-parameter %}
-
 {% endapi-method-query-parameters %}
-
-
 {% endapi-method-request %}
 
 {% api-method-response %}

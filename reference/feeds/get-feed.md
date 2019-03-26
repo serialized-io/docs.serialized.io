@@ -6,11 +6,17 @@ Get feed of events
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Get all events for all aggregates given a type (feed name). The payload is returned with the event batches in insertion order, each with a unique sequence number.
+Get all events for all aggregates given a type \(feed name\). The payload is returned with the event batches in insertion order, each with a unique sequence number.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="name" type="string" required=true %}
+The feed name
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
 {% api-method-headers %}
 {% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
 Access key for the project
@@ -20,12 +26,6 @@ Access key for the project
 Secret access key for the project
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-path-parameters %}
-{% api-method-parameter name="name" type="string" required=true %}
-The feed name
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="since" type="number" required=false %}
@@ -43,16 +43,7 @@ ISO 8601 date-time string to start from, eg. 2017-07-21T17:32:28. Must be used i
 {% api-method-parameter name="to" type="number" required=false %}
 ISO 8601 data-time string to stop at, eg. 2017-07-21T17:32:28. Must be used in combination with 'from' parameter.
 {% endapi-method-parameter %}
-
 {% endapi-method-query-parameters %}
-
-
-{% api-method-path-parameters %}
-{% api-method-parameter name="name" type="string" required=true %}
-The feed name
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
 {% endapi-method-request %}
 
 {% api-method-response %}

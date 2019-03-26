@@ -1,2 +1,2 @@
-# Feeds
+# Feeds API
 

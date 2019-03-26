@@ -11,7 +11,6 @@ Update a reaction definition
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-path-parameters %}
 {% api-method-parameter name="reactionName" type="string" required=true %}
 The reaction name
@@ -19,7 +18,6 @@ The reaction name
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
-
 {% api-method-parameter name="reactionName" type="string" required=true %}
 Unique name of the reaction
 {% endapi-method-parameter %}
@@ -41,15 +39,13 @@ Path to event data field containing trigger time. If not specified, trigger time
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="offset" type="string" required=false %}
-Trigger time offset. Defined in the ISO-8601 duration format (PnDTnHnMn.nS). May be negative.
+Trigger time offset. Defined in the ISO-8601 duration format \(PnDTnHnMn.nS\). May be negative.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="action" type="object" required=true %}
 Action to invoke. See examples below.
 {% endapi-method-parameter %}
-
 {% endapi-method-body-parameters %}
-
 {% endapi-method-request %}
 
 {% api-method-response %}

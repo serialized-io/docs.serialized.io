@@ -10,12 +10,13 @@
 * [Authentication](basics/authentication.md)
 
 ## Projections
-* [Overview](projections/README.md)
+
+* [Projections Overview](projections/projections.md)
 * [Create projection definitions](projections/create-projection-definitions.md)
 * [List all projections](projections/list-all-projections.md)
 * [Defining event handlers](projections/defining-event-handlers.md)
 * [External projector functions](projections/external-projector-functions.md)
-* [Examples](projections/examples/README.md)
+* [Examples](projections/examples.md)
 
 ## Concepts
 
@@ -27,8 +28,7 @@
   * [Reading all events since the beginning](concepts/event-feed/reading-all-events-since-the-beginning.md)
   * [Reading new events since last received event](concepts/event-feed/reading-new-events-since-last-received-event.md)
   * [Reading events created within two points in time](concepts/event-feed/reading-events-created-within-two-points-in-time.md)
-* [Projection](projections/examples/README.md)
-  
+* [Projection](concepts/examples.md)
 * [Reaction](concepts/reaction.md)
 
 ## Reference
@@ -61,9 +61,9 @@
   * [List single projections](reference/projections/list-single-projections.md)
   * [Delete/recreate single projections](reference/projections/delete-single-projections.md)
   * [List aggregated projections](reference/projections/list-aggregated-projections.md)
-  * [Get aggregated projection](reference/projections/get-aggregated-projections.md)
+  * [Get aggregated projection](reference/projections/get-aggregated-projection.md)
   * [Delete/recreate aggregated projections](reference/projections/delete-aggregated-projections.md)
-  
+
 ## Tools
 
 * [Projection Tester](https://console.serialized.io/projection-tester)

@@ -34,7 +34,7 @@ Valid delete token. Will be included in the response to the first DELETE request
 Aggregate successfully deleted.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -44,11 +44,10 @@ Aggregate successfully deleted.
 Invalid aggregate type name or aggregate id
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
-
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}

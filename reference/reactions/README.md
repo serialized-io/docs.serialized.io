@@ -1,2 +1,2 @@
-# Reactions
+# Reactions API
 
