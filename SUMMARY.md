@@ -32,10 +32,11 @@
 ## Reference
 
 * [Event Sourcing](reference/event-sourcing/README.md)
+  * [Loading aggregate events](reference/event-sourcing/load-all-events-for-an-aggregate.md)
   * [Store events](reference/event-sourcing/store-events.md)
-  * [Delete all aggregates by type](reference/event-sourcing/delete-all-aggregates-by-type.md)
   * [Check if an aggregate exists](reference/event-sourcing/check-if-an-aggregate-exists.md)
   * [Delete an aggregate](reference/event-sourcing/delete-an-aggregate.md)
+  * [Delete all aggregates by type](reference/event-sourcing/delete-all-aggregates-by-type.md)
 
 ## Tools
 
