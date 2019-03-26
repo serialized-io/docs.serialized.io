@@ -22,9 +22,15 @@ The aggregate id
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="since" type="string" required=false %}
 
+{% api-method-parameter name="since" type="number" required=false %}
+Version number to start from
 {% endapi-method-parameter %}
+
+{% api-method-parameter name="limit" type="number" required=false %}
+Version limit. Default is 1000.
+{% endapi-method-parameter %}
+
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
