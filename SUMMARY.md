@@ -11,7 +11,7 @@
 
 ## Projections
 
-* [Projections Overview](projections/projections.md)
+* [Getting started](projections/getting-started.md)
 * [Create projection definitions](projections/create-projection-definitions.md)
 * [List all projections](projections/list-all-projections.md)
 * [Defining event handlers](projections/defining-event-handlers.md)
