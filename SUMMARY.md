@@ -41,6 +41,8 @@
   * [List feeds](reference/feeds/list-feeds.md)
   * [Get feed of all events](reference/feeds/get-all-feed.md)
   * [Get current global sequence number](reference/feeds/get-global-sequence-number.md)
+  * [Get current sequence number](reference/feeds/get-sequence-number.md)
+  * [Get feed of events](reference/feeds/get-sequence-number.md)
 
 ## Tools
 
