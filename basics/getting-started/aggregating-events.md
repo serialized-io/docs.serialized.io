@@ -6,7 +6,7 @@ description: >-
 
 # Aggregating events
 
-## Creating your first aggregated projections
+## Creating your first aggregated projection
 
 To illustrate aggregated projections we will create an aggregated projection that counts the amount of paid orders and their total amount. We use a `POST` command to create a new projection definition:
 

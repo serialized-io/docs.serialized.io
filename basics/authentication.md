@@ -17,15 +17,19 @@ Serialized-Access-Key: <YOUR-ACCESS-KEY>
 Serialized-Secret-Access-Key: <YOUR-SECRET-ACCESS-KEY>
 ```
 
-This is an example of a cURL request to the API authenticated with example keys:
+This is an example of an authenticated request to the API using these headers:
 
-```text
+{% tabs %}
+{% tab title="cURL" %}
+```bash
 curl --header "Serialized-Access-Key: example-access-key" \
      --header "Serialized-Secret-Access-Key: example-secret-key" \
      https://api.serialized.io/feeds
 ```
+{% endtab %}
+{% endtabs %}
 
-{% hint style="info" %}
-You must provide the access key headers in all requests to the API.
+{% hint style="warning" %}
+You must provide these access key headers in all requests to the API.
 {% endhint %}
 
