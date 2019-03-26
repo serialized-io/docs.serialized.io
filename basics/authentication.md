@@ -1,27 +1,31 @@
 ---
-description: Authentication si
+description: >-
+  Serialized provides a simple yet secure authentication using API keys over
+  HTTPS.
 ---
 
 # Authentication
 
-## Getting Super Powers
+## Authenticating with the API
 
-Becoming a super hero is a fairly straight forward process:
+All your Serialized projects have separate API key pairs that you use to authenticate towards the API. Your keys will redirect you to the corresponding project so the API urls will remain the same regardless of which project you authenticate to.
 
+The keys are provided as HTTP headers:
+
+```text
+Serialized-Access-Key: <YOUR-ACCESS-KEY>
+Serialized-Secret-Access-Key: <YOUR-SECRET-ACCESS-KEY>
 ```
-$ give me super-powers
+
+This is an example of a cURL request to the API authenticated with example keys:
+
+```text
+curl --header "Serialized-Access-Key: example-access-key" \
+     --header "Serialized-Secret-Access-Key: example-secret-key" \
+     https://api.serialized.io/feeds
 ```
 
 {% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
+You must provide the access key headers in all requests to the API.
 {% endhint %}
-
-Once you're strong enough, save the world:
-
-```
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
-
-
 
