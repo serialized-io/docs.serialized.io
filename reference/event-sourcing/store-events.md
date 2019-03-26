@@ -48,7 +48,7 @@ Events successfully stored.
 Invalid aggregate type name
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -58,7 +58,7 @@ Invalid aggregate type name
 Conflict due to expected version mismatch
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -68,6 +68,9 @@ Conflict due to expected version mismatch
 Invalid request body
 {% endapi-method-response-example-description %}
 
+```
+
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -101,6 +104,4 @@ curl -i https://api.serialized.io/aggregates/order/events \
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

@@ -32,6 +32,7 @@
 ## Reference
 
 * [Event Sourcing](reference/event-sourcing/README.md)
+  * [Test page](reference/event-sourcing/test-page.md)
   * [Store events](reference/event-sourcing/store-events.md)
 
 ## Tools
