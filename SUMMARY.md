@@ -10,7 +10,8 @@
 * [Authentication](basics/authentication.md)
 * [Getting started](basics/getting-started/README.md)
   * [Working with aggregates](basics/getting-started/working-with-aggregates.md)
-  * [Projections](basics/getting-started/projections.md)
+  * [Projecting events](basics/getting-started/projections.md)
+  * [Aggregating events](basics/getting-started/aggregating-events.md)
   * [Reacting to events](basics/getting-started/reacting-to-events.md)
   * [Subscribing to event feeds](basics/getting-started/subscribing-to-event-feeds.md)
 
