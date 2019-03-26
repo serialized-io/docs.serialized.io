@@ -8,10 +8,12 @@
 * [Projects](basics/projects/README.md)
   * [Multi-tenant projects](basics/projects/multi-tenant-projects.md)
 * [Authentication](basics/authentication.md)
+* [Getting started](basics/getting-started/README.md)
+  * [Projections](basics/getting-started/projections.md)
+  * [Working with aggregates](basics/getting-started/working-with-aggregates.md)
 
 ## Projections
 
-* [Getting started](projections/getting-started.md)
 * [Create projection definitions](projections/create-projection-definitions.md)
 * [List all projections](projections/list-all-projections.md)
 * [Event handlers](projections/event-handlers.md)
