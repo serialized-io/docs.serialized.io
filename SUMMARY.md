@@ -11,28 +11,28 @@
 
 ## Concepts
 
-* [Event Sourcing](apis/event-sourcing/README.md)
-  * [Storing events](apis/event-sourcing/storing-events.md)
-  * [Loading an aggregate](apis/event-sourcing/loading-an-aggregate.md)
-  * [Deleting aggregates](apis/event-sourcing/deleting-aggregates.md)
-* [Event Feed](apis/event-feed/README.md)
-  * [List event feeds](apis/event-feed/list-event-feeds.md)
-  * [Read events by aggregate type](apis/event-feed/read-events-by-aggregate-type.md)
-  * [Using the \_all feed](apis/event-feed/using-the-_all-feed.md)
-  * [Reading all events since the beginning](apis/event-feed/reading-all-events-since-the-beginning.md)
-  * [Reading new events since last received event](apis/event-feed/reading-new-events-since-last-received-event.md)
-  * [Reading events created within two points in time](apis/event-feed/reading-events-created-within-two-points-in-time.md)
-* [Projection](apis/projection/README.md)
-  * [Create projection definitions](apis/projection/create-projection-definitions.md)
-  * [List all projections](apis/projection/list-all-projections.md)
-  * [Defining event handlers](apis/projection/defining-event-handlers.md)
-  * [External projector functions](apis/projection/external-projector-functions.md)
-* [Reaction](apis/reaction.md)
+* [Event Sourcing](concepts/event-sourcing/README.md)
+  * [Storing events](concepts/event-sourcing/storing-events.md)
+  * [Loading an aggregate](concepts/event-sourcing/loading-an-aggregate.md)
+  * [Deleting aggregates](concepts/event-sourcing/deleting-aggregates.md)
+* [Event Feed](concepts/event-feed/README.md)
+  * [List event feeds](concepts/event-feed/list-event-feeds.md)
+  * [Read events by aggregate type](concepts/event-feed/read-events-by-aggregate-type.md)
+  * [Using the \_all feed](concepts/event-feed/using-the-_all-feed.md)
+  * [Reading all events since the beginning](concepts/event-feed/reading-all-events-since-the-beginning.md)
+  * [Reading new events since last received event](concepts/event-feed/reading-new-events-since-last-received-event.md)
+  * [Reading events created within two points in time](concepts/event-feed/reading-events-created-within-two-points-in-time.md)
+* [Projection](concepts/projection/README.md)
+  * [Create projection definitions](concepts/projection/create-projection-definitions.md)
+  * [List all projections](concepts/projection/list-all-projections.md)
+  * [Defining event handlers](concepts/projection/defining-event-handlers.md)
+  * [External projector functions](concepts/projection/external-projector-functions.md)
+* [Reaction](concepts/reaction.md)
 
 ## Reference
 
-* [Event Sourcing](apis-1/event-sourcing/README.md)
-  * [Store events](apis-1/event-sourcing/store-events.md)
+* [Event Sourcing](reference/event-sourcing/README.md)
+  * [Store events](reference/event-sourcing/store-events.md)
 
 ## Tools
 
