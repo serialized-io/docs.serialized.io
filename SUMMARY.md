@@ -15,13 +15,13 @@
   * [Reacting to events](basics/getting-started/reacting-to-events.md)
   * [Subscribing to event feeds](basics/getting-started/subscribing-to-event-feeds.md)
 
-## Projections
+## ADVANCED
 
-* [Create projection definitions](projections/create-projection-definitions.md)
-* [List all projections](projections/list-all-projections.md)
-* [Event handlers](projections/event-handlers.md)
-* [External projector functions](projections/external-projector-functions.md)
-* [Examples](projections/examples.md)
+* [Create projection definitions](advanced/create-projection-definitions.md)
+* [List all projections](advanced/list-all-projections.md)
+* [Event handlers](advanced/event-handlers.md)
+* [External projector functions](advanced/external-projector-functions.md)
+* [Examples](advanced/examples.md)
 
 ## Concepts
 

@@ -1,6 +1,13 @@
+---
+description: >-
+  For greater flexibility you can write your own projector code and deploy it as
+  a function wherever you prefer. AWS Lambda, Google Cloud Functions and Azure
+  Functions are all viable alternatives.
+---
+
 # External projector functions
 
-For greater flexibility you can write your own projector code and deploy it as a function wherever you prefer. [AWS Lambda](https://aws.amazon.com/lambda/), [Google Cloud Functions](https://cloud.google.com/functions/) and [Azure Functions](https://azure.microsoft.com/services/functions) are all viable alternatives.
+## Executing external projector functions
 
 The external function will be automatically executed by Serialized for every event in the particular feed matching the event type\(s\) specified in the projection definition.
 
