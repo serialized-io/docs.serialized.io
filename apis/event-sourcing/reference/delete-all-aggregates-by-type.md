@@ -6,7 +6,7 @@ Delete all aggregates by type
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Stores all events in the request atomically. All events must refer to the same aggregate id.
+Permanently deletes all aggregates, including all events for a given aggregate type.
 {% endapi-method-description %}
 
 {% api-method-spec %}

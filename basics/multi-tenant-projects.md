@@ -2,7 +2,7 @@
 description: This page describes Serialized multi-tenancy support.
 ---
 
-# Multi-tenant projects
+# Multi-tenancy support
 
 In order to build business-to-business applications where the application serves many customers it is common to build a multi-tenant system. This means that multiple customers share the use of the same system instance but their data is separated in the storage level.
 
@@ -12,7 +12,7 @@ Serialized provides a convenient way of building multi-tenant systems by enablin
 Multi-tenancy is only supported on our paid plans
 {% endhint %}
 
-## Data separation
+See the Tenants API for details on how to use the multi-tenancy support.
 
-Each tenant in the 
+{% page-ref page="../apis/tenants-api/" %}
 
