@@ -1,12 +1,12 @@
-# Delete/recreate single projections
+# Delete projection definition
 
-{% api-method method="delete" host="https://api.serialized.io" path="/projections/single/{projectionName}" %}
+{% api-method method="delete" host="https://api.serialized.io" path="/projections/definitions/{projectionName}" %}
 {% api-method-summary %}
-This call deletes all existing projections and starts a rebuild from the beginning of the event history. Keep in mind that this might take a while.
+Delete a projection definition
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Delete/recreate single projections
+Delete a projection definition
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -34,7 +34,7 @@ Projection definition successfully deleted.
 Projection definition not found
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}

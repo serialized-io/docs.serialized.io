@@ -1,19 +1,19 @@
-# Delete reaction definition
+# Delete/recreate aggregated projections
 
-{% api-method method="delete" host="https://api.serialized.io" path="/reactions/definitions/{reactionName}" %}
+{% api-method method="delete" host="https://api.serialized.io" path="/projections/aggregated/{projectionName}" %}
 {% api-method-summary %}
-Delete a reaction definition
+This call deletes all existing projections and starts a rebuild from the beginning of the event history. Keep in mind that this might take a while.
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Delete a reaction definition
+Delete/recreate aggregated projections
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="reactionName" type="string" required=true %}
-The reaction name
+{% api-method-parameter name="projectionName" type="string" required=true %}
+The projection name
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -21,7 +21,7 @@ The reaction name
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Reaction definition successfully deleted.
+Projection definition successfully deleted.
 {% endapi-method-response-example-description %}
 
 ```text
@@ -31,10 +31,10 @@ Reaction definition successfully deleted.
 
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
-Reaction definition not found
+Projection definition not found
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}

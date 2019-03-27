@@ -1,19 +1,23 @@
-# Delete/recreate aggregated projections
+# Check if an aggregate exists
 
-{% api-method method="delete" host="https://api.serialized.io" path="/projections/aggregated/{projectionName}" %}
+{% api-method method="head" host="https://api.serialized.io" path="/aggregates/{aggregateType}/{aggregateId}" %}
 {% api-method-summary %}
-This call deletes all existing projections and starts a rebuild from the beginning of the event history. Keep in mind that this might take a while.
+Check if an aggregate exists
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Delete/recreate aggregated projections
+Check if an aggregate exists without loading any events from the event store.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="projectionName" type="string" required=true %}
-The projection name
+{% api-method-parameter name="aggregateType" type="string" required=true %}
+The aggregate type
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="aggregateId" type="string" required=true %}
+The aggregate id
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -21,7 +25,17 @@ The projection name
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Projection definition successfully deleted.
+Success
+{% endapi-method-response-example-description %}
+
+```text
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Invalid aggregate type name or aggregate id
 {% endapi-method-response-example-description %}
 
 ```text
@@ -31,10 +45,10 @@ Projection definition successfully deleted.
 
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
-Projection definition not found
+If the aggregate does not exist
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}

@@ -9,5 +9,3 @@ description: >-
 
 In a CQRS architecture it typically means operations performed by the **query**-side of the application.
 
-
-

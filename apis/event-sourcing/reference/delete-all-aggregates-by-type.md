@@ -24,7 +24,7 @@ The aggregate type
 Events successfully stored.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -34,7 +34,7 @@ Events successfully stored.
 Invalid aggregate type name
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -44,7 +44,7 @@ Invalid aggregate type name
 Conflict due to expected version mismatch
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -54,7 +54,7 @@ Conflict due to expected version mismatch
 Invalid request body
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}

@@ -1,12 +1,12 @@
 # Reacting to events
 
-### Reacting to events
+## Reacting to events
 
 Reactions can be used to trigger external services when certain events occur.
 
 The following examples shows the basic APIs for working with reactions.
 
-#### Create event reaction definition <a id="create-event-reaction-definition"></a>
+### Create event reaction definition  <a id="create-event-reaction-definition"></a>
 
 As an example, we are going to set up a reaction that posts notifications every time an order is placed. We need to specify the feed name and the event type to react to.
 
@@ -58,6 +58,4 @@ Next time an `OrderPlacedEvent` happens you will get a POST request to your `som
    }
 }
 ```
-
-
 

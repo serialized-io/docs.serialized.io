@@ -9,7 +9,7 @@ description: >-
 
 ## Creating your first projection definition
 
-The first part of projecting data is creating a projection definition. A definition defines what events should be processed and how they should be processed into a data structure that is more suitable for the client to query. 
+The first part of projecting data is creating a projection definition. A definition defines what events should be processed and how they should be processed into a data structure that is more suitable for the client to query.
 
 {% hint style="info" %}
 It is a good idea to create multiple projection definitions for different use cases. Projections are cheap views and making them tailored for the client makes your data easy to use.
@@ -83,7 +83,7 @@ curl -i https://api.serialized.io/projections/definitions \
 {% endtab %}
 {% endtabs %}
 
-#### Query our projection
+### Query our projection
 
 Great! We can now access the projection and check the current state of our order!
 
@@ -119,6 +119,4 @@ Content-Length: 125
 {% endcode-tabs %}
 {% endtab %}
 {% endtabs %}
-
-
 

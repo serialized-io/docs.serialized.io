@@ -1,37 +1,27 @@
-# Delete an aggregate
+# Delete/recreate single projections
 
-{% api-method method="delete" host="https://api.serialized.io" path="/aggregates/{aggregateType}/{aggregateId}" %}
+{% api-method method="delete" host="https://api.serialized.io" path="/projections/single/{projectionName}" %}
 {% api-method-summary %}
-Delete an aggregate
+This call deletes all existing projections and starts a rebuild from the beginning of the event history. Keep in mind that this might take a while.
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Permanently delete an aggregate, including all events.
+Delete/recreate single projections
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="aggregateType" type="string" required=true %}
-The aggregate type
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="aggregateId" type="string" required=true %}
-The aggregate id
+{% api-method-parameter name="projectionName" type="string" required=true %}
+The projection name
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="deleteToken" type="number" required=false %}
-Valid delete token. Will be included in the response to the first DELETE request.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Aggregate successfully deleted.
+Projection definition successfully deleted.
 {% endapi-method-response-example-description %}
 
 ```text
@@ -39,9 +29,9 @@ Aggregate successfully deleted.
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=400 %}
+{% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
-Invalid aggregate type name or aggregate id
+Projection definition not found
 {% endapi-method-response-example-description %}
 
 ```text
