@@ -1,13 +1,14 @@
 ---
 description: >-
-  For greater flexibility you can write your own projector code and deploy it as
-  a function wherever you prefer. AWS Lambda, Google Cloud Functions and Azure
-  Functions are all viable alternatives.
+  This page describes how to write your own custom handler function to make it
+  possible to implement more complex projections.
 ---
 
-# External projector functions
+# Custom Functions
 
-## Executing external projector functions
+You can write your own projector code and deploy it as a function wherever you prefer. AWS Lambda, Google Cloud Functions and Azure Functions are all viable alternatives.
+
+## Executing custom functions
 
 The external function will be automatically executed by Serialized for every event in the particular feed matching the event type\(s\) specified in the projection definition.
 
