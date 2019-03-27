@@ -35,11 +35,28 @@ Version limit. Default is 1000.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Success
+Aggregate successfully loaded
 {% endapi-method-response-example-description %}
 
-```text
-
+```javascript
+{
+  "aggregateId": "22c3780f-6dcb-440f-8532-6693be83f21c",
+  "aggregateVersion": 1,
+  "aggregateType": "payment",
+  "events": [
+    {
+      "eventId": "f2c8bfc1-c702-4f1a-b295-ef113ed7c8be",
+      "eventType": "PaymentProcessed",
+      "data": {
+        "paymentMethod": "CARD",
+        "amount": 1000,
+        "currency": "SEK"
+      },
+      "encryptedData": "string"
+    }
+  ],
+  "hasMore": false
+}
 ```
 {% endapi-method-response-example %}
 
