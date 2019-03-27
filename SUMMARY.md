@@ -19,7 +19,6 @@
 
 * [Event Sourcing](concepts/event-sourcing/README.md)
   * [Loading an aggregate](concepts/event-sourcing/loading-an-aggregate.md)
-  * [Deleting aggregates](concepts/event-sourcing/deleting-aggregates.md)
 * [Event Feed](concepts/event-feed/README.md)
   * [Using the \_all feed](concepts/event-feed/using-the-_all-feed.md)
   * [Reading all events since the beginning](concepts/event-feed/reading-all-events-since-the-beginning.md)
@@ -30,6 +29,9 @@
 ## APIS
 
 * [Event Sourcing API](reference/event-sourcing/README.md)
+  * [Concurrency](reference/event-sourcing/concurrency.md)
+  * [Atomicity and versioning](reference/event-sourcing/atomicity-and-versioning.md)
+  * [Deleting aggregates](reference/event-sourcing/deleting-aggregates.md)
   * [Reference](reference/event-sourcing/reference/README.md)
     * [Loading aggregate events](reference/event-sourcing/reference/load-all-events-for-an-aggregate.md)
     * [Store events](reference/event-sourcing/reference/store-events.md)

@@ -1,6 +1,13 @@
+---
+description: >-
+  Deleting data might be considered unorthodox in the world of event sourcing
+  but Serialized is pragmatic in regarding this and allows users to delete
+  aggregates.
+---
+
 # Deleting aggregates
 
-Deleting data might be considered unorthodox in the world of event sourcing. However, we chose the pragmatic way allowing API users to delete aggregates, including all events, either by a single aggregateId or by aggregate type. The HTTP `DELETE` request will return a `deleteToken` valid for ten minutes.
+Serialized supports deleting aggregates including all events, either by a single aggregateId or by aggregate type. The HTTP `DELETE` request will return a `deleteToken` valid for ten minutes.
 
 {% code-tabs %}
 {% code-tabs-item title="Example deletion of an aggregate" %}
