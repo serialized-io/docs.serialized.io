@@ -1,8 +1,8 @@
-# Loading aggregate events
+# Load an Aggregate
 
 {% api-method method="get" host="https://api.serialized.io" path="/aggregates/{aggregateType}/{aggregateId}" %}
 {% api-method-summary %}
-Load all events for an aggregate
+Load an Aggregate
 {% endapi-method-summary %}
 
 {% api-method-description %}
