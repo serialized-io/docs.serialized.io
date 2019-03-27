@@ -1,13 +1,12 @@
 ---
 description: >-
-  There are two ways to handle concurrency. You can either use our built in
-  optimistic concurrency control support or make sure you’re always writing data
-  to one aggregate using a single writer thread.
+  This page describes the details about how to handle concurrency with
+  Serialized.
 ---
 
 # Concurrency
 
-Both methods have their pros and cons and are perfectly viable solutions.
+There are two ways to handle concurrency. You can either use our built in optimistic concurrency control support or make sure you’re always writing data to one aggregate using a single writer thread. Both methods have their pros and cons and are perfectly viable solutions.
 
 ## Optimistic Concurrency-Control \(OCC\)
 

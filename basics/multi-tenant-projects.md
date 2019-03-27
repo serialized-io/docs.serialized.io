@@ -2,7 +2,7 @@
 description: This page describes Serialized multi-tenancy support.
 ---
 
-# Multi-tenancy support
+# Multi-Tenancy
 
 In order to build business-to-business applications where the application serves many customers it is common to build a multi-tenant system. This means that multiple customers share the use of the same system instance but their data is separated in the storage level.
 
