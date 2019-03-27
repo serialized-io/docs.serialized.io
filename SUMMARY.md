@@ -27,7 +27,7 @@
     * [Store Events](apis/event-sourcing/reference/store-events.md)
     * [Check if an aggregate exists](apis/event-sourcing/reference/check-if-an-aggregate-exists.md)
     * [Delete an Aggregate](apis/event-sourcing/reference/delete-an-aggregate.md)
-    * [Delete all aggregates by type](apis/event-sourcing/reference/delete-all-aggregates-by-type.md)
+    * [Delete all Aggregates by type](apis/event-sourcing/reference/delete-all-aggregates-by-type.md)
 * [Feeds API](apis/feeds/README.md)
   * [Basic Usage](apis/feeds/basic-usage.md)
   * [Sequence Numbers](apis/feeds/sequence-numbers.md)
@@ -64,6 +64,10 @@
     * [List Aggregated Projections](apis/projections/reference/list-aggregated-projections.md)
     * [Get Aggregated Projection](apis/projections/reference/get-aggregated-projection.md)
     * [Delete/recreate Aggregated Projections](apis/projections/reference/delete-aggregated-projections.md)
+* [Tenants API](apis/tenants-api/README.md)
+  * [Basic Usage](apis/tenants-api/basic-usage.md)
+  * [API Reference](apis/tenants-api/api-reference/README.md)
+    * [Untitled](apis/tenants-api/api-reference/untitled.md)
 
 ## Tools
 

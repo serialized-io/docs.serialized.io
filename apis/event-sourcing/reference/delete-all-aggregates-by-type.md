@@ -1,4 +1,4 @@
-# Delete all aggregates by type
+# Delete all Aggregates by type
 
 {% api-method method="delete" host="https://api.serialized.io" path="/aggregates/{aggregateType}" %}
 {% api-method-summary %}
