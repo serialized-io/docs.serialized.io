@@ -46,7 +46,7 @@ Serialized supports deletion of Events by deleting the Aggregate that contains t
 
 ## Event Example: Hotel Room Reservation
 
-Let's say we're developing a Hotel Management System that handles reservations of hotel rooms and see how a reservation could be implemented as a Serialized Event
+Let's say we're developing a Hotel Management System that handles reservations of hotel rooms and see how a reservation could be implemented as a Serialized Event:
 
 > A **hotel room** for **Room 213** was **reserved** by **John Doe** at **2019-03-12**.
 
