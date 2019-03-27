@@ -15,15 +15,6 @@
   * [Reacting to events](basics/getting-started/reacting-to-events.md)
   * [Subscribing to event feeds](basics/getting-started/subscribing-to-event-feeds.md)
 
-## Concepts
-
-* [Event Feed](concepts/event-feed/README.md)
-  * [Using the \_all feed](concepts/event-feed/using-the-_all-feed.md)
-  * [Reading all events since the beginning](concepts/event-feed/reading-all-events-since-the-beginning.md)
-  * [Reading new events since last received event](concepts/event-feed/reading-new-events-since-last-received-event.md)
-  * [Reading events created within two points in time](concepts/event-feed/reading-events-created-within-two-points-in-time.md)
-* [Projection](concepts/examples.md)
-
 ## APIS
 
 * [Event Sourcing API](reference/event-sourcing/README.md)
@@ -38,6 +29,11 @@
     * [Delete an aggregate](reference/event-sourcing/reference/delete-an-aggregate.md)
     * [Delete all aggregates by type](reference/event-sourcing/reference/delete-all-aggregates-by-type.md)
 * [Feeds API](reference/feeds/README.md)
+  * [Sequence numbers](reference/feeds/sequence-numbers.md)
+  * [Using the \_all feed](reference/feeds/using-the-_all-feed.md)
+  * [Reading all events since the beginning](reference/feeds/reading-all-events-since-the-beginning.md)
+  * [Reading new events since last received event](reference/feeds/reading-new-events-since-last-received-event.md)
+  * [Reading events created within two points in time](reference/feeds/reading-events-created-within-two-points-in-time.md)
   * [Reference](reference/feeds/reference/README.md)
     * [List feeds](reference/feeds/reference/list-feeds.md)
     * [Get feed of all events](reference/feeds/reference/get-all-feed.md)
