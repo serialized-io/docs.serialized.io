@@ -22,7 +22,7 @@
   * [Concurrency](apis/event-sourcing/concurrency.md)
   * [Atomicity and Versioning](apis/event-sourcing/atomicity-and-versioning.md)
   * [Deleting Aggregates](apis/event-sourcing/deleting-aggregates.md)
-  * [Reference](apis/event-sourcing/reference/README.md)
+  * [API Reference](apis/event-sourcing/reference/README.md)
     * [Load an Aggregate](apis/event-sourcing/reference/load-all-events-for-an-aggregate.md)
     * [Store Events](apis/event-sourcing/reference/store-events.md)
     * [Check if an aggregate exists](apis/event-sourcing/reference/check-if-an-aggregate-exists.md)
