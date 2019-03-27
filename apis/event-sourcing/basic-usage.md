@@ -44,7 +44,7 @@ Since Events describe facts that have happened they are immutable. You can there
 Serialized supports deletion of Events by deleting the Aggregate that contains the Event. In the case you accidentally stored secret data or have to clean your data by request from a customer we provide the support to do this.
 {% endhint %}
 
-## Event Example: Hotel Management System
+## Event Example: Hotel Room Reservation
 
 Let's say we're developing a Hotel Management System that handles reservations of hotel rooms and see how a reservation could be implemented as a Serialized Event
 
