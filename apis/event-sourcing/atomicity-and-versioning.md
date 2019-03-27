@@ -1,3 +1,7 @@
+---
+description: This page describes atomicity and versioning of Aggregate modifications.
+---
+
 # Atomicity and Versioning
 
 ## Event Batches

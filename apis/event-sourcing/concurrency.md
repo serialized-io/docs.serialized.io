@@ -1,7 +1,7 @@
 ---
 description: >-
-  This page describes the details about how to handle concurrency with
-  Serialized.
+  This page describes the details about using the API to handle concurrent
+  applications.
 ---
 
 # Concurrency
