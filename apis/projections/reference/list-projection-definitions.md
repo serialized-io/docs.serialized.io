@@ -1,4 +1,4 @@
-# List projection definitions
+# List Projection Definitions
 
 {% api-method method="get" host="https://api.serialized.io" path="/projections/definitions" %}
 {% api-method-summary %}

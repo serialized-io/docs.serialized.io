@@ -1,4 +1,4 @@
-# Delete projection definition
+# Delete Projection Definition
 
 {% api-method method="delete" host="https://api.serialized.io" path="/projections/definitions/{projectionName}" %}
 {% api-method-summary %}

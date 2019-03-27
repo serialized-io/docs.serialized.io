@@ -1,2 +1,2 @@
-# Get aggregated projection
+# Get Aggregated Projection
 

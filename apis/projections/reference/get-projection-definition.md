@@ -1,4 +1,4 @@
-# Get projection definition
+# Get Projection Definition
 
 {% api-method method="get" host="https://api.serialized.io" path="/projections/definitions/{projectionName}" %}
 {% api-method-summary %}

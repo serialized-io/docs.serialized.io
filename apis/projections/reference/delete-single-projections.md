@@ -1,4 +1,4 @@
-# Delete/recreate single projections
+# Delete/recreate Single Projections
 
 {% api-method method="delete" host="https://api.serialized.io" path="/projections/single/{projectionName}" %}
 {% api-method-summary %}

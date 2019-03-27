@@ -1,4 +1,4 @@
-# List aggregated projections
+# List Aggregated Projections
 
 {% api-method method="get" host="https://api.serialized.io" path="/projections/aggregated" %}
 {% api-method-summary %}

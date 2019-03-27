@@ -1,4 +1,4 @@
-# Update projection definition
+# Update Projection Definition
 
 {% api-method method="put" host="https://api.serialized.io" path="/projections/definitions/{projectionName}" %}
 {% api-method-summary %}

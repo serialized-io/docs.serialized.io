@@ -1,4 +1,4 @@
-# List single projections
+# List Single Projections
 
 {% api-method method="get" host="https://api.serialized.io" path="/projections/single/{projectionName}" %}
 {% api-method-summary %}

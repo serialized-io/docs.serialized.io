@@ -1,4 +1,4 @@
-# Get projections overview
+# Get Projection Statistics
 
 {% api-method method="get" host="https://api.serialized.io" path="/projections" %}
 {% api-method-summary %}

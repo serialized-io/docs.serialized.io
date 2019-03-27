@@ -1,12 +1,12 @@
-# Delete/recreate aggregated projections
+# Delete/recreate Aggregated Projections
 
 {% api-method method="delete" host="https://api.serialized.io" path="/projections/aggregated/{projectionName}" %}
 {% api-method-summary %}
-This call deletes all existing projections and starts a rebuild from the beginning of the event history. Keep in mind that this might take a while.
+Delete/recreate Aggregated Projections
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Delete/recreate aggregated projections
+Delete/recreate aggregated projections. 
 {% endapi-method-description %}
 
 {% api-method-spec %}

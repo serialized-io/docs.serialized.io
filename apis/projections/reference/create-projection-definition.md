@@ -1,4 +1,4 @@
-# Create projection definition
+# Create Projection Definition
 
 {% api-method method="post" host="https://api.serialized.io" path="/projections/definitions" %}
 {% api-method-summary %}
