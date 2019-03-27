@@ -16,11 +16,15 @@ An **Event** in Serialized describes something important that have happened in y
 
 ### Uniquely identified
 
-Your events have a unique identifier that is of the format of UUID. You can supply this id in the API or you can omit id and let Serialized generate a random unique id before storing the event.
+Your events have a unique identifier that is of the format of UUID. You can supply this id in the API or you can omit id and let Serialized generate a random unique when the Event is stored.
 
 ### Event type
 
-The `eventType` field of the Event describes the meaning of the Event.
+The `eventType` field of the Event describes the meaning of the Event. The Event type describes in business language what has happened.
+
+{% hint style="warning" %}
+Make sure to name your Event type in **past tense**. Events should describe something that happened in the past in order to make sense.
+{% endhint %}
 
 ### Event data
 
