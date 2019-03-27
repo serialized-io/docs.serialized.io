@@ -56,8 +56,6 @@ Adds anything to the end of an array.
 | targetSelector | Array |
 | eventSelector | Array |
 
-{% code-tabs %}
-{% code-tabs-item title="Push example" %}
 ```javascript
 {
   "eventType": "RunnerFinishedRaceEvent",
@@ -70,8 +68,6 @@ Adds anything to the end of an array.
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 ### **prepend**
 
@@ -82,8 +78,6 @@ Adds anything to the beginning of an array.
 | targetSelector | Array |
 | eventSelector | Array |
 
-{% code-tabs %}
-{% code-tabs-item title="Prepend example" %}
 ```javascript
 {
   "eventType": "TodoAddedEvent",
@@ -96,8 +90,6 @@ Adds anything to the beginning of an array.
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 ### **set**
 
@@ -108,8 +100,6 @@ Replaces the value of an existing key
 | targetSelector | Any \(but must exist\) |
 | eventSelector | Any |
 
-{% code-tabs %}
-{% code-tabs-item title="Set example" %}
 ```javascript
 {
   "eventType": "EmailUpdatedEvent",
@@ -122,8 +112,6 @@ Replaces the value of an existing key
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 ### **remove**
 
@@ -135,8 +123,6 @@ Removes an existing key or an array element matching filter expression.
 | eventSelector | Any |
 | targetFilter \(required\) | Filter expression |
 
-{% code-tabs %}
-{% code-tabs-item title="Remove example" %}
 ```javascript
 {
   "eventType": "TodoRemovedEvent",
@@ -149,8 +135,6 @@ Removes an existing key or an array element matching filter expression.
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 ### **add**
 
@@ -161,8 +145,6 @@ Sums two numbers together.
 | targetSelector | Number |
 | eventSelector | Number |
 
-{% code-tabs %}
-{% code-tabs-item title="Add example" %}
 ```javascript
 {
   "eventType": "OrderPlacedEvent",
@@ -175,8 +157,6 @@ Sums two numbers together.
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 ### **subtract**
 
@@ -187,8 +167,6 @@ Subtracts two numbers.
 | targetSelector | Number |
 | eventSelector | Number |
 
-{% code-tabs %}
-{% code-tabs-item title="Subtract example" %}
 ```javascript
 {
   "eventType": "OrderRefundedEvent",
@@ -201,8 +179,6 @@ Subtracts two numbers.
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 ### **inc**
 
@@ -212,8 +188,6 @@ Increases a number by one.
 | :--- | :--- |
 | targetSelector | Number |
 
-{% code-tabs %}
-{% code-tabs-item title="Inc example" %}
 ```javascript
 {
   "eventType": "TicketReservedEvent",
@@ -225,8 +199,6 @@ Increases a number by one.
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 ### **dec**
 
@@ -236,8 +208,6 @@ Decreases a number by one.
 | :--- | :--- |
 | targetSelector | Number |
 
-{% code-tabs %}
-{% code-tabs-item title="Dec example" %}
 ```javascript
 {
   "eventType": "TicketReleasedEvent",
@@ -249,8 +219,6 @@ Decreases a number by one.
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 ## Filters
 
