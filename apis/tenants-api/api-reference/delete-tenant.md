@@ -1,8 +1,8 @@
-# Add Tenant
+# Delete Tenant
 
-{% api-method method="post" host="https://api.serialized.io" path="/tenants" %}
+{% api-method method="delete" host="https://api.cakes.com" path="/v1/cakes/:id" %}
 {% api-method-summary %}
-Add Tenant
+Delete Tenant
 {% endapi-method-summary %}
 
 {% api-method-description %}
