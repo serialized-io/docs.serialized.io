@@ -18,6 +18,7 @@
 ## APIS
 
 * [Event Sourcing API](apis/event-sourcing/README.md)
+  * [Basic Usage](apis/event-sourcing/basic-usage.md)
   * [Concurrency](apis/event-sourcing/concurrency.md)
   * [Atomicity and Versioning](apis/event-sourcing/atomicity-and-versioning.md)
   * [Deleting Aggregates](apis/event-sourcing/deleting-aggregates.md)
@@ -28,6 +29,7 @@
     * [Delete an Aggregate](apis/event-sourcing/reference/delete-an-aggregate.md)
     * [Delete all aggregates by type](apis/event-sourcing/reference/delete-all-aggregates-by-type.md)
 * [Feeds API](apis/feeds/README.md)
+  * [Basic Usage](apis/feeds/basic-usage.md)
   * [Sequence Numbers](apis/feeds/sequence-numbers.md)
   * [The \_all feed](apis/feeds/using-the-_all-feed.md)
   * [Reference](apis/feeds/reference/README.md)
