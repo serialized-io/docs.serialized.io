@@ -6,7 +6,7 @@ Delete/recreate Aggregated Projections
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Delete/recreate aggregated projections. 
+Delete/recreate aggregated projections
 {% endapi-method-description %}
 
 {% api-method-spec %}
