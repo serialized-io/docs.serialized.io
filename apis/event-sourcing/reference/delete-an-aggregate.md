@@ -1,4 +1,4 @@
-# Delete an aggregate
+# Delete an Aggregate
 
 {% api-method method="delete" host="https://api.serialized.io" path="/aggregates/{aggregateType}/{aggregateId}" %}
 {% api-method-summary %}

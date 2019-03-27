@@ -1,8 +1,8 @@
-# Store events
+# Store Events
 
 {% api-method method="post" host="https://api.serialized.io" path="/aggregates/{aggregateType}/events" %}
 {% api-method-summary %}
-Store events
+Store Events
 {% endapi-method-summary %}
 
 {% api-method-description %}
