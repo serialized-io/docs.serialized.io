@@ -1,3 +1,9 @@
+---
+description: >-
+  This page describes how to use the built-in JsonPath support to process event
+  data into projections.
+---
+
 # JsonPath Functions
 
 To create useful projections we need to merge the event data with the projection data in different ways. We provide templating support built on [JsonPath](http://goessner.net/articles/JsonPath) to support this out-of-the-box.
