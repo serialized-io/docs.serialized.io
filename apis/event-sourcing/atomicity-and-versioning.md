@@ -1,6 +1,6 @@
-# Atomicity and versioning
+# Atomicity and Versioning
 
-## Event batches
+## Event Batches
 
 When you update an aggregate you do so by saving batches of events. The reason for this is to ensure atomicity in the case when a command results in multiple events being emitted simultaneously.
 
