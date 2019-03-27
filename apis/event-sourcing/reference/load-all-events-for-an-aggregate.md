@@ -1,3 +1,9 @@
+---
+description: >-
+  By loading all events for a single aggregate we can derive the current state
+  of the Aggregate.
+---
+
 # Load an Aggregate
 
 {% api-method method="get" host="https://api.serialized.io" path="/aggregates/{aggregateType}/{aggregateId}" %}
@@ -6,7 +12,9 @@ Load an Aggregate
 {% endapi-method-summary %}
 
 {% api-method-description %}
-By loading all events for a single aggregate we can derive the current state.
+Before appending events to your aggregate you typically load \(hydrate\) it by loading all previous events for that particular `aggregateId` and fast-forward it into its current state.   
+  
+To limit the size of the response the optional query parameters `since` and `limit` can be used. Note that the parameters represents _changes_ to the aggregate which does not necessarily correspond to the number of events that has been appended to it. The default `limit` is set to `1000`.  
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -23,7 +31,7 @@ The aggregate id
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="since" type="number" required=false %}
-Version number to start from
+Version number to start reading from.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="number" required=false %}
