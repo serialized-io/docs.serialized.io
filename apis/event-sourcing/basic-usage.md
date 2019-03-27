@@ -52,7 +52,7 @@ Serialized supports deletion of Events by deleting the Aggregate that contains t
 
 Let's say we're developing a Hotel Management System that handles reservations of hotel rooms and see how a reservation could be implemented as a Serialized Event:
 
-> A **hotel room** for **Room 213** was **reserved** by **John Doe** at **2019-03-12**.
+> A **hotel room** for **Room 213** was **reserved** by **John Doe** at **2019-03-12** using **reservation number ABC-123**.
 
 ```javascript
 {
@@ -62,6 +62,7 @@ Let's say we're developing a Hotel Management System that handles reservations o
       "eventId": "f2c8bfc1-c702-4f1a-b295-ef113ed7c8be",
       "eventType": "HotelRoomReserved",
       "data": {
+        "reservationNumber" : "ABC-123",
         "roomNumber": "213",
         "guests": ["John Doe"],
         "reservationDate" : "2019-03-12"
@@ -74,6 +75,40 @@ Let's say we're developing a Hotel Management System that handles reservations o
 ## Aggregates
 
 Aggregates are ordered sequences of batches of Events. 
+
+It is your system and application code that will implement the business rules of the Aggregate and Serialized will take care of storing all Events for the Aggregate in an efficient manner and providing the APIs you need to manage the lifecycle of the Aggregate.
+
+## Aggregate Example: Hotel Room Reservation
+
+To connect the example of the `HotelRoomReserved` Event that we used in the previous example we can view the process of a **HotelRoomReservation** as our Aggregate. The reservation would contain multiple Events that refer to this specific reservation and business rules that only makes it possible for Events to occur in a certain order.
+
+#### Confirming the Reservation
+
+Pseudo-code for how your application could implement the use-case of confirming a reservation in a consistent manner looks like this:
+
+1. Load the Aggregate events and current version.
+2. Materialize a current state for the aggregate from the Events. In this case create a data structure with the availability of rooms for certain dates.
+3. Validate that the room is still available for the date of the reservation.
+4. Store a new `ReservationConfirmed` Event providing the version number loaded in step 1 to avoid any inconsistency or double-booking.
+
+```javascript
+{
+  "aggregateId": "2c3cf88c-ee88-427e-818a-ab0267511c84",
+  "events": [
+    {
+      "eventId": "1f112f10-ac94-416c-9b0a-5a5d521ceb66",
+      "eventType": "ReservationConfirmed",
+      "data": {
+        "reservationNumber" : "ABC-123",
+        "confirmationDate" : "2019-03-13"
+      }
+    }
+  ],
+  "expectedVersion" : 46
+}
+```
+
+
 
 
 
