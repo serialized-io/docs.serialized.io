@@ -66,7 +66,7 @@
 * [Tenants API](apis/tenants-api/README.md)
   * [Basic Usage](apis/tenants-api/basic-usage.md)
   * [API Reference](apis/tenants-api/api-reference/README.md)
-    * [Add Tenant](apis/tenants-api/api-reference/untitled.md)
+    * [Add Tenant](apis/tenants-api/api-reference/add-tenant.md)
     * [Delete Tenant](apis/tenants-api/api-reference/delete-tenant.md)
 
 ## Tools
