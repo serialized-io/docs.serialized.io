@@ -11,11 +11,7 @@ This endpoint allows you to create a Tenant.
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Serialized-Access-Keu" type="string" required=false %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
