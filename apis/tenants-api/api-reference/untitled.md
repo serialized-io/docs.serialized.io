@@ -6,7 +6,7 @@ Add Tenant
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get free cakes.
+This endpoint allows you to create a Tenant.
 {% endapi-method-description %}
 
 {% api-method-spec %}
