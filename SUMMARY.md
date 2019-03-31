@@ -6,8 +6,8 @@
 
 * [Accounts](basics/accounts.md)
 * [Projects](basics/projects.md)
-* [Multi-Tenancy](basics/multi-tenant-projects.md)
 * [Authentication](basics/authentication.md)
+* [Multi-Tenancy](basics/multi-tenant-projects.md)
 * [Getting started](basics/getting-started/README.md)
   * [Working with aggregates](basics/getting-started/working-with-aggregates.md)
   * [Projecting events](basics/getting-started/projections.md)
