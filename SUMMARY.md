@@ -77,5 +77,4 @@
 ## Advanced
 
 * [Multi-Tenancy](advanced/multi-tenant-projects.md)
-* [Untitled](advanced/untitled.md)
 
