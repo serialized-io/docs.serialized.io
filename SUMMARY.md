@@ -52,6 +52,7 @@
   * [JsonPath Functions](apis/projections/event-handlers.md)
   * [Custom Functions](apis/projections/external-projector-functions.md)
   * [Examples](apis/projections/examples/README.md)
+    * [Adding search support to Projections](apis/projections/examples/adding-search-support-to-projections.md)
     * [Aggregating data to a list](apis/projections/examples/aggregating-data-to-a-list.md)
     * [Adding and removing from lists](apis/projections/examples/adding-and-removing-from-lists.md)
   * [API Reference](apis/projections/reference/README.md)
