@@ -53,6 +53,7 @@
   * [Custom Functions](apis/projections/external-projector-functions.md)
   * [Examples](apis/projections/examples/README.md)
     * [Aggregating data to a list](apis/projections/examples/aggregating-data-to-a-list.md)
+    * [Adding and removing from lists](apis/projections/examples/adding-and-removing-from-lists.md)
   * [API Reference](apis/projections/reference/README.md)
     * [Create Projection Definition](apis/projections/reference/create-projection-definition.md)
     * [Get Projection Definition](apis/projections/reference/get-projection-definition.md)
