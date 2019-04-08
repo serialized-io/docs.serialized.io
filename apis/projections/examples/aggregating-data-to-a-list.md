@@ -1,6 +1,6 @@
 # Aggregating data to a list
 
-## Projecting a field from all aggregates into a list
+## Example Events
 
 A common use-case is collecting some data across all aggregates for a given type. In the example below we want to be able to get a list of all registered Customers from a single query to a Projection.
 
@@ -36,7 +36,7 @@ Let's say two Customers have been registered in our system with the fo
   }
 ```
 
-### Aggregating a single field
+## Projection definition
 
 We can create an aggregated Projection that pushes all Customer names to a field in our Aggregated Projection called `registered-customers`.
 
@@ -60,7 +60,7 @@ We can create an aggregated Projection that pushes all Customer names to a field
 }
 ```
 
-### Querying the Aggregated Projection
+## Results
 
 When we query the Aggregated Projection we will now get the following result.
 
