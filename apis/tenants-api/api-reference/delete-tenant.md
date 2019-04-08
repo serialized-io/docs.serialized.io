@@ -25,7 +25,6 @@ Tenant successfully deleted.
 {% endapi-method-response-example-description %}
 
 ```javascript
-
 }
 ```
 {% endapi-method-response-example %}
@@ -42,6 +41,4 @@ Could not find the given Tenant.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 
