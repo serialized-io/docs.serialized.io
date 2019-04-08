@@ -64,6 +64,8 @@ We can create an aggregated Projection that pushes all Customer names to a field
 
 When we query the Aggregated Projection we will now get the following result.
 
+{% code-tabs %}
+{% code-tabs-item title="/projections/aggregated/registered-customers" %}
 ```javascript
 {
   "projectionId" : "registered-customers",       
@@ -74,4 +76,6 @@ When we query the Aggregated Projection we will now get the following result.
   }
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 

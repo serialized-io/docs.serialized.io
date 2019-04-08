@@ -86,6 +86,8 @@ Later, one of the participants rejects the invitation:
 
 The result of this example would render a meeting projection that looks like this:
 
+{% code-tabs %}
+{% code-tabs-item title="/projections/single/meetings/723ecfce-14e9-4889-98d5-a3d0ad54912f" %}
 ```javascript
 {
   "projectionId" : "723ecfce-14e9-4889-98d5-a3d0ad54912f",       
@@ -98,6 +100,8 @@ The result of this example would render a meeting projection that looks like thi
   }
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 
 
