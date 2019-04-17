@@ -21,37 +21,29 @@ The aggregate type
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Events successfully stored.
+Delete token created successfully 
 {% endapi-method-response-example-description %}
 
-```text
+```javascript
+{
+  "deleteToken": "12c3780f-2dcb-340f-5532-5693be83f21c"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=204 %}
+{% api-method-response-example-description %}
+Aggregate type successfully deleted
+{% endapi-method-response-example-description %}
+
+```
 
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=400 %}
+{% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-Invalid aggregate type name
-{% endapi-method-response-example-description %}
-
-```text
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=409 %}
-{% api-method-response-example-description %}
-Conflict due to expected version mismatch
-{% endapi-method-response-example-description %}
-
-```text
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=422 %}
-{% api-method-response-example-description %}
-Invalid request body
+Unknown delete token
 {% endapi-method-response-example-description %}
 
 ```text
