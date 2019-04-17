@@ -51,9 +51,9 @@ Aggregate successfully deleted
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=400 %}
+{% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-Invalid aggregate type name or aggregate id
+Unknown delete token
 {% endapi-method-response-example-description %}
 
 ```text
