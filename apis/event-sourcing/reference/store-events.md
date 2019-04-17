@@ -19,15 +19,15 @@ The aggregate type
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="aggregateId" type="string" required=true %}
-
+Aggregate id. Must be UUID.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="events" type="array" required=true %}
-
+Array of events 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="expectedVersion" type="number" required=false %}
-
+Expected version of the aggregate for optimistic concurrency control.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
