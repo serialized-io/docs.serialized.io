@@ -25,7 +25,7 @@ The aggregate id
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Success
+Aggregate exists
 {% endapi-method-response-example-description %}
 
 ```text
@@ -60,6 +60,28 @@ If the aggregate does not exist
 {% tab title="cURL" %}
 ```bash
 todo
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+    
+Response response = client.target(apiRoot)
+    .path("aggregates")
+    .path("order")
+    .path("99415be8-6819-4470-860c-c2933558d8d3")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .head();
+
 ```
 {% endtab %}
 {% endtabs %}
