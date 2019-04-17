@@ -76,6 +76,8 @@ Invalid request body
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
@@ -88,19 +90,55 @@ curl -i https://api.serialized.io/aggregates/order/events \
   "aggregateId": "2c3cf88c-ee88-427e-818a-ab0267511c84",
   "events": [
     {
-      "eventId": "f2c8bfc1-c702-4f1a-b295-ef113ed7c8be",
       "eventType": "PaymentProcessed",
       "data": {
         "paymentMethod": "CARD",
         "amount": 1000,
         "currency": "SEK"
-      },
-      "encryptedData": "string"
+      }
     }
   ],
-  "expectedVersion": 1
+  "expectedVersion": 0
 }
 '
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.UriBuilder;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+    
+Map eventBatch = ImmutableMap.of(
+    "aggregateId", "3070b6fb-f31b-4a8e-bc03-e22d38f4076e",
+    "events", ImmutableList.of(
+        ImmutableMap.of(
+            "eventType", "PaymentProcessed",
+            "data", ImmutableMap.of(
+                "paymentMethod", "CARD",
+                "amount", "1000",
+                "currency", "SEK"
+            )
+        )
+    ),
+    "expectedVersion", "0"
+);
+
+Response response = client.target(apiRoot)
+    .path("aggregates")
+    .path("order")
+    .path("events")
+    .request(MediaType.APPLICATION_JSON_TYPE)
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .post(Entity.json(eventBatch));
+
 ```
 {% endtab %}
 {% endtabs %}
