@@ -91,10 +91,32 @@ If the aggregate does not exist
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Examples
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-todo
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  https://api.serialized.io/aggregates/order/99415be8-6819-4470-860c-c2933558d8d3
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+    Client client = ClientBuilder.newClient();
+    URI apiRoot = URI.create("https://api.serialized.io");
+    
+    Map aggregateResponse = client.target(apiRoot)
+        .path("aggregates")
+        .path("order")
+        .path("99415be8-6819-4470-860c-c2933558d8d3")
+        .request()
+        .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+        .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+        .get(Map.class);
+
 ```
 {% endtab %}
 {% endtabs %}
