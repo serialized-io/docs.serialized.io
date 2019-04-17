@@ -105,17 +105,21 @@ curl -i \
 
 {% tab title="Java" %}
 ```java
-    Client client = ClientBuilder.newClient();
-    URI apiRoot = URI.create("https://api.serialized.io");
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.UriBuilder;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
     
-    Map aggregateResponse = client.target(apiRoot)
-        .path("aggregates")
-        .path("order")
-        .path("99415be8-6819-4470-860c-c2933558d8d3")
-        .request()
-        .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
-        .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
-        .get(Map.class);
+Map aggregateResponse = client.target(apiRoot)
+    .path("aggregates")
+    .path("order")
+    .path("99415be8-6819-4470-860c-c2933558d8d3")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .get(Map.class);
 
 ```
 {% endtab %}
