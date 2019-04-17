@@ -77,9 +77,31 @@ curl -i \
   -X DELETE https://api.serialized.io/aggregates/order/d28bae0e-6f46-4c88-8935-b6e2c87ae4af
 ```
 {% endtab %}
+
+{% tab title="Java" %}
+```java
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.UriBuilder;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+
+Map response = client.target(apiRoot)
+    .path("aggregates")
+    .path("order")
+    .path("99415be8-6819-4470-860c-c2933558d8d3")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .delete(Map.class);
+    
+String deleteToken = (String) response.get("deleteToken");
+```
+{% endtab %}
 {% endtabs %}
 
-#### Example: deleting an aggregate permanently
+#### Permanently deleting the aggregate using the delete token
 
 This example permanently deletes an aggregate using a delete token that was returned in the response to the preceding delete request.
 
@@ -94,6 +116,20 @@ curl -i \
   --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
   --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
   -X DELETE https://api.serialized.io/aggregates/order/d28bae0e-6f46-4c88-8935-b6e2c87ae4af?deleteToken=12c3780f-2dcb-340f-5532-5693be83f21c
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+Response delete = client.target(apiRoot)
+        .path("aggregates")
+        .path("order")
+        .path("99415be8-6819-4470-860c-c2933558d8d3")
+        .queryParam("deleteToken", deleteToken)
+        .request()
+        .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+        .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+        .delete();
 ```
 {% endtab %}
 {% endtabs %}
