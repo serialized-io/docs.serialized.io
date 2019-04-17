@@ -64,7 +64,7 @@ Invalid aggregate type name or aggregate id
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Example: requesting a delete token
+### Example
 
 This example requests a delete token for deleting a specific `order` aggregate
 

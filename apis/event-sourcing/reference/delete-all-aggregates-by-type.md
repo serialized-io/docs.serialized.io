@@ -62,10 +62,66 @@ Invalid request body
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
+
+This example requests a delete token for deleting all aggregates for a given type
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-todo
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  -X DELETE https://api.serialized.io/aggregates/order
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.UriBuilder;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+
+Map response = client.target(apiRoot)
+    .path("aggregates")
+    .path("order")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .delete(Map.class);
+    
+String deleteToken = (String) response.get("deleteToken");
+```
+{% endtab %}
+{% endtabs %}
+
+#### Permanently deleting the aggregate type using the delete token
+
+This example permanently deletes an aggregate type using a delete token that was returned in the response to the preceding delete request.
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  -X DELETE https://api.serialized.io/aggregates/order?deleteToken=12c3780f-2dcb-340f-5532-5693be83f21c
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+Response delete = client.target(apiRoot)
+        .path("aggregates")
+        .path("order")
+        .queryParam("deleteToken", deleteToken)
+        .request()
+        .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+        .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+        .delete();
 ```
 {% endtab %}
 {% endtabs %}
