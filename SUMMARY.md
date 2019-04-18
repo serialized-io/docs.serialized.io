@@ -35,7 +35,7 @@
     * [Get feeds overview](apis/feeds/reference/list-feeds.md)
     * [Get feed of events](apis/feeds/reference/get-feed.md)
     * [Get current sequence number](apis/feeds/reference/get-sequence-number.md)
-    * [Get feed of all events](apis/feeds/reference/get-all-feed.md)
+    * [Get events from all feeds](apis/feeds/reference/get-all-feed.md)
     * [Get current global sequence number](apis/feeds/reference/get-global-sequence-number.md)
 * [Reactions API](apis/reactions/README.md)
   * [Basic Usage](apis/reactions/basic-usage.md)
