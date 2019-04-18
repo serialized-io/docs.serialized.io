@@ -6,7 +6,7 @@ Get current global sequence number
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Get current global sequence number at head for all feeds
+Get current global sequence number at head for all feeds. Note that since this is a **HEAD** request the value is returned as a HTTP header \(`Serialized-SequenceNumber-Current`\).
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -25,11 +25,12 @@ Secret access key for the project
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+Global sequence number successfully retrieved
 {% endapi-method-response-example-description %}
 
 ```text
-
+HTTP/1.1 200 OK
+Serialized-SequenceNumber-Current: 23
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -39,7 +40,33 @@ Secret access key for the project
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-todo
+curl -I \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  https://api.serialized.io/feeds/_all
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.Response;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+
+Response response = client.target(apiRoot)
+    .path("feeds")
+    .path("_all")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .head();
+
+String globalSequenceNumber = (String) response.getHeaders()
+    .getFirst("Serialized-SequenceNumber-Current");
+
 ```
 {% endtab %}
 {% endtabs %}
