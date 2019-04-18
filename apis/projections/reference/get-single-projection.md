@@ -45,8 +45,11 @@ Single Projection successfully received
 
 {% tabs %}
 {% tab title="cURL" %}
-```text
-
+```bash
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  https://api.serialized.io/projections/single/orders/84e3565e-cd61-44e7-9769-c4663588c4dd
 ```
 {% endtab %}
 
