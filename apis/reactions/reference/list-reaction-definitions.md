@@ -34,7 +34,9 @@ Reaction definitions successfully received
         "actionType": "HTTP_POST"
       }
     }
-  ]
+  ],
+  "hasMore": false,
+  "totalCount": 1
 }
 ```
 {% endapi-method-response-example %}

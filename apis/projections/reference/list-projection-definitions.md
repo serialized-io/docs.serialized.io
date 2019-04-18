@@ -41,6 +41,8 @@ Projection definitions successfully received
       ]
     }
   ]
+  "hasMore": false,
+  "totalCount": 1
 }
 ```
 {% endapi-method-response-example %}
