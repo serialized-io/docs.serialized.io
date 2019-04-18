@@ -105,6 +105,9 @@ import com.google.common.collect.ImmutableMap;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+    
 Map<String, Object> reactionDefinition = ImmutableMap.of(
         "reactionName", "payment-processed-email-reaction",
         "feedName", "payment",

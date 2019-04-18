@@ -82,7 +82,6 @@ curl -i \
 ```java
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.core.UriBuilder;
 
 Client client = ClientBuilder.newClient();
 URI apiRoot = URI.create("https://api.serialized.io");

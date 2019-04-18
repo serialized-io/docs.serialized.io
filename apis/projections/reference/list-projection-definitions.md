@@ -11,16 +11,6 @@ List all definitions
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
-Access key for the project
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
-Secret access key for the project
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -56,10 +46,33 @@ If the aggregate does not exist
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-todo
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  https://api.serialized.io/projections/definitions
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+
+Map response = client.target(apiRoot)
+    .path("projections")
+    .path("definitions")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .get(Map.class);
 ```
 {% endtab %}
 {% endtabs %}
