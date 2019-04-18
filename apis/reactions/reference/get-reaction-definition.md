@@ -21,11 +21,23 @@ The reaction name
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Success
+Reaction definition successfully received
 {% endapi-method-response-example-description %}
 
-```text
-
+```javascript
+{
+  "reactionName": "payment-processed-email-reaction",
+  "feedName": "payment",
+  "reactOnEventType": "PaymentProcessed",
+  "cancelOnEventTypes": [
+    "OrderCanceledEvent"
+  ],
+  "triggerTimeField": "my.event.data.field",
+  "offset": "PT1H",
+  "action": {
+    "actionType": "HTTP_POST"
+  }
+}
 ```
 {% endapi-method-response-example %}
 
@@ -42,10 +54,31 @@ Reaction definition not found
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-todo
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  https://api.serialized.io/reactions/definitions/payment-processed-email-reaction
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+
+Map response = client.target(apiRoot)
+    .path("reactions")
+    .path("definitions")
+    .path("payment-notifier")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .get(Map.class);
 ```
 {% endtab %}
 {% endtabs %}
