@@ -16,16 +16,6 @@ Get projection definition
 The projection name
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
-
-{% api-method-headers %}
-{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
-Access key for the project
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
-Secret access key for the project
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -34,27 +24,35 @@ Secret access key for the project
 Success
 {% endapi-method-response-example-description %}
 
-```text
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Invalid aggregate type name or aggregate id
-{% endapi-method-response-example-description %}
-
-```text
-
+```javascript
+{
+  "projectionName": "orders",
+  "feedName": "order",
+  "handlers": [
+    {
+      "eventType": "OrderCancelledEvent",
+      "functionUri": "https://your-server.com/lambda",
+      "functions": [
+        {
+          "function": "inc",
+          "targetSelector": "$.projection.orders[?]",
+          "eventSelector": "$.event[?]",
+          "targetFilter": "@.orderId == $.event.orderId",
+          "eventFilter": "@.orderAmount > 4000"
+        }
+      ]
+    }
+  ]
+}
 ```
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
-If the aggregate does not exist
+If Projection definition is not found
 {% endapi-method-response-example-description %}
 
-```text
+```
 
 ```
 {% endapi-method-response-example %}
@@ -62,11 +60,37 @@ If the aggregate does not exist
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-todo
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  https://api.serialized.io/projections/definitions/order
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+
+Map response = client.target(apiRoot)
+    .path("projections")
+    .path("definitions")
+    .path("orders")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .get(Map.class);
 ```
 {% endtab %}
 {% endtabs %}
+
+
 
