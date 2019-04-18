@@ -45,7 +45,10 @@ Projection definition not found
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-todo
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  -X DELETE https://api.serialized.io/projections/definitions/orders
 ```
 {% endtab %}
 {% endtabs %}

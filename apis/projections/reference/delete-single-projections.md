@@ -2,11 +2,12 @@
 
 {% api-method method="delete" host="https://api.serialized.io" path="/projections/single/{projectionName}" %}
 {% api-method-summary %}
-This call deletes all existing projections and starts a rebuild from the beginning of the event history. Keep in mind that this might take a while.
+Delete/recreate single projections
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Delete/recreate single projections
+  
+This call deletes all existing projections and starts a rebuild from the beginning of the event history. Keep in mind that this might take a while.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -21,7 +22,7 @@ The projection name
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Projection definition successfully deleted.
+Projections successfully deleted.
 {% endapi-method-response-example-description %}
 
 ```text
@@ -31,7 +32,7 @@ Projection definition successfully deleted.
 
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
-Projection definition not found
+Projection type not found
 {% endapi-method-response-example-description %}
 
 ```text
@@ -42,10 +43,34 @@ Projection definition not found
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-todo
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  -X DELETE https://api.serialized.io/projections/single/orders
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+
+Response response = client.target(apiRoot)
+    .path("projections")
+    .path("single")
+    .path("orders")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .delete();
 ```
 {% endtab %}
 {% endtabs %}
