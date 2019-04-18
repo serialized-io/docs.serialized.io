@@ -45,7 +45,30 @@ Projection definition not found
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-todo
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  -X DELETE https://api.serialized.io/projections/definitions/orders
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import com.google.common.collect.ImmutableMap;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+
+Response response = client.target(apiRoot)
+    .path("projections")
+    .path("definitions")
+    .path("orders")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .delete();
 ```
 {% endtab %}
 {% endtabs %}
