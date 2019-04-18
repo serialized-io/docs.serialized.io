@@ -1,8 +1,8 @@
-# List feeds
+# Get feeds overview
 
 {% api-method method="get" host="https://api.serialized.io" path="/feeds" %}
 {% api-method-summary %}
-List feeds
+Get feeds overview
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -28,8 +28,17 @@ Secret access key for the project
 Success
 {% endapi-method-response-example-description %}
 
-```text
-
+```javascript
+{
+  "feeds": [
+    {
+      "aggregateType": "payment",
+      "aggregateCount": 1337,
+      "batchCount": 7331,
+      "eventCount": 9977
+    }
+  ]
+}
 ```
 {% endapi-method-response-example %}
 
@@ -56,10 +65,33 @@ If the aggregate does not exist
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-todo
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  https://api.serialized.io/feeds
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.Response;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+    
+Map response = client.target(apiRoot)
+    .path("feeds")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .get(Map.class);
 ```
 {% endtab %}
 {% endtabs %}

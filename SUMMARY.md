@@ -32,7 +32,7 @@
   * [Sequence Numbers](apis/feeds/sequence-numbers.md)
   * [The \_all feed](apis/feeds/using-the-_all-feed.md)
   * [API Reference](apis/feeds/reference/README.md)
-    * [List feeds](apis/feeds/reference/list-feeds.md)
+    * [Get feeds overview](apis/feeds/reference/list-feeds.md)
     * [Get feed of all events](apis/feeds/reference/get-all-feed.md)
     * [Get current global sequence number](apis/feeds/reference/get-global-sequence-number.md)
     * [Get current sequence number](apis/feeds/reference/get-sequence-number.md)
