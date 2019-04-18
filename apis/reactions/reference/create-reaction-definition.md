@@ -45,7 +45,7 @@ Action to invoke. See examples below.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Events successfully stored.
+Reaction definition successfully created.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -53,19 +53,9 @@ Events successfully stored.
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Invalid aggregate type name
-{% endapi-method-response-example-description %}
-
-```text
-
-```
-{% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=409 %}
 {% api-method-response-example-description %}
-Conflict due to expected version mismatch
+If reaction definition name is not unique
 {% endapi-method-response-example-description %}
 
 ```text
@@ -89,6 +79,33 @@ Invalid request body
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
+
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import com.google.common.collect.ImmutableMap;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+
+Map<String, Object> reactionDefinition = ImmutableMap.of(
+        "reactionName", "payment-processed-email-reaction",
+        "feedName", "payment",
+        "reactOnEventType", "PaymentProcessed",
+        "action", ImmutableMap.of(
+            "actionType", "HTTP_POST",
+            "targetUri", "https://your-email-service"
+        )
+    );
+
+Response response = client.target(apiRoot)
+    .path("reactions")
+    .path("definitions")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .post(Entity.json(reactionDefinition));
 
 ```
 {% endtab %}
