@@ -11,11 +11,21 @@ This endpoint allows you to create a Tenant.
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="tenantId" type="string" required=true %}
+Unique tenant id
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="reference" type="string" required=false %}
+Tenant reference
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+Tenant successfully created
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -35,4 +45,46 @@ Invalid Tenant id or reference.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+### Example
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -i https://api.serialized.io/tenants \
+  --header "Content-Type: application/json" \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  --data '
+  {  
+     "tenantId": "e9ef574f-4563-4d56-ad9e-0a2d5ce42004",
+     "reference": "Acme Inc"     
+  }
+  '
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import com.google.common.collect.ImmutableMap;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+
+Map<String, Object> tenant = ImmutableMap.of(
+    "tenantId", "e9ef574f-4563-4d56-ad9e-0a2d5ce42004",
+    "reference", "Acme Inc"
+);
+
+Response response = client.target(apiRoot)
+    .path("tenants")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .post(Entity.json(tenant));
+```
+{% endtab %}
+{% endtabs %}
 

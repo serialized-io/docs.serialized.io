@@ -24,8 +24,8 @@ ID of the Tenant to delete
 Tenant successfully deleted.
 {% endapi-method-response-example-description %}
 
-```javascript
-}
+```
+
 ```
 {% endapi-method-response-example %}
 
