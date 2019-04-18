@@ -17,19 +17,9 @@ The projection name
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
-Access key for the project
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
-Secret access key for the project
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
 {% api-method-query-parameters %}
 {% api-method-parameter name="sort" type="number" required=false %}
-Sort string. Any combination of the following fields: projectionId, reference, createdAt, updatedAt. Add '+' and '-' prefixes to indicate ascending/descending sort order. Ascending order is default.
+Sort string. Any combination of the following fields: `projectionId`, `reference`, `createdAt`, updatedAt. Add '+' and '-' prefixes to indicate ascending/descending sort order. Ascending order is default.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="skip" type="number" required=false %}
@@ -48,24 +38,25 @@ Max number of entries to include in response. Default is 100.
 Success
 {% endapi-method-response-example-description %}
 
-```text
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Invalid aggregate type name or aggregate id
-{% endapi-method-response-example-description %}
-
-```text
-
+```javascript
+{
+  "projections": [
+    {
+      "projectionId": "22c3780f-6dcb-440f-8532-6693be83f21c",
+      "createdAt": 1523518143967,
+      "updatedAt": 1523518144467,
+      "data": {}
+    }
+  ],
+  "hasMore": false,
+  "totalCount": 1
+}
 ```
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
-If the aggregate does not exist
+If the Projection type does not exist
 {% endapi-method-response-example-description %}
 
 ```text
@@ -76,10 +67,34 @@ If the aggregate does not exist
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-todo
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  https://api.serialized.io/projections/single/orders
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+
+Map response = client.target(apiRoot)
+    .path("projections")
+    .path("single")
+    .path("orders")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .get(Map.class);
 ```
 {% endtab %}
 {% endtabs %}
