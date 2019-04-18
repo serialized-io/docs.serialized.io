@@ -23,7 +23,7 @@ Secret access key for the project
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="since" type="number" required=false %}
-Sequence number to start feeding from
+Sequence number to start feeding from \(exclusive\).
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="number" required=false %}
@@ -43,31 +43,33 @@ ISO 8601 data-time string to stop at, eg. 2017-07-21T17:32:28. Must be used in c
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Success
+Feed successfully received
 {% endapi-method-response-example-description %}
 
-```text
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Invalid aggregate type name or aggregate id
-{% endapi-method-response-example-description %}
-
-```text
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-If the aggregate does not exist
-{% endapi-method-response-example-description %}
-
-```text
-
+```javascript
+{
+  "entries": [
+    {
+      "sequenceNumber": 12314,
+      "aggregateId": "22c3780f-6dcb-440f-8532-6693be83f21c",
+      "timestamp": 1503386583474,
+      "events": [
+        {
+          "eventId": "f2c8bfc1-c702-4f1a-b295-ef113ed7c8be",
+          "eventType": "PaymentProcessed",
+          "data": {
+            "paymentMethod": "CARD",
+            "amount": 1000,
+            "currency": "SEK"
+          },
+          "encryptedData": "string"
+        }
+      ]
+    }
+  ],
+  "hasMore": false,
+  "currentSequenceNumber": 123456
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -77,7 +79,29 @@ If the aggregate does not exist
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-todo
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  https://api.serialized.io/feeds/_all
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.Response;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+
+Map response = client.target(apiRoot)
+   .path("feeds")
+   .path("_all")
+   .request()
+   .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+   .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+   .get(Map.class);
 ```
 {% endtab %}
 {% endtabs %}
