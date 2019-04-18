@@ -16,16 +16,6 @@ Get reaction definition
 The reaction name
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
-
-{% api-method-headers %}
-{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
-Access key for the project
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
-Secret access key for the project
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}

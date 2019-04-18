@@ -17,16 +17,6 @@ The feed name
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
-Access key for the project
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
-Secret access key for the project
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
 {% api-method-query-parameters %}
 {% api-method-parameter name="since" type="number" required=false %}
 Sequence number to start feeding from

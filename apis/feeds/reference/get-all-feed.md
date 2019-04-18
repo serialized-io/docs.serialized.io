@@ -11,16 +11,6 @@ Get all events for all aggregates for all types \(feed names\). The payload is r
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
-Access key for the project
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
-Secret access key for the project
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
 {% api-method-query-parameters %}
 {% api-method-parameter name="since" type="number" required=false %}
 Sequence number to start feeding from \(exclusive\).
