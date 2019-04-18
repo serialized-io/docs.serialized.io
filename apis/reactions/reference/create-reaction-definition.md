@@ -79,7 +79,21 @@ Invalid request body
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-
+curl -i https://api.serialized.io/reactions/definitions \
+  --header "Content-Type: application/json" \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  --data '
+  {
+    "reactionName": "payment-processed-email-reaction",
+    "feedName": "payment",
+    "reactOnEventType": "PaymentProcessed",
+    "action": {
+      "actionType": "HTTP_POST",
+      "targetUri": "https://your-email-service"
+    }
+  }
+  '
 ```
 {% endtab %}
 
