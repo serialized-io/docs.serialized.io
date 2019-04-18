@@ -1,8 +1,8 @@
-# Get events from all feeds
+# Get feed of all events
 
 {% api-method method="get" host="https://api.serialized.io" path="/feeds/\_all" %}
 {% api-method-summary %}
-Get events from all feeds
+Get feed of all events
 {% endapi-method-summary %}
 
 {% api-method-description %}
