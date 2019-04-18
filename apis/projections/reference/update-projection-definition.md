@@ -45,26 +45,6 @@ Projection definition successfully updated
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Invalid aggregate type name
-{% endapi-method-response-example-description %}
-
-```text
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=409 %}
-{% api-method-response-example-description %}
-Conflict due to expected version mismatch
-{% endapi-method-response-example-description %}
-
-```text
-
-```
-{% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=422 %}
 {% api-method-response-example-description %}
 Invalid request body
