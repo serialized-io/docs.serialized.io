@@ -51,7 +51,7 @@ Action to invoke. See examples below.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Events successfully stored.
+Reaction definition successfully updated
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -61,17 +61,7 @@ Events successfully stored.
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Invalid aggregate type name
-{% endapi-method-response-example-description %}
-
-```text
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=409 %}
-{% api-method-response-example-description %}
-Conflict due to expected version mismatch
+If there is a mismatch in the ID of the reaction name in the payload and the path
 {% endapi-method-response-example-description %}
 
 ```text
@@ -92,10 +82,54 @@ Invalid request body
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
+curl -i https://api.serialized.io/reactions/definitions \
+  --header "Content-Type: application/json" \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  -X PUT \
+  --data '
+  {
+    "reactionName": "payment-processed-email-reaction",
+    "feedName": "payment",
+    "reactOnEventType": "PaymentProcessed",
+    "action": {
+      "actionType": "HTTP_POST",
+      "targetUri": "https://your-email-service"
+    }
+  }
+  '
+```
+{% endtab %}
 
+{% tab title="Java" %}
+```java
+import com.google.common.collect.ImmutableMap;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+
+Map<String, Object> reactionDefinition = ImmutableMap.of(
+    "reactionName", "payment-processed-email-reaction",
+    "feedName", "payment",
+    "reactOnEventType", "PaymentProcessed",
+    "action", ImmutableMap.of(
+        "actionType", "HTTP_POST",
+        "targetUri", "https://your-email-service"
+    )
+);
+
+Response response = client.target(apiRoot)
+    .path("reactions")
+    .path("definitions")
+    .path("payment-processed-email-reaction")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .put(Entity.json(reactionDefinition));
 ```
 {% endtab %}
 {% endtabs %}
