@@ -15,31 +15,33 @@ List all definitions
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Success
+Projection definitions successfully received
 {% endapi-method-response-example-description %}
 
-```text
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Invalid aggregate type name or aggregate id
-{% endapi-method-response-example-description %}
-
-```text
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-If the aggregate does not exist
-{% endapi-method-response-example-description %}
-
-```text
-
+```javascript
+{
+  "definitions": [
+    {
+      "projectionName": "orders",
+      "feedName": "order",
+      "handlers": [
+        {
+          "eventType": "OrderCancelledEvent",
+          "functionUri": "https://your-server.com/lambda",
+          "functions": [
+            {
+              "function": "inc",
+              "targetSelector": "$.projection.orders[?]",
+              "eventSelector": "$.event[?]",
+              "targetFilter": "@.orderId == $.event.orderId",
+              "eventFilter": "@.orderAmount > 4000"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
