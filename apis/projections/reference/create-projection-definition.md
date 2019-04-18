@@ -12,8 +12,12 @@ Create a new reaction definition
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
+{% api-method-parameter name="idField" type="string" required=false %}
+Field in the Projection to use as id field in queries. Defaults to the aggregate id.
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="aggregated" type="boolean" required=false %}
-If true, creates an aggregated Projection. Default: false
+If true, creates an aggregated Projection. Default: `false`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="projectionName" type="string" required=true %}
@@ -37,6 +41,26 @@ Projection definition successfully created
 {% endapi-method-response-example-description %}
 
 ```javascript
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=409 %}
+{% api-method-response-example-description %}
+If projection name is not unique
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=422 %}
+{% api-method-response-example-description %}
+If request body is invalid
+{% endapi-method-response-example-description %}
+
+```
 
 ```
 {% endapi-method-response-example %}
