@@ -88,6 +88,22 @@ String deleteToken = (String) response.get("deleteToken");
 ```
 {% endtab %}
 
+{% tab title="C\#" %}
+```csharp
+using RestSharp;
+using System;
+
+var client = new RestClient("https://api.serialized.io");
+
+var request = new RestRequest("aggregates/order", Method.DELETE)
+   .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+   .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
+
+var response = client.Execute<Dictionary<string, Object>>(request);
+var deleteToken = response.Data["deleteToken"]
+```
+{% endtab %}
+
 {% tab title="Node" %}
 ```javascript
 const axios = require("axios");
@@ -138,6 +154,22 @@ Response delete = client.target(apiRoot)
         .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
         .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
         .delete();
+```
+{% endtab %}
+
+{% tab title="C\#" %}
+```csharp
+using RestSharp;
+using System;
+
+var client = new RestClient("https://api.serialized.io");
+
+var request = new RestRequest("aggregates/order", Method.DELETE)
+   .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+   .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+   .AddQueryParameter("deleteToken", deleteToken);
+
+var response = client.Execute<Dictionary<string, Object>>(request);
 ```
 {% endtab %}
 
