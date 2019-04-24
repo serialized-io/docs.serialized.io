@@ -141,6 +141,50 @@ Response response = client.target(apiRoot)
 ```
 {% endtab %}
 
+{% tab title="C\#" %}
+```csharp
+using System;
+using System.Collections.Generic;
+using RestSharp;
+
+class Event
+{
+    public string eventType { get; set; }
+    public Dictionary<string, Object> data { get; set; }
+}
+
+class EventBatch
+{
+    public string aggregateId { get; set; }
+    public List<Event> events { get; set; }
+}
+
+var postRequest = new RestRequest("aggregates/payments/events", Method.POST)
+   .AddHeader("Serialized-Access-Key", "9bc49330642e44f1b2d89fe935a27433")
+   .AddHeader("Serialized-Secret-Access-Key", "40d3ece14b9c4438b885ac2e390d193d059c48da3d444d59901f5744a12f21ee");
+
+var eventBatch = new EventBatch
+{
+    aggregateId = "99415be8-6819-4470-860c-c2933558d8d3",
+    events = new List<Event>
+    {
+        new Event
+        {
+            eventType = "PaymentProcessed",
+            data = new Dictionary<string, Object>
+                {
+                    { "paymentMethod", "CARD" },
+                    { "amount", 1000 },
+                    { "currency", "SEK" }
+                }
+        }
+    }
+};
+postRequest.AddJsonBody(eventBatch);
+var response = client.Execute(postRequest);
+```
+{% endtab %}
+
 {% tab title="Node" %}
 ```javascript
 const axios = require("axios");
