@@ -86,5 +86,25 @@ Response response = client.target(apiRoot)
 
 ```
 {% endtab %}
+
+{% tab title="Node" %}
+```javascript
+const axios = require("axios");
+
+const client = axios.create({
+  baseURL: "https://api.serialized.io",
+  headers: {"Serialized-Access-Key": "<YOUR_ACCESS_KEY>"},
+  headers: {"Serialized-Secret-Access-Key": "<YOUR_SECRET_ACCESS_KEY>"}
+});
+
+client.head("aggregates/order/99415be8-6819-4470-860c-c2933558d8d3")
+    .then(function (aggregateResponse) {
+      // Handle response
+    })
+    .catch(function (error) {
+      // Handle error
+    });
+```
+{% endtab %}
 {% endtabs %}
 

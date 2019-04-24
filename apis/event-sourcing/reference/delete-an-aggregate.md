@@ -98,6 +98,27 @@ Map response = client.target(apiRoot)
 String deleteToken = (String) response.get("deleteToken");
 ```
 {% endtab %}
+
+{% tab title="Node" %}
+```javascript
+const axios = require("axios");
+
+const client = axios.create({
+  baseURL: "https://api.serialized.io",
+  headers: {"Serialized-Access-Key": "<YOUR_ACCESS_KEY>"},
+  headers: {"Serialized-Secret-Access-Key": "<YOUR_SECRET_ACCESS_KEY>"}
+});
+
+client.delete("aggregates/order/99415be8-6819-4470-860c-c2933558d8d3")
+    .then(function (response) {
+      const deleteToken = response.data.deleteToken;
+      // Use deleteToken
+    })
+    .catch(function (error) {
+      // Handle error
+    });
+```
+{% endtab %}
 {% endtabs %}
 
 #### Permanently deleting the aggregate using the delete token
@@ -129,6 +150,24 @@ Response delete = client.target(apiRoot)
         .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
         .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
         .delete();
+```
+{% endtab %}
+
+{% tab title="Node" %}
+```javascript
+const requestConfig = {
+  params: {
+    deleteToken: deleteToken 
+  }
+};
+
+client.delete("aggregates/order/99415be8-6819-4470-860c-c2933558d8d3", requestConfig)
+    .then(function (response) {
+      // Handle response
+    })
+    .catch(function (error) {
+      // Handle error
+    });
 ```
 {% endtab %}
 {% endtabs %}
