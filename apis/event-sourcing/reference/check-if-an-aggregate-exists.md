@@ -98,7 +98,7 @@ const client = axios.create({
 });
 
 client.head("aggregates/order/99415be8-6819-4470-860c-c2933558d8d3")
-    .then(function (aggregateResponse) {
+    .then(function (response) {
       // Handle response
     })
     .catch(function (error) {
