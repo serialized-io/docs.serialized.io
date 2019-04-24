@@ -114,6 +114,10 @@ client.delete("aggregates/order")
 
 This example permanently deletes an aggregate type using a delete token that was returned in the response to the preceding delete request.
 
+{% hint style="danger" %}
+This is a permanent request that cannot be undone. If you need to be able to restore this data in any way you must back it up on your side before executing the deletion.
+{% endhint %}
+
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
