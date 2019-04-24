@@ -137,7 +137,32 @@ Response response = client.target(apiRoot)
 {% endtab %}
 
 {% tab title="C\#" %}
+```csharp
+using System;
+using System.Collections.Generic;
+using RestSharp;
 
+var definition = new Dictionary<string, object>
+{
+    { "reactionName", "payment-processed-email-reaction" },
+    { "feedName", "payment" },
+    { "reactOnEventType", "PaymentProcessed" },
+    { "action", new Dictionary<string, Object>
+        {
+            {"actionType", "HTTP_POST"},
+            {"targetUri", "https://your-email-service"}
+        }
+    },
+};
+
+var request = new RestRequest("reactions/definitions/{reactionName}", Method.PUT)
+    .AddUrlSegment("reactionName", "payment-processed-email-reaction")
+    .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
+    .AddJsonBody(definition);
+
+var response = client.Execute(request);
+```
 {% endtab %}
 
 {% tab title="Node" %}

@@ -93,7 +93,7 @@ using System;
 var client = new RestClient("https://api.serialized.io");
 
 var request = new RestRequest("reactions/definitions/{reactionName}", Method.GET)
-   .AddUrlSegment("reactionName", "payment-notifier")
+   .AddUrlSegment("reactionName", "payment-processed-email-reaction")
    .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
    .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
 
@@ -103,17 +103,21 @@ var response = client.Execute<Dictionary<string, Object>>(request);
 
 {% tab title="Node" %}
 ```javascript
-using RestSharp;
-using System;
+const axios = require("axios");
 
-var client = new RestClient("https://api.serialized.io");
+const client = axios.create({
+  baseURL: "https://api.serialized.io",
+  headers: {"Serialized-Access-Key": "<YOUR_ACCESS_KEY>"},
+  headers: {"Serialized-Secret-Access-Key": "<YOUR_SECRET_ACCESS_KEY>"}
+});
 
-var request = new RestRequest("reactions/{reactionName}", Method.GET)
-   .AddUrlSegment("reactionName", "payment-notifier")
-   .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
-   .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
-
-var response = client.Execute<Dictionary<string, Object>>(request);
+client.get("reactions/definitions/payment-processed-email-reaction")
+    .then(function (response) {
+      // Handle response
+    })
+    .catch(function (error) {
+      // Handle error
+    });
 ```
 {% endtab %}
 {% endtabs %}
