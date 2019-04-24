@@ -144,6 +144,94 @@ Response response = client.target(apiRoot)
     .post(Entity.json(projectionDefinition));
 ```
 {% endtab %}
+
+{% tab title="C\#" %}
+```csharp
+using System;
+using System.Collections.Generic;
+using RestSharp;
+
+var definition = new Dictionary<string, Object>
+{
+    { "projectionName", "orders" },
+    { "feedName", "order" },
+    { "handlers", new List<Dictionary<string, Object>>
+        {
+            new Dictionary<string, Object>
+            {
+                {"eventType", "OrderPlacedEvent"},
+                {"functions", new List<Dictionary<string, Object>>
+                    {
+                        new Dictionary<string, Object>
+                        {
+                            {"function", "set"},
+                            {"targetSelector", "$.projection.status"},
+                            { "rawData", "PLACED"}
+                        },
+                        new Dictionary<string, Object>
+                        {
+                            {"function", "set"},
+                            {"targetSelector", "$.projection.orderAmount"},
+                            { "eventSelector", "$.event.orderAmount"}
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+
+var request = new RestRequest("projections/definitions", Method.POST)
+   .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+   .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
+   .AddJsonBody(definition);
+
+var response = client.Execute(request);
+```
+{% endtab %}
+
+{% tab title="Node" %}
+```javascript
+const axios = require("axios");
+
+const client = axios.create({
+  baseURL: "https://api.serialized.io",
+  headers: {"Serialized-Access-Key": "<YOUR_ACCESS_KEY>"},
+  headers: {"Serialized-Secret-Access-Key": "<YOUR_SECRET_ACCESS_KEY>"}
+});
+
+const definition = {
+  projectionName: "orders",
+  feedName: "order",
+  handlers: [
+    {
+      eventType: "OrderPlacedEvent",
+      functions: [
+        {
+          "function": "set",
+          "targetSelector": "$.projection.status",
+          "rawData": "PLACED"
+        },
+        {
+          "function": "set",
+          "targetSelector": "$.projection.orderAmount",
+          "eventSelector": "$.event.orderAmount"
+        }
+      ]
+    }
+  ]
+};
+
+client.post("projections/definitions", definition)
+    .then(function (response) {
+      // Handle response
+    })
+    .catch(function (error) {
+      // Handle error
+    });
+
+```
+{% endtab %}
 {% endtabs %}
 
 
