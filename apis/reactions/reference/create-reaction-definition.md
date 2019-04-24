@@ -128,5 +128,65 @@ Response response = client.target(apiRoot)
 
 ```
 {% endtab %}
+
+{% tab title="C\#" %}
+```csharp
+using System;
+using System.Collections.Generic;
+using RestSharp;
+
+var definition = new Dictionary<string, object>
+{
+    { "reactionName", "payment-processed-email-reaction" },
+    { "feedName", "payment" },
+    { "reactOnEventType", "PaymentProcessed" },
+    { "action", new Dictionary<string, Object>
+        {
+            {"actionType", "HTTP_POST"},
+            {"targetUri", "https://your-email-service"}
+        }
+    },
+};
+
+var postRequest = new RestRequest("reactions/definitions", Method.POST)
+   .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+   .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
+   .AddJsonBody(definition);
+
+var response = client.Execute(postRequest);
+
+```
+{% endtab %}
+
+{% tab title="Node" %}
+```javascript
+const axios = require("axios");
+
+const client = axios.create({
+  baseURL: "https://api.serialized.io",
+  headers: {"Serialized-Access-Key": "<YOUR_ACCESS_KEY>"},
+  headers: {"Serialized-Secret-Access-Key": "<YOUR_SECRET_ACCESS_KEY>"}
+});
+
+const definition = {
+  reactionName: "payment-processed-email-reaction",
+  feedName: "payment",
+  reactOnEventType: "PaymentProcessed",
+  action: {
+    actionType: "HTTP_POST",
+    targetUri: "https://your-email-service"
+  }
+};
+
+client.post("reactions/definitions", definition)
+    .then(function (response) {
+      // Handle response
+    })
+    .catch(function (error) {
+      // Handle error
+    });
+
+```
+{% endtab %}
 {% endtabs %}
 

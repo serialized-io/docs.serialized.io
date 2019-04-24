@@ -168,8 +168,8 @@ var eventBatch = new Dictionary<string, Object>
 };
 
 var postRequest = new RestRequest("aggregates/payments/events", Method.POST)
-   .AddHeader("Serialized-Access-Key", "9bc49330642e44f1b2d89fe935a27433")
-   .AddHeader("Serialized-Secret-Access-Key", "40d3ece14b9c4438b885ac2e390d193d059c48da3d444d59901f5744a12f21ee")
+   .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+   .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
    .AddJsonBody(eventBatch);
 
 var response = client.Execute(postRequest);

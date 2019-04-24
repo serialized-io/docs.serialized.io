@@ -135,5 +135,39 @@ Response response = client.target(apiRoot)
     .put(Entity.json(reactionDefinition));
 ```
 {% endtab %}
+
+{% tab title="C\#" %}
+
+{% endtab %}
+
+{% tab title="Node" %}
+```javascript
+const axios = require("axios");
+
+const client = axios.create({
+  baseURL: "https://api.serialized.io",
+  headers: {"Serialized-Access-Key": "<YOUR_ACCESS_KEY>"},
+  headers: {"Serialized-Secret-Access-Key": "<YOUR_SECRET_ACCESS_KEY>"}
+});
+
+const definition = {
+  reactionName: "payment-processed-email-reaction",
+  feedName: "payment",
+  reactOnEventType: "PaymentProcessed",
+  action: {
+    actionType: "HTTP_POST",
+    targetUri: "https://your-email-service"
+  }
+};
+
+client.put("reactions/definitions/payment-processed-email-reaction", definition)
+    .then(function (response) {
+      // Handle response
+    })
+    .catch(function (error) {
+      // Handle error
+    });
+```
+{% endtab %}
 {% endtabs %}
 
