@@ -136,7 +136,7 @@ var request = new RestRequest("aggregates/order/{aggregateId}")
    .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
    .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
 
-var aggregateResponse = client.Get(request);
+var response = client.Get(request);
 ```
 {% endtab %}
 
