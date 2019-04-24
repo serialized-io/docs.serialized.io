@@ -121,7 +121,7 @@ Map eventBatch = ImmutableMap.of(
             "eventType", "PaymentProcessed",
             "data", ImmutableMap.of(
                 "paymentMethod", "CARD",
-                "amount", "1000",
+                "amount", 1000,
                 "currency", "SEK"
             )
         )
@@ -137,6 +137,41 @@ Response response = client.target(apiRoot)
     .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
     .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
     .post(Entity.json(eventBatch));
+
+```
+{% endtab %}
+
+{% tab title="Node" %}
+```javascript
+const axios = require("axios");
+
+const client = axios.create({
+  baseURL: "https://api.serialized.io",
+  headers: {"Serialized-Access-Key": "<YOUR_ACCESS_KEY>"},
+  headers: {"Serialized-Secret-Access-Key": "<YOUR_SECRET_ACCESS_KEY>"}
+});
+
+const eventBatch = {
+  aggregateId: "99415be8-6819-4470-860c-c2933558d8d3",
+  events: [
+    {
+      eventType: "PaymentProcessed",
+      data: {
+        paymentMethod: "CARD",
+        amount: 1000,
+        currency: "SEK"
+      }
+    }
+  ]
+};
+
+client.post("aggregates/order/events", eventBatch)
+    .then(function (response) {
+      // Handle response
+    })
+    .catch(function (error) {
+      // Handle error
+    });
 
 ```
 {% endtab %}
