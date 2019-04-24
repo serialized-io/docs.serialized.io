@@ -68,6 +68,22 @@ String globalSequenceNumber = (String) response.getHeaders()
 ```
 {% endtab %}
 
+{% tab title="C\#" %}
+```csharp
+using RestSharp;
+using System;
+
+var client = new RestClient("https://api.serialized.io");
+
+var request = new RestRequest("aggregates/order/{aggregateId}")
+   .AddUrlSegment("aggregateId", "99415be8-6819-4470-860c-c2933558d8d3")
+   .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+   .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
+
+var aggregateResponse = client.Head(request);
+```
+{% endtab %}
+
 {% tab title="Node" %}
 ```javascript
 const axios = require("axios");

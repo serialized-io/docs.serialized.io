@@ -65,6 +65,21 @@ Map response = client.target(apiRoot)
 ```
 {% endtab %}
 
+{% tab title="C\#" %}
+```csharp
+using RestSharp;
+using System;
+
+var client = new RestClient("https://api.serialized.io");
+
+var request = new RestRequest("feeds", Method.GET)
+   .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+   .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
+
+var response = client.Execute<Dictionary<string, Object>>(request);
+```
+{% endtab %}
+
 {% tab title="Node" %}
 ```javascript
 const axios = require("axios");

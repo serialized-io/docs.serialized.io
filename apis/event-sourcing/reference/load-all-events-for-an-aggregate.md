@@ -131,12 +131,12 @@ using System;
 
 var client = new RestClient("https://api.serialized.io");
 
-var request = new RestRequest("aggregates/order/{aggregateId}")
+var request = new RestRequest("aggregates/order/{aggregateId}", Method.GET)
    .AddUrlSegment("aggregateId", "99415be8-6819-4470-860c-c2933558d8d3")
    .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
    .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
 
-var response = client.Get(request);
+var response = client.Execute<Dictionary<string, Object>>(request);
 ```
 {% endtab %}
 
