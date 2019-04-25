@@ -36,25 +36,79 @@ The above example can also be simplified to:
 
 since the default values for `targetSelector` and `eventSelector` are `$.event` and `$.projection`, respectively.
 
-## **Supported handler functions**
+### Providing raw data
+
+If you have a static value that you want to use as the data for the projection instead of some value that is provided in the event, you can use the `rawData` argument instead of the `eventSelector`. You can then provide any JSON value which will be used as-is.
+
+{% hint style="warning" %}
+`rawData` and `eventSelector` are always mutual exclusive, so make sure you only provide one of them in your function configuration.
+{% endhint %}
+
+## **Basic object modification**
 
 ### **merge**
 
 Merges two JSON objects.
 
-| Argument | Expected evaluation |
-| :--- | :--- |
-| targetSelector | Object |
-| eventSelector | Object |
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | Object | Yes |
+| eventSelector | Object | No |
+| targetFilter | _Not used_ | No |
+| eventFilter | _Not used_ | No |
+| rawData | Object | No |
+
+```javascript
+{
+  "eventType": "OrderStatusChangedEvent",
+  "functions": [
+    {
+      "function": "merge"
+    }
+  ]
+}
+```
+
+### **set**
+
+Replaces the value of an existing key.
+
+
+
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | Any | Yes |
+| eventSelector | Any | Yes |
+| targetFilter | Filter expression | No |
+| eventFilter | Filter expression | No |
+| rawData | Any | No |
+
+```javascript
+{
+  "eventType": "EmailUpdatedEvent",
+  "functions": [
+    {
+      "function": "set",
+      "targetSelector": "$.projection.user.email",
+      "eventSelector": "$.event.newEmail"
+    }
+  ]
+}
+```
+
+## **Working with arrays/lists**
 
 ### **push**
 
 Adds anything to the end of an array.
 
-| Argument | Expected evaluation |
-| :--- | :--- |
-| targetSelector | Array |
-| eventSelector | Array |
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | Array | Yes |
+| eventSelector | Any | Yes |
+| targetFilter | Filter expression | No |
+| eventFilter | Filter expression | No |
+| rawData | Any \(optional, instead of eventSelector\)  | No |
 
 ```javascript
 {
@@ -73,10 +127,13 @@ Adds anything to the end of an array.
 
 Adds anything to the beginning of an array.
 
-| Argument | Expected evaluation |
-| :--- | :--- |
-| targetSelector | Array |
-| eventSelector | Array |
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | Array | Yes |
+| eventSelector | Any | Yes |
+| targetFilter | Filter expression | No |
+| eventFilter | Filter expression | No |
+| rawData | Any \(optional, instead of eventSelector\)  | No |
 
 ```javascript
 {
@@ -91,37 +148,17 @@ Adds anything to the beginning of an array.
 }
 ```
 
-### **set**
-
-Replaces the value of an existing key
-
-| Argument | Expected evaluation |
-| :--- | :--- |
-| targetSelector | Any \(but must exist\) |
-| eventSelector | Any |
-
-```javascript
-{
-  "eventType": "EmailUpdatedEvent",
-  "functions": [
-    {
-      "function": "set",
-      "targetSelector": "$.projection.user.email",
-      "eventSelector": "$.event.newEmail"
-    }
-  ]
-}
-```
-
 ### **remove**
 
 Removes an existing key or an array element matching filter expression.
 
-| Argument | Expected evaluation |
-| :--- | :--- |
-| targetSelector | Any \(but must exist\) |
-| eventSelector | Any |
-| targetFilter \(required\) | Filter expression |
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | Any | Yes |
+| eventSelector | _Not used_ | No |
+| eventFilter | _Not used_ | No |
+| targetFilter | Filter expression | Yes |
+| rawData | _Not used_ | No |
 
 ```javascript
 {
@@ -136,14 +173,19 @@ Removes an existing key or an array element matching filter expression.
 }
 ```
 
+## Performing arithmetic
+
 ### **add**
 
 Sums two numbers together.
 
-| Argument | Expected evaluation |
-| :--- | :--- |
-| targetSelector | Number |
-| eventSelector | Number |
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | Number | Yes |
+| eventSelector | Number | Yes |
+| eventFilter | _Not used_ | No |
+| targetFilter | _Not used_ | No |
+| rawData | Number | No |
 
 ```javascript
 {
@@ -162,10 +204,13 @@ Sums two numbers together.
 
 Subtracts two numbers.
 
-| Argument | Expected evaluation |
-| :--- | :--- |
-| targetSelector | Number |
-| eventSelector | Number |
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | Number | Yes |
+| eventSelector | Number | Yes |
+| eventFilter | _Not used_ | No |
+| targetFilter | _Not used_ | No |
+| rawData | Number | No |
 
 ```javascript
 {
@@ -184,9 +229,13 @@ Subtracts two numbers.
 
 Increases a number by one.
 
-| Argument | Expected evaluation |
-| :--- | :--- |
-| targetSelector | Number |
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | Number | Yes |
+| eventSelector | _Not used_ | No |
+| targetFilter | Filter expression | No |
+| targetFilter | _Not used_ | No |
+| rawData | _Not used_ | No |
 
 ```javascript
 {
@@ -204,9 +253,13 @@ Increases a number by one.
 
 Decreases a number by one.
 
-| Argument | Expected evaluation |
-| :--- | :--- |
-| targetSelector | Number |
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | Number | Yes |
+| eventSelector | _Not used_ | No |
+| targetFilter | Filter expression | No |
+| targetFilter | _Not used_ | No |
+| rawData | _Not used_ | No |
 
 ```javascript
 {
