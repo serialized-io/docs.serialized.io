@@ -125,3 +125,23 @@ The date or timestamp in the field specified as the `triggerTimeField` must be i
 * `'yyyyMMdd'`
 * `'yyMMdd'`
 
+### Cancelling scheduled actions
+
+Each scheduled Reaction can be configured to automatically cancel its pending action if a certain event occurs by adding the event type to the array `cancelOnEventTypes`. This is particularly useful for cancelling timeouts or reminders no longer valid.
+
+Example of a body setting up a Reaction with a 12h delay and a cancelOn event:
+
+```javascript
+{
+  "reactionName": "send-reminder-to-inactive-users",
+  "feedName": "gamerounds",
+  "reactOnEventType": "UserLoggedOutEvent",
+  "cancelOnEventTypes": ["UserLoggedInEvent"],
+  "offset": "P7D",
+  "action": {
+    "actionType": "HTTP_POST",
+    "targetUri": "https://your-email-service"
+  }
+}
+```
+

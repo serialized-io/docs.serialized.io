@@ -7,13 +7,13 @@
 * [Accounts](basics/accounts.md)
 * [Projects](basics/projects.md)
 * [Authentication](basics/authentication.md)
+* [Rate limiting](basics/rate-limiting.md)
 * [Getting started](basics/getting-started/README.md)
   * [Working with aggregates](basics/getting-started/working-with-aggregates.md)
   * [Projecting events](basics/getting-started/projections.md)
   * [Aggregating events](basics/getting-started/aggregating-events.md)
   * [Reacting to events](basics/getting-started/reacting-to-events.md)
   * [Subscribing to event feeds](basics/getting-started/subscribing-to-event-feeds.md)
-* [Rate limiting](basics/rate-limiting.md)
 
 ## APIS
 
