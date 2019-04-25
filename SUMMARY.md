@@ -41,7 +41,6 @@
 * [Reactions API](apis/reactions/README.md)
   * [Basic Usage](apis/reactions/basic-usage.md)
   * [Configuring execution time](apis/reactions/configuring-execution-time.md)
-  * [Actions](apis/reactions/reaction.md)
   * [API Reference](apis/reactions/reference/README.md)
     * [Create reaction definition](apis/reactions/reference/create-reaction-definition.md)
     * [Get reaction definition](apis/reactions/reference/get-reaction-definition.md)
