@@ -13,6 +13,7 @@
   * [Aggregating events](basics/getting-started/aggregating-events.md)
   * [Reacting to events](basics/getting-started/reacting-to-events.md)
   * [Subscribing to event feeds](basics/getting-started/subscribing-to-event-feeds.md)
+* [Rate limiting](basics/rate-limiting.md)
 
 ## APIS
 
@@ -82,4 +83,6 @@
 ## Advanced
 
 * [Multi-Tenancy](advanced/multi-tenant-projects.md)
+* [Encrypting Event data](advanced/encrypting-event-data.md)
+* [Conditional requests](advanced/conditional-requests.md)
 
