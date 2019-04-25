@@ -72,5 +72,18 @@ The response from the custom function should be the new updated state of the pro
 }
 ```
 
+### **Securing external function endpoints**
+
+The endpoints can be secured with Basic Authentication by including user:password in the `functionUri` like this:
+
+```javascript
+{
+  "eventType": "<YOUR_EVENT_TYPE>",
+  "functionUri": "https://user:password@example.com/your-function"
+}
+```
+
+### Sample code
+
 For a full example of an implementation of an external custom function using AWS Lambda see [our Github repository](https://github.com/serialized-io/samples-java/tree/master/event-projector-lambda).
 
