@@ -51,6 +51,7 @@
   * [Basic Usage](apis/projections/basic-usage.md)
   * [JsonPath Functions](apis/projections/event-handlers.md)
   * [Custom Functions](apis/projections/external-projector-functions.md)
+  * [Custom Projection IDs](apis/projections/custom-projection-ids.md)
   * [Examples](apis/projections/examples/README.md)
     * [Adding search support to Projections](apis/projections/examples/adding-search-support-to-projections.md)
     * [Aggregating data to a list](apis/projections/examples/aggregating-data-to-a-list.md)
