@@ -71,5 +71,40 @@ Response response = client.target(apiRoot)
   .delete();
 ```
 {% endtab %}
+
+{% tab title="C\#" %}
+```csharp
+using System;
+using System.Collections.Generic;
+using RestSharp;
+
+var request = new RestRequest("tenants/{tenantId}", Method.DELETE)
+   .AddUrlSegment("tenantId", "e9ef574f-4563-4d56-ad9e-0a2d5ce42004")
+   .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+   .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
+
+var response = client.Execute(request);
+```
+{% endtab %}
+
+{% tab title="Node" %}
+```javascript
+const axios = require("axios");
+
+const client = axios.create({
+  baseURL: "https://api.serialized.io",
+  headers: {"Serialized-Access-Key": "<YOUR_ACCESS_KEY>"},
+  headers: {"Serialized-Secret-Access-Key": "<YOUR_SECRET_ACCESS_KEY>"}
+});
+
+client.delete("tenants/e9ef574f-4563-4d56-ad9e-0a2d5ce42004")
+    .then(function (response) {
+      // Handle response
+    })
+    .catch(function (error) {
+      // Handle error
+    });
+```
+{% endtab %}
 {% endtabs %}
 
