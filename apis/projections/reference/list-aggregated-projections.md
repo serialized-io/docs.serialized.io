@@ -11,12 +11,6 @@ List all aggregated projections
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="projectionName" type="string" required=true %}
-The projection name
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
 {% api-method-query-parameters %}
 {% api-method-parameter name="sort" type="number" required=false %}
 Sort string. Any combination of the following fields: projectionId, reference, createdAt, updatedAt. Add '+' and '-' prefixes to indicate ascending/descending sort order. Ascending order is default.
