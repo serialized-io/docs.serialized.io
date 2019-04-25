@@ -36,7 +36,41 @@ An example of a complete projection definition could look like this:
 }
 ```
 
-### Request to the external function
+## Implementing a custom function
 
-**&lt;todo&gt;**
+### Handling the request
+
+To implement an custom function you need to implement a publicly available backend service that can receive a JSON payload that looks like this:
+
+```javascript
+{
+  "metadata": {
+    "aggregateId": "a341b64c-b01f-43fb-907c-50c0067df672",
+    "createdAt": 1535442699551,
+    "updatedAt": 1535442699551
+  },
+  "currentState": {},
+  "event": {
+    "eventId": "d710b9b1-063a-4b65-98be-0d46de443bdd",
+    "eventType": "UserLoggedInEvent",
+    "data": {
+      "userId": "618f5a47-9d4c-4f42-9380-ca47c12087a1"
+    }
+  }
+}
+```
+
+### Producing a response
+
+The response from the custom function should be the new updated state of the projection. The format of the updated state must look like this:
+
+```javascript
+{
+    "updatedState": {
+        "loginCount": 1
+    }
+}
+```
+
+For a full example of an implementation of an external custom function using AWS Lambda see [our Github repository](https://github.com/serialized-io/samples-java/tree/master/event-projector-lambda).
 
