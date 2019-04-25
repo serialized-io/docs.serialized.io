@@ -85,4 +85,5 @@
 * [Multi-Tenancy](advanced/multi-tenant-projects.md)
 * [Encrypting Event data](advanced/encrypting-event-data.md)
 * [Conditional requests](advanced/conditional-requests.md)
+* [Request signatures](advanced/request-signatures.md)
 
