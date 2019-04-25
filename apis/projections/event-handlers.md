@@ -273,6 +273,57 @@ Decreases a number by one.
 }
 ```
 
+## Adding lookup via references
+
+You can make your projections 
+
+### **setRef**
+
+Marks a projection field as a reference which makes it searchable in the API.
+
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | String/Number/Date | Yes |
+| eventSelector | _Not used_ | No |
+| targetFilter | _Not used_ | No |
+| targetFilter | _Not used_ | No |
+| rawData | _Not used_ | No |
+
+```javascript
+{
+  "eventType": "TicketReleasedEvent",
+  "functions": [
+    {
+      "function": "setRef",
+      "targetSelector": "$.projection.releaseDate"
+    }
+  ]
+}
+```
+
+### **clearRef**
+
+Clears the reference for the projection, removing it from the searchable index.
+
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | _Not used_ | No |
+| eventSelector | _Not used_ | No |
+| targetFilter | _Not used_ | No |
+| targetFilter | _Not used_ | No |
+| rawData | _Not used_ | No |
+
+```javascript
+{
+  "eventType": "TicketReleasedEvent",
+  "functions": [
+    {
+      "function": "clearRef"
+    }
+  ]
+}
+```
+
 ## Filters
 
 Functions can also provide two filters: `targetFilter` and `eventFilter`.
@@ -280,4 +331,8 @@ Functions can also provide two filters: `targetFilter` and `eventFilter`.
 To add a filter to a selector you provide a `[?]` in the selector text, as described in the JsonPath documentation. The filter for the selector is then applied for the given function. This is useful for matching on ids in nested lists or to apply conditional logic for when/how to process events.
 
 All Filter Operators that are described [here](https://github.com/json-path/JsonPath) are supported.
+
+
+
+
 

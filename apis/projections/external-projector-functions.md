@@ -72,6 +72,17 @@ The response from the custom function should be the new updated state of the pro
 }
 ```
 
+### Adding a reference to the projection
+
+```javascript
+{
+    "updatedState": {
+        "loginCount": 1
+    },
+    "reference": "john.doe@example.com"
+}
+```
+
 ### **Securing external function endpoints**
 
 The endpoints can be secured with Basic Authentication by including user:password in the `functionUri` like this:
