@@ -66,7 +66,6 @@
     * [Get Single Projection](apis/projections/reference/get-single-projection.md)
     * [List Single Projections](apis/projections/reference/list-single-projections.md)
     * [Delete/recreate Single Projections](apis/projections/reference/delete-single-projections.md)
-    * [List Aggregated Projections](apis/projections/reference/list-aggregated-projections.md)
     * [Get Aggregated Projection](apis/projections/reference/get-aggregated-projection.md)
     * [Delete/recreate Aggregated Projections](apis/projections/reference/delete-aggregated-projections.md)
 * [Tenants API](apis/tenants-api/README.md)
