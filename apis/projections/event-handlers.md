@@ -96,6 +96,52 @@ Replaces the value of an existing key.
 }
 ```
 
+### **clear**
+
+Clear an entire projection's data.
+
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | _Not used_ | No |
+| eventSelector | _Not used_ | No |
+| targetFilter | Filter expression | No |
+| eventFilter | Filter expression | No |
+| rawData | _Not used_ | No |
+
+```javascript
+{
+  "eventType": "UserDeletedEvent",
+  "functions": [
+    {
+      "function": "clear"
+    }
+  ]
+}
+```
+
+### **delete**
+
+Delete a projection instance
+
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | _Not used_ | No |
+| eventSelector | _Not used_ | No |
+| targetFilter | Filter expression | No |
+| eventFilter | Filter expression | No |
+| rawData | _Not used_ | No |
+
+```javascript
+{
+  "eventType": "UserDeletedEvent",
+  "functions": [
+    {
+      "function": "delete"
+    }
+  ]
+}
+```
+
 ## **Working with arrays/lists**
 
 ### **push**
