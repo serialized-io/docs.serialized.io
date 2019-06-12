@@ -48,7 +48,7 @@ If you have a static value that you want to use as the data for the projection i
 
 ### **merge**
 
-Merges two JSON objects.
+Merges event data with existing projected data.
 
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |
@@ -78,7 +78,7 @@ Replaces the value of an existing key.
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |
 | targetSelector | Any | Yes |
-| eventSelector | Any | Yes |
+| eventSelector | Any | No |
 | targetFilter | Filter expression | No |
 | eventFilter | Filter expression | No |
 | rawData | Any | No |
@@ -151,10 +151,10 @@ Adds anything to the end of an array.
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |
 | targetSelector | Array | Yes |
-| eventSelector | Any | Yes |
+| eventSelector | Any | No |
 | targetFilter | Filter expression | No |
 | eventFilter | Filter expression | No |
-| rawData | Any \(optional, instead of eventSelector\)  | No |
+| rawData | Any  | No |
 
 ```javascript
 {
@@ -176,10 +176,10 @@ Adds anything to the beginning of an array.
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |
 | targetSelector | Array | Yes |
-| eventSelector | Any | Yes |
+| eventSelector | Any | No |
 | targetFilter | Filter expression | No |
 | eventFilter | Filter expression | No |
-| rawData | Any \(optional, instead of eventSelector\)  | No |
+| rawData | Any  | No |
 
 ```javascript
 {
@@ -228,7 +228,7 @@ Sums two numbers together.
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |
 | targetSelector | Number | Yes |
-| eventSelector | Number | Yes |
+| eventSelector | Number | No |
 | eventFilter | _Not used_ | No |
 | targetFilter | _Not used_ | No |
 | rawData | Number | No |
@@ -253,7 +253,7 @@ Subtracts two numbers.
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |
 | targetSelector | Number | Yes |
-| eventSelector | Number | Yes |
+| eventSelector | Number | No |
 | eventFilter | _Not used_ | No |
 | targetFilter | _Not used_ | No |
 | rawData | Number | No |
