@@ -11,6 +11,7 @@ Different requests have different signatures, that you can use to verify the out
 | Request type | Signed data |
 | :--- | :--- |
 | Reaction | Reaction definition name |
+| Projection | Projection definition name |
 
 ### Example
 
