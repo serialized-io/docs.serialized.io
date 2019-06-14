@@ -8,7 +8,7 @@ description: >-
 
 To create useful projections we need to merge the event data with the projection data in different ways. We provide templating support built on [JsonPath](http://goessner.net/articles/JsonPath) to support this out-of-the-box.
 
-If the templating support we provide is too restricted for your use-case we encourage you to write your own projector, deployed either as an external function \(hosted on eg. AWS\) or external service using the [Feed API](https://serialized.io/docs/apis/event-feed/) and a storage of your choice. Read more about customized projectors in the next chapter.
+If the templating support we provide is too restricted for your use-case we encourage you to write your own projector, deployed either as an external function \(hosted on eg. AWS\) or external service using the [Feed API](https://docs.serialized.io/api-reference/apis/feeds) and a storage of your choice. Read more about customized projectors in the next chapter.
 
 The structure of a handler using the provided JsonPath templating looks like this:
 
