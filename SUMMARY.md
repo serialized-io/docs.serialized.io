@@ -77,7 +77,7 @@
 ## Client libraries
 
 * [Java client](https://github.com/serialized-io/client-java)
-* [Go client (unofficial)](https://github.com/marcusolsson/serialized-go)
+* [Go client \(unofficial\)](https://github.com/marcusolsson/serialized-go)
 
 ## Tools
 
