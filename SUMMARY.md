@@ -74,6 +74,11 @@
     * [Add Tenant](apis/tenants-api/api-reference/add-tenant.md)
     * [Delete Tenant](apis/tenants-api/api-reference/delete-tenant.md)
 
+## Client libraries
+
+* [Java client](https://github.com/serialized-io/client-java)
+* [Go client (unofficial)](https://github.com/marcusolsson/serialized-go)
+
 ## Tools
 
 * [Projection Tester](https://console.serialized.io/projection-tester)
