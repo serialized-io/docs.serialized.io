@@ -56,35 +56,37 @@ Vary: Accept-Encoding
 Content-Length: 484
 
 {  
-   "entries":[  
+   "entries": [  
       {  
-         "sequenceNumber":1,
-         "aggregateId":"723ecfce-14e9-4889-98d5-a3d0ad54912f",
-         "timestamp":1504023145574,
+         "sequenceNumber": 1,
+         "aggregateId": "723ecfce-14e9-4889-98d5-a3d0ad54912f",
+         "timestamp": 1504023145574,
+         "feedName": "order",
          "events":[  
             {  
-               "eventId":"127b80b5-4a05-4774-b870-1c9a2e2a27a3",
-               "eventType":"OrderPlacedEvent",
-               "data":{  
-                  "customerId":"some-test-id-1",
-                  "orderAmount":12345
+               "eventId": "127b80b5-4a05-4774-b870-1c9a2e2a27a3",
+               "eventType": "OrderPlacedEvent",
+               "data": {  
+                  "customerId": "some-test-id-1",
+                  "orderAmount": 12345
                }
             }
          ]
       },
       {  
-         "sequenceNumber":2,
-         "aggregateId":"723ecfce-14e9-4889-98d5-a3d0ad54912f",
-         "timestamp":1504023255370,
-         "events":[  
+         "sequenceNumber": 2,
+         "aggregateId": "723ecfce-14e9-4889-98d5-a3d0ad54912f",
+         "timestamp": 1504023255370,
+         "feedName": "order",
+         "events": [  
             {  
-               "eventId":"c8b90e06-f3c0-46aa-93a6-c0b281ef3ac5",
-               "eventType":"OrderPaidEvent"
+               "eventId": "c8b90e06-f3c0-46aa-93a6-c0b281ef3ac5",
+               "eventType": "OrderPaidEvent"
             }
          ]
       }
    ],
-   "hasMore":false
+   "hasMore": false
 }
 ```
 
