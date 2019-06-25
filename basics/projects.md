@@ -1,7 +1,7 @@
 ---
 description: >-
   A Project is the entry point for all Serialized APIs and is also the container
-  of your data. All projects are isolated from each on a storage level.
+  of your data. All projects are isolated from each other on a storage level.
 ---
 
 # Projects
