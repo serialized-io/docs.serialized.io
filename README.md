@@ -8,7 +8,7 @@ Serialized provides intuitive and simple to use APIs using JSON over HTTP with a
 
 ### SDKs
 
-We officially support and maintain a Java client and a Go client.
+We officially support and maintain a [Java client](https://github.com/serialized-io/client-java) and a [Go client](https://github.com/marcusolsson/serialized-go).
 
 ### Examples
 
