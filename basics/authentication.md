@@ -1,6 +1,6 @@
 ---
 description: >-
-  Serialized provides a simple yet secure authentication using API keys over
+  Serialized provides simple yet secure authentication using API keys over
   HTTPS.
 ---
 
