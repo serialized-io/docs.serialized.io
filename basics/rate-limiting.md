@@ -21,7 +21,7 @@ Serialized-RateLimit-Reset: 1506939198
 | Serialized-RateLimit-Remaining | The number of requests remaining in the current rate limit window. |
 | Serialized-RateLimit-Reset | The time at which the current rate limit window resets in [UTC epoch seconds](https://en.wikipedia.org/wiki/Unix_time). |
 
-### Exceeding the limits
+## Exceeding the limits
 
 If you exceed the rate limit, an error response returns:
 

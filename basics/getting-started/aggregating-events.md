@@ -1,7 +1,7 @@
 ---
 description: >-
-  Projections can also be configured to merge events from different aggregates which
-  makes it easy to build things such as reporting features or similar.
+  Projections can also be configured to merge events from different aggregates
+  which makes it easy to build things such as reporting features or similar.
 ---
 
 # Aggregating events
