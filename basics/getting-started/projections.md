@@ -1,7 +1,7 @@
 ---
 description: >-
   To present your event data in multiple ways you can define projections that
-  processe your events and generate data structures that can be fetched,
+  process your events and generate data structures that can be fetched,
   listed and searched for in the Serialized API.
 ---
 
