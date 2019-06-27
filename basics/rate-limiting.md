@@ -19,7 +19,7 @@ Serialized-RateLimit-Reset: 1506939198
 | :--- | :--- |
 | Serialized-RateLimit-Limit | The maximum number of requests you are permitted to make per hour. |
 | Serialized-RateLimit-Remaining | The number of requests remaining in the current rate limit window. |
-| Serialized-RateLimit-Reset | The time at which the current rate limit window resets in [UTC epoch seconds](https://en.wikipedia.org/wiki/Unix_time) |
+| Serialized-RateLimit-Reset | The time at which the current rate limit window resets in [UTC epoch seconds](https://en.wikipedia.org/wiki/Unix_time). |
 
 ### Exceeding the limits
 
