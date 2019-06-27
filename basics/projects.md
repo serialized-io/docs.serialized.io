@@ -16,7 +16,7 @@ You can create multiple projects for different use cases.
 
 ## Use cases for multiple projects
 
-There are many scenarios where using multiple projects can be useful.
+There are many scenarios where using multiple projects can be useful:
 
 ### Different environments
 
