@@ -1,7 +1,7 @@
 ---
 description: >-
   To present your event data in multiple ways you can define projections that
-  processes your events and generates data structures that can be fetched,
+  processe your events and generate data structures that can be fetched,
   listed and searched for in the Serialized API.
 ---
 
@@ -15,7 +15,7 @@ The first part of projecting data is creating a projection definition. A definit
 It is a good idea to create multiple projection definitions for different use cases. Projections are cheap views and making them tailored for the client makes your data easy to use.
 {% endhint %}
 
-If you performed the you now have a stream of `order` events. To be able to query the current state of a particular order, without having to load all its events, we could configure a projection.
+If you performed the first steps explained in [Working with aggregates](working-with-aggregates) you now have a stream of `order` events. To be able to query the current state of a particular order, without having to load all its events, we could configure a projection.
 
 We use a `POST` command to create our projection definition:
 

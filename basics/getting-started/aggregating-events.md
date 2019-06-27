@@ -1,6 +1,6 @@
 ---
 description: >-
-  Projections can also be configured to merge events from different feeds which
+  Projections can also be configured to merge events from different aggregates which
   makes it easy to build things such as reporting features or similar.
 ---
 
@@ -86,5 +86,5 @@ Connection: keep-alive
 {% endtab %}
 {% endtabs %}
 
-Given that we have two `OrderPlacedEvent` that together sum up to 1000 we should get the response above-
+Given that we have two `OrderPlacedEvent` that together sum up to 1000 we should get the response above.
 

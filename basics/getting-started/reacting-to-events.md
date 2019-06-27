@@ -4,7 +4,7 @@
 
 Reactions can be used to trigger external services when certain events occur.
 
-The following examples shows the basic APIs for working with reactions.
+The following example shows the basic APIs for working with reactions.
 
 ### Create event reaction definition  <a id="create-event-reaction-definition"></a>
 
