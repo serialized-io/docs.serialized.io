@@ -105,6 +105,7 @@ curl -i https://api.serialized.io/aggregates/order/events \
            "eventType":"OrderPaidEvent"
         }
      ]
+  }   
   '
 ```
 {% endtab %}
