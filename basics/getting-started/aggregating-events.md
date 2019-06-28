@@ -65,9 +65,6 @@ Content-Type: application/json
 Date: Wed, 20 Sep 2017 11:45:27 GMT
 ETag: "7b2b05dab4a33088d9aee48b90c4a786"
 Last-Modified: Tue, 19 Sep 2017 19:53:08 GMT
-Serialized-RateLimit-Limit: 10000
-Serialized-RateLimit-Remaining: 9995
-Serialized-RateLimit-Reset: 1505911185
 Vary: Accept-Encoding
 Content-Length: 91
 Connection: keep-alive
