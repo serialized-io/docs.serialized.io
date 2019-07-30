@@ -33,6 +33,16 @@ Tenant successfully created
 ```
 {% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=204 %}
+{% api-method-response-example-description %}
+Tenant already created
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
 Invalid Tenant id or reference.
