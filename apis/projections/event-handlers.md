@@ -323,7 +323,7 @@ Decreases a number by one.
 
 You can make your projections 
 
-### **setRef**
+### **setref**
 
 Marks a projection field as a reference which makes it searchable in the API.
 
@@ -340,14 +340,14 @@ Marks a projection field as a reference which makes it searchable in the API.
   "eventType": "TicketReleasedEvent",
   "functions": [
     {
-      "function": "setRef",
+      "function": "setref",
       "targetSelector": "$.projection.releaseDate"
     }
   ]
 }
 ```
 
-### **clearRef**
+### **clearref**
 
 Clears the reference for the projection, removing it from the searchable index.
 
@@ -364,7 +364,7 @@ Clears the reference for the projection, removing it from the searchable index.
   "eventType": "TicketReleasedEvent",
   "functions": [
     {
-      "function": "clearRef"
+      "function": "clearref"
     }
   ]
 }
