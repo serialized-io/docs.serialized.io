@@ -1,6 +1,6 @@
 # Store Events
 
-{% api-method method="post" host="https://api.serialized.io" path="/aggregates/{aggregateType}/events" %}
+{% api-method method="post" host="https://api.serialized.io" path="/aggregates/{aggregateType}/{aggregateId}/events" %}
 {% api-method-summary %}
 Store Events
 {% endapi-method-summary %}
@@ -13,15 +13,15 @@ Stores all events in the request atomically. All events must refer to the same a
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="aggregateType" type="string" required=true %}
-The aggregate type
+The aggregate type.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="aggregateId" type="string" required=true %}
+Aggregate id. Must be UUID.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="aggregateId" type="string" required=true %}
-Aggregate id. Must be UUID.
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="events" type="array" required=true %}
 Array of events 
 {% endapi-method-parameter %}
@@ -81,13 +81,12 @@ Invalid request body
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -i https://api.serialized.io/aggregates/order/events \
+curl -i https://api.serialized.io/aggregates/order/2c3cf88c-ee88-427e-818a-ab0267511c84/events \
   --header "Content-Type: application/json" \
   --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
   --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
   --data '
 {
-  "aggregateId": "2c3cf88c-ee88-427e-818a-ab0267511c84",
   "events": [
     {
       "eventType": "PaymentProcessed",
@@ -115,7 +114,6 @@ Client client = ClientBuilder.newClient();
 URI apiRoot = URI.create("https://api.serialized.io");
     
 Map eventBatch = ImmutableMap.of(
-    "aggregateId", "3070b6fb-f31b-4a8e-bc03-e22d38f4076e",
     "events", ImmutableList.of(
         ImmutableMap.of(
             "eventType", "PaymentProcessed",
@@ -132,6 +130,7 @@ Map eventBatch = ImmutableMap.of(
 Response response = client.target(apiRoot)
     .path("aggregates")
     .path("order")
+    .path("3070b6fb-f31b-4a8e-bc03-e22d38f4076e")
     .path("events")
     .request(MediaType.APPLICATION_JSON_TYPE)
     .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
@@ -149,7 +148,6 @@ using RestSharp;
 
 var eventBatch = new Dictionary<string, Object>
 {
-    { "aggregateId", "99415be8-6819-4470-860c-c2933558d8d2" },
     { "events", new List<Dictionary<string, Object>>
         {
             new Dictionary<string, Object>
@@ -167,7 +165,8 @@ var eventBatch = new Dictionary<string, Object>
     }
 };
 
-var postRequest = new RestRequest("aggregates/payments/events", Method.POST)
+var postRequest = new RestRequest("aggregates/payments/{aggregateId}/events", Method.POST)
+   .AddUrlSegment("aggregateId", "99415be8-6819-4470-860c-c2933558d8d2")
    .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
    .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
    .AddJsonBody(eventBatch);
@@ -187,7 +186,6 @@ const client = axios.create({
 });
 
 const eventBatch = {
-  aggregateId: "99415be8-6819-4470-860c-c2933558d8d3",
   events: [
     {
       eventType: "PaymentProcessed",
@@ -200,7 +198,7 @@ const eventBatch = {
   ]
 };
 
-client.post("aggregates/order/events", eventBatch)
+client.post("aggregates/order/99415be8-6819-4470-860c-c2933558d8d3/events", eventBatch)
     .then(function (response) {
       // Handle response
     })
