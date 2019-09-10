@@ -21,11 +21,13 @@ Tenants successfully retrieved.
 ```javascript
 {
     "tenants": [
-        "tenantId": "a8c929ac-b59d-429b-8570-99c9a84f6b2c",
-        "tenantNumber": "1",
-        "addedAt": 1568105144988,
-        "reference": "Acme Corp.",
-        "deleted": false
+        {
+            "tenantId": "a8c929ac-b59d-429b-8570-99c9a84f6b2c",
+            "tenantNumber": "1",
+            "addedAt": 1568105144988,
+            "reference": "Acme Corp.",
+            "deleted": false
+        }
     ]
 }
 ```
@@ -34,7 +36,7 @@ Tenants successfully retrieved.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Example
+## Example
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -99,3 +101,4 @@ client.get("tenants")
 ```
 {% endtab %}
 {% endtabs %}
+
