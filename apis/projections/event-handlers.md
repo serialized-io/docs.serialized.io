@@ -73,8 +73,6 @@ Merges event data with existing projected data.
 
 Replaces the value of an existing key.
 
-
-
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |
 | targetSelector | Any | Yes |
@@ -154,7 +152,7 @@ Adds anything to the end of an array.
 | eventSelector | Any | No |
 | targetFilter | Filter expression | No |
 | eventFilter | Filter expression | No |
-| rawData | Any  | No |
+| rawData | Any | No |
 
 ```javascript
 {
@@ -179,7 +177,7 @@ Adds anything to the beginning of an array.
 | eventSelector | Any | No |
 | targetFilter | Filter expression | No |
 | eventFilter | Filter expression | No |
-| rawData | Any  | No |
+| rawData | Any | No |
 
 ```javascript
 {
@@ -321,7 +319,7 @@ Decreases a number by one.
 
 ## Adding lookup via references
 
-You can make your projections 
+You can make your projections
 
 ### **setref**
 
@@ -377,8 +375,4 @@ Functions can also provide two filters: `targetFilter` and `eventFilter`.
 To add a filter to a selector you provide a `[?]` in the selector text, as described in the JsonPath documentation. The filter for the selector is then applied for the given function. This is useful for matching on ids in nested lists or to apply conditional logic for when/how to process events.
 
 All Filter Operators that are described [here](https://github.com/json-path/JsonPath) are supported.
-
-
-
-
 

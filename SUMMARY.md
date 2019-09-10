@@ -72,6 +72,7 @@
   * [Basic Usage](apis/tenants-api/basic-usage.md)
   * [API Reference](apis/tenants-api/api-reference/README.md)
     * [Add Tenant](apis/tenants-api/api-reference/add-tenant.md)
+    * [List Tenants](apis/tenants-api/api-reference/list-tenants.md)
     * [Delete Tenant](apis/tenants-api/api-reference/delete-tenant.md)
 
 ## Client libraries
