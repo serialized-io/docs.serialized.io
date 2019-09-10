@@ -11,13 +11,12 @@ The following call will create an aggregate of type `order` with ID `723ecfce-14
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -i https://api.serialized.io/aggregates/order/events \
+curl -i https://api.serialized.io/aggregates/order/723ecfce-14e9-4889-98d5-a3d0ad54912f/events \
   --header "Content-Type: application/json" \
   --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
   --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
   --data '
   {  
-     "aggregateId":"723ecfce-14e9-4889-98d5-a3d0ad54912f",
      "events":[  
         {  
            "eventId":"127b80b5-4a05-4774-b870-1c9a2e2a27a3",
@@ -92,13 +91,12 @@ We use a `POST` command to add events:
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -i https://api.serialized.io/aggregates/order/events \
+curl -i https://api.serialized.io/aggregates/order/723ecfce-14e9-4889-98d5-a3d0ad54912f/events \
   --header "Content-Type: application/json" \
   --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
   --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
   --data '
   {  
-     "aggregateId":"723ecfce-14e9-4889-98d5-a3d0ad54912f",
      "events":[  
         {  
            "eventId":"c8b90e06-f3c0-46aa-93a6-c0b281ef3ac5",
