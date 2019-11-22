@@ -8,7 +8,6 @@ Example event payload utilizing the `encryptedData` field:
 
 ```javascript
 {
-  "aggregateId": "723ecfce-14e9-4889-98d5-a3d0ad54912f",
   "events": [
     {
       "eventId": "127b80b5-4a05-4774-b870-1c9a2e2a27a3",

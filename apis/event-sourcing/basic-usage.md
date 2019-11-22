@@ -56,7 +56,6 @@ Let's say we're developing a Hotel Management System that handles reservations o
 
 ```javascript
 {
-  "aggregateId": "2c3cf88c-ee88-427e-818a-ab0267511c84",
   "events": [
     {
       "eventId": "f2c8bfc1-c702-4f1a-b295-ef113ed7c8be",
@@ -93,7 +92,6 @@ Pseudo-code for how your application could implement the use-case of confirming 
 
 ```javascript
 {
-  "aggregateId": "2c3cf88c-ee88-427e-818a-ab0267511c84",
   "events": [
     {
       "eventId": "1f112f10-ac94-416c-9b0a-5a5d521ceb66",
