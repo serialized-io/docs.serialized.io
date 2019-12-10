@@ -86,8 +86,7 @@ Later, one of the participants rejects the invitation:
 
 ## Results
 
-{% code-tabs %}
-{% code-tabs-item title="/projections/single/meetings/723ecfce-14e9-4889-98d5-a3d0ad54912f" %}
+{% code title="/projections/single/meetings/723ecfce-14e9-4889-98d5-a3d0ad54912f" %}
 ```javascript
 {
   "projectionId" : "723ecfce-14e9-4889-98d5-a3d0ad54912f",       
@@ -100,8 +99,7 @@ Later, one of the participants rejects the invitation:
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 

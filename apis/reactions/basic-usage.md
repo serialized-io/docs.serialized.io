@@ -62,6 +62,7 @@ The action type \(`SLACK_POST`\) requires the field `targetUri` to be populated 
 
 Example of a Reaction posting a notification to Slack:
 
+{% code title="" %}
 ```javascript
 {
   "reactionName": "on-order-placed-slack-notifier",
@@ -74,6 +75,7 @@ Example of a Reaction posting a notification to Slack:
   }
 }
 ```
+{% endcode %}
 
 Given this event:
 

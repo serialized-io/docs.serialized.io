@@ -12,7 +12,7 @@ Get Single Projection
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="projectionName" %}
+{% api-method-parameter name="projectionName" type="string" required=true %}
 The name of the Projection type
 {% endapi-method-parameter %}
 
@@ -20,6 +20,12 @@ The name of the Projection type
 The id of the Projection instance
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="awaitCreation" type="integer" required=false %}
+Max number of milliseconds to await the initial creation. Must be between 1 and 60000.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}

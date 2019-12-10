@@ -53,8 +53,7 @@ You can now query your shipments Projection with a reference that will result i 
 The `reference` query parameter is optional
 {% endhint %}
 
-{% code-tabs %}
-{% code-tabs-item title="/projections/single/shipments?reference=ABC123" %}
+{% code title="/projections/single/shipments?reference=ABC123" %}
 ```javascript
 {                                                                  
   "projections" : [ {                                              
@@ -69,6 +68,5 @@ The `reference` query parameter is optional
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 

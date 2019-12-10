@@ -96,8 +96,7 @@ curl -i \
   https://api.serialized.io/projections/single/orders/723ecfce-14e9-4889-98d5-a3d0ad54912f
 ```
 
-{% code-tabs %}
-{% code-tabs-item title="Response" %}
+{% code title="Response" %}
 ```bash
 HTTP/1.1 200 OK
 Content-Type: application/json
@@ -115,8 +114,7 @@ Content-Length: 125
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

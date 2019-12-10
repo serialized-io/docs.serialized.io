@@ -57,8 +57,7 @@ curl -i \
   https://api.serialized.io/projections/aggregated/order-totals
 ```
 
-{% code-tabs %}
-{% code-tabs-item title="Response" %}
+{% code title="Response" %}
 ```bash
 HTTP/1.1 200 OK
 Content-Type: application/json
@@ -78,8 +77,7 @@ Connection: keep-alive
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

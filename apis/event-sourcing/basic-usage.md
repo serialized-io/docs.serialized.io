@@ -7,7 +7,7 @@ description: Basic usage of the Event Sourcing API.
 The most important concepts in Serialized are **Aggregates** and **Events**. Both these concepts are borrowed from the concepts Domain-Driven Design and it is important to understand the nuances of them to effectively use Serialized.
 
 {% hint style="info" %}
-We use the shorter term **Event** to refer to ****the concept **Domain Event** from Domain-Driven Design. 
+We use the shorter term **Event** to refer to **\*\*the concept** Domain Event\*\* from Domain-Driven Design.
 {% endhint %}
 
 ## Events
@@ -38,7 +38,7 @@ The format of the data field is a generic JSON object, so you can store any stru
 
 #### Encrypted data
 
-Events also provides a special String-type field `encryptedData` for storing data that should be client-side encrypted before stored. 
+Events also provides a special String-type field `encryptedData` for storing data that should be client-side encrypted before stored.
 
 ### Immutable
 
@@ -73,7 +73,7 @@ Let's say we're developing a Hotel Management System that handles reservations o
 
 ## Aggregates
 
-Aggregates are ordered sequences of batches of Events. 
+Aggregates are ordered sequences of batches of Events.
 
 It is your system and application code that will implement the business rules of the Aggregate and Serialized will take care of storing all Events for the Aggregate in an efficient manner and providing the APIs you need to manage the lifecycle of the Aggregate.
 
@@ -105,10 +105,4 @@ Pseudo-code for how your application could implement the use-case of confirming 
   "expectedVersion" : 46
 }
 ```
-
-
-
-
-
-
 

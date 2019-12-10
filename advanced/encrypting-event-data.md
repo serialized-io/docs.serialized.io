@@ -1,6 +1,6 @@
 # Encrypting Event data
 
-If you need to store personal or sensitive data in your events you can populate the field`encryptedData`, which is reserved for this kind of client-side encrypted data. This field will not be processed in any way and can contain anything packed into a `string`. 
+If you need to store personal or sensitive data in your events you can populate the field`encryptedData`, which is reserved for this kind of client-side encrypted data. This field will not be processed in any way and can contain anything packed into a `string`.
 
 Preferably you encrypt a JSON payload using symmetric encryption. Remember to keep the secret key safe! As you are not sharing the key with us, there’s no way we can help you recover it or access your encrypted data if you loose it. Note that the field is limited to max `65535` bytes.
 
