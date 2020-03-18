@@ -323,7 +323,7 @@ You can make your projections
 
 ### **setref**
 
-Marks a projection field as a reference which makes it searchable in the API.
+Marks a projection field as a reference which makes it filterable in the API.
 
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |
@@ -347,7 +347,7 @@ Marks a projection field as a reference which makes it searchable in the API.
 
 ### **clearref**
 
-Clears the reference for the projection, removing it from the searchable index.
+Clears the reference for the projection, removing the ability to filter.
 
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |

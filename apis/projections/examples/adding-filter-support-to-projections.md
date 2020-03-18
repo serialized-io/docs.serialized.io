@@ -1,4 +1,4 @@
-# Adding search support to Projections
+# Adding filer support to Projections
 
 ## Example Events
 
@@ -21,7 +21,8 @@ Given some events that models planning of shipment routes for a cargo shipping c
 
 ## Projection definition
 
-To mark a field as a searchable field you tell Serialized it should be a reference field. You do this by adding a `setref` function to the field you want to be able to search for. In this case we want to be able to search for shipments by their shipment code:
+To make a field filterable you tell Serialized it should be a reference field. You do this by adding a `setref` function to the field you want to be able to filter on.
+In this case we want to be able to filter shipments by their shipment code:
 
 ```javascript
 {
