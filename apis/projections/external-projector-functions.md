@@ -46,6 +46,7 @@ To implement an custom function you need to implement a publicly available backe
 {
   "metadata": {
     "aggregateId": "a341b64c-b01f-43fb-907c-50c0067df672",
+    "timestamp": 1535442699000,
     "createdAt": 1535442699551,
     "updatedAt": 1535442699551
   },
