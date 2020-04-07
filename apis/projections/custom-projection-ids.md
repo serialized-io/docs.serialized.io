@@ -51,7 +51,7 @@ https://api.serialized.io/projections/single/orders/22c3780f-6dcb-440f-8532-6693
 
 You can control what ID you want to use for your projections. You can use any primitive field that is in the Projection data as an ID instead of the default Aggregate ID.
 
-To change the ID of your Projections, you use the `idField` value in the Projection definition that you use to configure your Projection. 
+To change the ID of your Projections, you use the `idField` value in the Projection definition that you use to configure your Projection. If you want different ID:s for different event types, you can put the `idField` on Handler level instead.
 
 ### Example
 
