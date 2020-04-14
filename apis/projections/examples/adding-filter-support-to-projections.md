@@ -1,4 +1,4 @@
-# Adding filer support to Projections
+# Adding filter support to Projections
 
 ## Example Events
 
@@ -21,8 +21,7 @@ Given some events that models planning of shipment routes for a cargo shipping c
 
 ## Projection definition
 
-To make a field filterable you tell Serialized it should be a reference field. You do this by adding a `setref` function to the field you want to be able to filter on.
-In this case we want to be able to filter shipments by their shipment code:
+To make a field filterable you tell Serialized it should be a reference field. You do this by adding a `setref` function to the field you want to be able to filter on. In this case we want to be able to filter shipments by their shipment code:
 
 ```javascript
 {
@@ -67,7 +66,6 @@ The `reference` query parameter is optional
   } ],
   "totalCount" : 1
 }
-
 ```
 {% endcode %}
 
