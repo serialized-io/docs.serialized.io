@@ -28,8 +28,18 @@ Serialized secret key
 List successfully retrieved.
 {% endapi-method-response-example-description %}
 
-```text
-
+```javascript
+{
+  "reactions" : [ {
+    "reactionId" : "141c606a-9db1-4d3b-9b5c-0d6bc03a3405",
+    "reactionName" : "payment-processed-email-reaction",
+    "aggregateType" : "payment",
+    "aggregateId" : "b39bcc9b-581b-4457-b0e5-006458ac70ed",
+    "eventId" : "4bf26a74-3918-4085-b90f-5f3ea510bf53",
+    "createdAt" : 1586372740000,
+    "finishedAt" : 1586372740756
+  } ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
