@@ -12,12 +12,11 @@ Create a new reaction definition
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
-Serialized secret key
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
 Serialized access key
+{% endapi-method-parameter %}
+{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
+Serialized secret key
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
