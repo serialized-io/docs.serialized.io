@@ -16,5 +16,5 @@ Multi-tenancy is only supported on our paid plans
 
 See the Tenants API for details on how to use the multi-tenancy support.
 
-{% page-ref page="../apis/tenants-api/" %}
+{% page-ref page="../apis/tenants/" %}
 

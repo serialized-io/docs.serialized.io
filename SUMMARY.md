@@ -73,12 +73,12 @@
     * [Delete/recreate Single Projections](apis/projections/reference/delete-single-projections.md)
     * [Get Aggregated Projection](apis/projections/reference/get-aggregated-projection.md)
     * [Delete/recreate Aggregated Projections](apis/projections/reference/delete-aggregated-projections.md)
-* [Tenants API](apis/tenants-api/README.md)
-  * [Basic Usage](apis/tenants-api/basic-usage.md)
-  * [API Reference](apis/tenants-api/api-reference/README.md)
-    * [Add Tenant](apis/tenants-api/api-reference/add-tenant.md)
-    * [List Tenants](apis/tenants-api/api-reference/list-tenants.md)
-    * [Delete Tenant](apis/tenants-api/api-reference/delete-tenant.md)
+* [Tenants API](apis/tenants/README.md)
+  * [Basic Usage](apis/tenants/basic-usage.md)
+  * [API Reference](apis/tenants/api-reference/README.md)
+    * [Add Tenant](apis/tenants/api-reference/add-tenant.md)
+    * [List Tenants](apis/tenants/api-reference/list-tenants.md)
+    * [Delete Tenant](apis/tenants/api-reference/delete-tenant.md)
 
 ## Client libraries
 
