@@ -42,3 +42,70 @@ Reaction successfully executed.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+## Example
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -i \
+  --header "Serialized-Access-Key: <YOUR_ACCESS_KEY>" \
+  --header "Serialized-Secret-Access-Key: <YOUR_SECRET_ACCESS_KEY>" \
+  -X POST https://api.serialized.io/reactions/scheduled/52cb6e32-e3f3-40f3-b06f-a19a08fbc19f
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+
+Client client = ClientBuilder.newClient();
+URI apiRoot = URI.create("https://api.serialized.io");
+
+Response response = client.target(apiRoot)
+    .path("reactions")
+    .path("scheduled")
+    .path("52cb6e32-e3f3-40f3-b06f-a19a08fbc19f")
+    .request()
+    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
+    .post(Entity.json(""));
+```
+{% endtab %}
+
+{% tab title="C\#" %}
+```csharp
+using RestSharp;
+using System;
+
+var client = new RestClient("https://api.serialized.io");
+
+var request = new RestRequest("reactions/scheduled/{reactionId}", Method.POST)
+   .AddUrlSegment("reactionId", "52cb6e32-e3f3-40f3-b06f-a19a08fbc19f")
+   .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
+   .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
+
+var response = client.Execute<Dictionary<string, Object>>(request);
+```
+{% endtab %}
+
+{% tab title="Node" %}
+```javascript
+const axios = require("axios");
+
+const client = axios.create({
+  baseURL: "https://api.serialized.io",
+  headers: {"Serialized-Access-Key": "<YOUR_ACCESS_KEY>"},
+  headers: {"Serialized-Secret-Access-Key": "<YOUR_SECRET_ACCESS_KEY>"}
+});
+
+client.post("reactions/scheduled/52cb6e32-e3f3-40f3-b06f-a19a08fbc19f")
+    .then(function (response) {
+      // Handle response
+    })
+    .catch(function (error) {
+      // Handle error
+    });
+```
+{% endtab %}
+{% endtabs %}
