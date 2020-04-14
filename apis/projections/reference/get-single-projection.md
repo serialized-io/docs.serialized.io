@@ -11,15 +11,6 @@ Get Single Projection
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
-Serialized access key
-{% endapi-method-parameter %}
-{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
-Serialized secret key
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
 {% api-method-path-parameters %}
 {% api-method-parameter name="projectionName" type="string" required=true %}
 The name of the Projection type
@@ -29,6 +20,16 @@ The name of the Projection type
 The id of the Projection instance
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
+Serialized access key
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
+Serialized secret key
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="awaitCreation" type="integer" required=false %}
@@ -56,7 +57,7 @@ Single Projection successfully received
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Example
+## Example
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -76,7 +77,7 @@ import javax.ws.rs.client.ClientBuilder;
 
 Client client = ClientBuilder.newClient();
 URI apiRoot = URI.create("https://api.serialized.io");
-    
+
 Map response = client.target(apiRoot)
    .path("projections")
    .path("single")
@@ -86,7 +87,6 @@ Map response = client.target(apiRoot)
    .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
    .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
    .get(Map.class);
-
 ```
 {% endtab %}
 

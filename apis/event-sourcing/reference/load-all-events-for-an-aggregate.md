@@ -12,22 +12,11 @@ Load an Aggregate
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Before appending events to your aggregate you typically load \(hydrate\) it by loading all previous events for that particular `aggregateId` and fast-forward it into its current state.   
-  
-To limit the size of the response the optional query parameters `since` and `limit` can be used. Note that the parameters represents _changes_ to the aggregate which does not necessarily correspond to the number of events that has been appended to it. The default `limit` is set to `1000`.  
+Before appending events to your aggregate you typically load \(hydrate\) it by loading all previous events for that particular `aggregateId` and fast-forward it into its current state.To limit the size of the response the optional query parameters `since` and `limit` can be used. Note that the parameters represents _changes_ to the aggregate which does not necessarily correspond to the number of events that has been appended to it. The default `limit` is set to `1000`.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
-Serialized access key
-{% endapi-method-parameter %}
-{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
-Serialized secret key
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
 {% api-method-path-parameters %}
 {% api-method-parameter name="aggregateType" type="string" required=true %}
 The aggregate type
@@ -37,6 +26,16 @@ The aggregate type
 The aggregate id
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
+Serialized access key
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
+Serialized secret key
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="since" type="number" required=false %}
@@ -100,7 +99,7 @@ If the aggregate does not exist
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Examples
+## Examples
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -120,7 +119,7 @@ import javax.ws.rs.core.UriBuilder;
 
 Client client = ClientBuilder.newClient();
 URI apiRoot = URI.create("https://api.serialized.io");
-    
+
 Map aggregateResponse = client.target(apiRoot)
     .path("aggregates")
     .path("order")
@@ -129,7 +128,6 @@ Map aggregateResponse = client.target(apiRoot)
     .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
     .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
     .get(Map.class);
-
 ```
 {% endtab %}
 
@@ -166,7 +164,6 @@ client.get("aggregates/order/99415be8-6819-4470-860c-c2933558d8d3")
     .catch(function (error) {
       // Handle error
     });
-
 ```
 {% endtab %}
 {% endtabs %}

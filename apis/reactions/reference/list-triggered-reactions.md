@@ -15,6 +15,7 @@ List all reactions that have been executed already.
 {% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
 Serialized access key
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
 Serialized secret key
 {% endapi-method-parameter %}
@@ -27,7 +28,7 @@ Serialized secret key
 Cake successfully retrieved.
 {% endapi-method-response-example-description %}
 
-```
+```text
 {    "name": "Cake's name",    "recipe": "Cake's recipe name",    "cake": "Binary cake"}
 ```
 {% endapi-method-response-example %}
@@ -37,13 +38,11 @@ Cake successfully retrieved.
 Could not find a cake matching this query.
 {% endapi-method-response-example-description %}
 
-```
+```text
 {    "message": "Ain't no cake like that."}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 

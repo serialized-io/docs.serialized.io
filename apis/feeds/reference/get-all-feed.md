@@ -15,6 +15,7 @@ Get all events for all aggregates for all types \(feed names\). The payload is r
 {% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
 Serialized access key
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
 Serialized secret key
 {% endapi-method-parameter %}

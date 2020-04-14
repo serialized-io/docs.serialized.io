@@ -15,6 +15,7 @@ Overview showing number of batches, aggregates and events per aggregate type.
 {% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
 Serialized access key
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
 Serialized secret key
 {% endapi-method-parameter %}
@@ -44,7 +45,7 @@ Feeds successfully received
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Example
+## Example
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -64,7 +65,7 @@ import javax.ws.rs.core.Response;
 
 Client client = ClientBuilder.newClient();
 URI apiRoot = URI.create("https://api.serialized.io");
-    
+
 Map response = client.target(apiRoot)
     .path("feeds")
     .request()

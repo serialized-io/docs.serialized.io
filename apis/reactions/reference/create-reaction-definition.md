@@ -15,6 +15,7 @@ Create a new reaction definition
 {% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
 Serialized access key
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
 Serialized secret key
 {% endapi-method-parameter %}
@@ -85,7 +86,7 @@ Invalid request body
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Example
+## Example
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -116,7 +117,7 @@ import javax.ws.rs.client.ClientBuilder;
 
 Client client = ClientBuilder.newClient();
 URI apiRoot = URI.create("https://api.serialized.io");
-    
+
 Map<String, Object> reactionDefinition = ImmutableMap.of(
         "reactionName", "payment-processed-email-reaction",
         "feedName", "payment",
@@ -134,7 +135,6 @@ Response response = client.target(apiRoot)
     .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
     .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
     .post(Entity.json(reactionDefinition));
-
 ```
 {% endtab %}
 
@@ -163,7 +163,6 @@ var postRequest = new RestRequest("reactions/definitions", Method.POST)
    .AddJsonBody(definition);
 
 var response = client.Execute(postRequest);
-
 ```
 {% endtab %}
 
@@ -194,7 +193,6 @@ client.post("reactions/definitions", definition)
     .catch(function (error) {
       // Handle error
     });
-
 ```
 {% endtab %}
 {% endtabs %}

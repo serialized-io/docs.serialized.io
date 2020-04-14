@@ -11,15 +11,6 @@ Check if an aggregate exists without loading any events from the event store.
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
-Serialized access key
-{% endapi-method-parameter %}
-{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
-Serialized secret key
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
 {% api-method-path-parameters %}
 {% api-method-parameter name="aggregateType" type="string" required=true %}
 The aggregate type
@@ -29,6 +20,16 @@ The aggregate type
 The aggregate id
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
+Serialized access key
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
+Serialized secret key
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -83,7 +84,7 @@ import javax.ws.rs.core.Response;
 
 Client client = ClientBuilder.newClient();
 URI apiRoot = URI.create("https://api.serialized.io");
-    
+
 Response response = client.target(apiRoot)
     .path("aggregates")
     .path("order")
@@ -92,7 +93,6 @@ Response response = client.target(apiRoot)
     .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
     .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
     .head();
-
 ```
 {% endtab %}
 

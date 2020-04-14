@@ -11,15 +11,6 @@ Permanently delete an aggregate, including all events.
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
-Serialized access key
-{% endapi-method-parameter %}
-{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
-Serialized secret key
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
 {% api-method-path-parameters %}
 {% api-method-parameter name="aggregateType" type="string" required=true %}
 The aggregate type
@@ -29,6 +20,16 @@ The aggregate type
 The aggregate id
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
+Serialized access key
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
+Serialized secret key
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="deleteToken" type="string" required=false %}
@@ -55,7 +56,7 @@ Delete token created successfully
 Aggregate successfully deleted
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -73,7 +74,7 @@ Unknown delete token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Example
+## Example
 
 This example requests a delete token for deleting a specific `order` aggregate
 
@@ -103,7 +104,7 @@ Map response = client.target(apiRoot)
     .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
     .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
     .delete(Map.class);
-    
+
 String deleteToken = (String) response.get("deleteToken");
 ```
 {% endtab %}
@@ -147,7 +148,7 @@ client.delete("aggregates/order/99415be8-6819-4470-860c-c2933558d8d3")
 {% endtab %}
 {% endtabs %}
 
-#### Permanently deleting the aggregate using the delete token
+### Permanently deleting the aggregate using the delete token
 
 This example permanently deletes an aggregate using a delete token that was returned in the response to the preceding delete request.
 
@@ -209,8 +210,4 @@ client.delete("aggregates/order/99415be8-6819-4470-860c-c2933558d8d3", requestCo
 ```
 {% endtab %}
 {% endtabs %}
-
-
-
-
 

@@ -15,6 +15,7 @@ Get current global sequence number at head for all feeds. Note that since this i
 {% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
 Serialized access key
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
 Serialized secret key
 {% endapi-method-parameter %}
@@ -65,7 +66,6 @@ Response response = client.target(apiRoot)
 
 String globalSequenceNumber = (String) response.getHeaders()
     .getFirst("Serialized-SequenceNumber-Current");
-
 ```
 {% endtab %}
 
@@ -101,7 +101,6 @@ client.head("feeds/_all")
     .catch(function (error) {
       // Handle error
     });
-
 ```
 {% endtab %}
 {% endtabs %}

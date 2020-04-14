@@ -11,26 +11,27 @@ Permanently deletes all aggregates, including all events for a given aggregate t
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
-Serialized access key
-{% endapi-method-parameter %}
-{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
-Serialized secret key
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
 {% api-method-path-parameters %}
 {% api-method-parameter name="aggregateType" type="string" required=true %}
 The aggregate type
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
+Serialized access key
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
+Serialized secret key
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Delete token created successfully 
+Delete token created successfully
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -45,7 +46,7 @@ Delete token created successfully
 Aggregate type successfully deleted
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -63,7 +64,7 @@ Unknown delete token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Example
+## Example
 
 This example requests a delete token for deleting all aggregates for a given type
 
@@ -92,7 +93,7 @@ Map response = client.target(apiRoot)
     .header("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
     .header("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>")
     .delete(Map.class);
-    
+
 String deleteToken = (String) response.get("deleteToken");
 ```
 {% endtab %}
@@ -135,7 +136,7 @@ client.delete("aggregates/order")
 {% endtab %}
 {% endtabs %}
 
-#### Permanently deleting the aggregate type using the delete token
+### Permanently deleting the aggregate type using the delete token
 
 This example permanently deletes an aggregate type using a delete token that was returned in the response to the preceding delete request.
 

@@ -15,6 +15,7 @@ Create a new reaction definition
 {% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
 Serialized access key
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="Serialized-Secret-Access-Key" type="string" required=true %}
 Serialized secret key
 {% endapi-method-parameter %}
@@ -59,7 +60,7 @@ Projection definition successfully created
 If projection name is not unique
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -69,7 +70,7 @@ If projection name is not unique
 If request body is invalid
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -77,7 +78,7 @@ If request body is invalid
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Example
+## Example
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -120,7 +121,7 @@ import javax.ws.rs.client.ClientBuilder;
 
 Client client = ClientBuilder.newClient();
 URI apiRoot = URI.create("https://api.serialized.io");
-    
+
 Map<String, Object> projectionDefinition = ImmutableMap.of(
     "projectionName", "orders",
     "feedName", "order",
@@ -238,10 +239,7 @@ client.post("projections/definitions", definition)
     .catch(function (error) {
       // Handle error
     });
-
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
