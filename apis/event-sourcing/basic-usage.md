@@ -7,7 +7,7 @@ description: Basic usage of the Event Sourcing API.
 The most important concepts in Serialized are **Aggregates** and **Events**. Both these concepts are borrowed from the concepts Domain-Driven Design and it is important to understand the nuances of them to effectively use Serialized.
 
 {% hint style="info" %}
-We use the shorter term **Event** to refer to **\*\*the concept** Domain Event\*\* from Domain-Driven Design.
+We use the shorter term **Event** to refer to the concept **Domain Event** from Domain-Driven Design.
 {% endhint %}
 
 ## Events
