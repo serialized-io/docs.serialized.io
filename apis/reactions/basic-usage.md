@@ -8,7 +8,7 @@ It is not possible for a Reaction to trigger on an event that has happened in th
 
 Each reaction is configured with a specific Action that defines what will happen when the reaction is triggered. When a Reaction is triggered it will execute its configured Action.
 
-Currently Serialized offer two different pre-defined action types that you can use to integrate with external systems. The specific Slack action and the more generic HTTP action
+Currently Serialized offer two pre-defined action types, for Slack and IFTTT, and a generic HTTP action for any system capable of receiving HTTP POST:s.
 
 ## HTTP Action
 
@@ -95,6 +95,52 @@ Given this event:
 the message to Slack will look like this:
 
 `A new order with number 12312345 was placed by customer@example.com!`
+
+## IFTTT Action
+
+The action type \(`IFTTT_POST`\) requires the field `targetUri` to be populated with a valid IFTTT webhook URI (i.e. starting with `https://maker.ifttt.com/trigger`).
+The map `valueMap` is used for storing the (up to three) dynamic values supported by IFTTT. Simple templating is supported and event data can be accessed using dot \(.\) notation.
+
+Example of a Reaction posting a request to IFTTT:
+
+{% code title="" %}
+```javascript
+{
+  "reactionName": "payment-notifier",
+  "feedName": "payment",
+  "reactOnEventType": "CaptureCompleted",
+  "action": {
+    "actionType": "IFTTT_POST",
+    "targetUri": "https://maker.ifttt.com/trigger/payment_notification/with/key/<your-key>",
+    "valueMap": {
+      "value1": "Payment made by ${event.data.customerId} with amount ${event.data.amount}."
+    }
+  }
+}
+```
+{% endcode %}
+
+Given this event:
+
+```javascript
+{
+  "eventId": "ca37d05c-a852-4de5-961f-16fb35e8cd7b",
+  "eventType": "CaptureCompleted",
+  "data": {  
+    "customerId": "some-test-id-1",
+    "amount": 12345
+  }
+}
+```
+
+the request body POST:ed to IFTTT would look like this:
+
+```javascript
+{
+  "value1": "Payment made by some-test-id-1 with amount 12345."
+}
+```
+
 
 ## Automatic retries
 
