@@ -145,7 +145,7 @@ the request body POST:ed to IFTTT would look like this:
 }
 ```
 
-## AUTOMATE Action
+## Automate Action
 
 The action type \(`AUTOMATE_POST`\) requires the field `targetUri` to be populated with a valid Automate.io webhook URI (i.e. starting with `https://wh.automate.io/webhook`).
 The map `valueMap` is used for storing the (up to nine) dynamic values. Simple templating is supported and event data can be accessed using dot \(.\) notation.
