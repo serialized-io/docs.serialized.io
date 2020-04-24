@@ -8,8 +8,7 @@ It is not possible for a Reaction to trigger on an event that has happened in th
 
 Each reaction is configured with a specific Action that defines what will happen when the reaction is triggered. When a Reaction is triggered it will execute its configured Action.
 
-Currently Serialized offer four pre-defined action types, for [Slack](https://slack.com/), [IFTTT](https://ifttt.com/), [Automate](https://automate.io/) and
-[Zapier](https://zapier.com), and a generic HTTP action for any system capable of receiving HTTP POST:s.
+Currently Serialized offer four pre-defined action types, for [Slack](https://slack.com/), [IFTTT](https://ifttt.com/), [Automate](https://automate.io/) and [Zapier](https://zapier.com), and a generic HTTP action for any system capable of receiving HTTP POST:s.
 
 ## HTTP Action
 
@@ -99,8 +98,7 @@ the message to Slack will look like this:
 
 ## IFTTT Action
 
-The action type \(`IFTTT_POST`\) requires the field `targetUri` to be populated with a valid IFTTT webhook URI (i.e. starting with `https://maker.ifttt.com/trigger`).
-The map `valueMap` is used for storing the (up to three) dynamic values supported by IFTTT. Simple templating is supported and event data can be accessed using dot \(.\) notation.
+The action type \(`IFTTT_POST`\) requires the field `targetUri` to be populated with a valid IFTTT webhook URI \(i.e. starting with `https://maker.ifttt.com/trigger`\). The map `valueMap` is used for storing the \(up to three\) dynamic values supported by IFTTT. Simple templating is supported and event data can be accessed using dot \(.\) notation.
 
 Example of a Reaction posting a request to IFTTT:
 
@@ -148,8 +146,7 @@ the request body POST:ed to IFTTT would look like this:
 
 ## Automate Action
 
-The action type \(`AUTOMATE_POST`\) requires the field `targetUri` to be populated with a valid Automate.io webhook URI (i.e. starting with `https://wh.automate.io/webhook`).
-The map `valueMap` is used for storing the (up to nine) dynamic values. Simple templating is supported and event data can be accessed using dot \(.\) notation.
+The action type \(`AUTOMATE_POST`\) requires the field `targetUri` to be populated with a valid Automate.io webhook URI \(i.e. starting with `https://wh.automate.io/webhook`\). The map `valueMap` is used for storing the \(up to nine\) dynamic values. Simple templating is supported and event data can be accessed using dot \(.\) notation.
 
 Example of a Reaction posting a request to Automate.io:
 
@@ -197,8 +194,7 @@ the request body POST:ed to Automate.io would look like this:
 
 ## Zapier Action
 
-The action type \(`ZAPIER_POST`\) requires the field `targetUri` to be populated with a valid Zapier webhook URI (i.e. starting with `https://hooks.zapier.com/hooks`).
-The map `valueMap` is used for storing the (up to nine) dynamic values. Simple templating is supported and event data can be accessed using dot \(.\) notation.
+The action type \(`ZAPIER_POST`\) requires the field `targetUri` to be populated with a valid Zapier webhook URI \(i.e. starting with `https://hooks.zapier.com/hooks`\). The map `valueMap` is used for storing the \(up to nine\) dynamic values. Simple templating is supported and event data can be accessed using dot \(.\) notation.
 
 Example of a Reaction posting a request to Automate.io:
 
