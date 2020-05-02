@@ -142,7 +142,7 @@ Delete a projection instance
 
 ## **Working with arrays/lists**
 
-### **push**
+### **append**
 
 Adds anything to the end of an array.
 
@@ -159,7 +159,7 @@ Adds anything to the end of an array.
   "eventType": "RunnerFinishedRaceEvent",
   "functions": [
     {
-      "function": "push",
+      "function": "append",
       "targetSelector": "$.projection.finishers",
       "eventSelector": "$.event['runnerName','finishTime']"
     }

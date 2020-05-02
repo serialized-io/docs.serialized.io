@@ -65,7 +65,7 @@ Later, one of the participants rejects the invitation:
       "eventType": "InvitationAcceptedEvent",
       "functions": [
         {
-          "function": "push",
+          "function": "append",
           "targetSelector": "$.projection.participants"
         }
       ]

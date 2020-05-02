@@ -38,7 +38,7 @@ Let's say two Customers have been registered in our system with the fo
 
 ## Projection definition
 
-We can create an aggregated Projection that pushes all Customer names to a field in our Aggregated Projection called `registered-customers`.
+We can create an aggregated Projection that appends all Customer names to a field in our Aggregated Projection called `registered-customers`.
 
 ```javascript
 {
@@ -50,7 +50,7 @@ We can create an aggregated Projection that pushes all Customer names to a field
       "eventType": "CustomerRegisteredEvent",
       "functions": [
         {
-          "function": "push",
+          "function": "append",
           "eventSelector": "$.event.customer",
           "targetSelector": "$.projection.customers"
         }
