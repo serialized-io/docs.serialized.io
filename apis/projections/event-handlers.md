@@ -96,7 +96,7 @@ Replaces the value of an existing key.
 
 ### **clear**
 
-Clear an entire projection's data.
+Clear an entire projection's data. Future requests will result in a 200 Success but with an empty payload.
 
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |
@@ -119,7 +119,7 @@ Clear an entire projection's data.
 
 ### **delete**
 
-Delete a projection instance
+Delete a projection instance entirely. Future requests will result in a 404 Not Found.
 
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |

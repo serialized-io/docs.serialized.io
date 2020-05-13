@@ -4,7 +4,7 @@
 
 Let's say we're developing support meetings, where participants can be invited and later accept or reject the invitation. In this scenario a reasonable Projection would be to view all participants that currently have accepted their invitation.
 
-An example of a events for two participants that accepted their invitations could look like this:  
+An example of a events for two participants that accepted their invitations could look like this:
 
 ```javascript
 {  
@@ -100,6 +100,4 @@ Later, one of the participants rejects the invitation:
 }
 ```
 {% endcode %}
-
-
 
