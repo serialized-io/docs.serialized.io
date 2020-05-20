@@ -2,7 +2,7 @@
 
 ## Registering for a Serialized account
 
-Registering for an account is easy using the Serialized Console. Navigate to [https://console.serialized.io](https://console.serialized.io) and enter your email address and password.
+Registering for an account is easy using the Serialized Console. Navigate to [https://app.serialized.io](https://app.serialized.io) and enter your email address and password.
 
 {% hint style="info" %}
 When registering for an account a project with pre-assigned access keys will automatically be created for you.
