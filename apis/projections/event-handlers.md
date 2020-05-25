@@ -71,7 +71,7 @@ Merges event data with existing projected data.
 
 ### **set**
 
-Replaces the value of an existing key.
+Sets/replaces the value of an existing key.
 
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |
@@ -94,13 +94,13 @@ Replaces the value of an existing key.
 }
 ```
 
-### **clear**
+### **unset**
 
-Clear an entire projection's data. Future requests will result in a 200 Success but with an empty payload.
+Removes an existing key.
 
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |
-| targetSelector | _Not used_ | No |
+| targetSelector | Any | Yes |
 | eventSelector | _Not used_ | No |
 | targetFilter | Filter expression | No |
 | eventFilter | Filter expression | No |
@@ -108,10 +108,35 @@ Clear an entire projection's data. Future requests will result in a 200 Success 
 
 ```javascript
 {
-  "eventType": "UserDeletedEvent",
+  "eventType": "EmailRemovedEvent",
   "functions": [
     {
-      "function": "clear"
+      "function": "unset",
+      "targetSelector": "$.projection.user.email"
+    }
+  ]
+}
+```
+
+### **clear**
+
+Clear the entire projection or a specific field.
+
+| Argument | Evaluated Type | Required |
+| :--- | :--- | :--- |
+| targetSelector | Any | No |
+| eventSelector | _Not used_ | No |
+| targetFilter | Filter expression | No |
+| eventFilter | Filter expression | No |
+| rawData | _Not used_ | No |
+
+```javascript
+{
+  "eventType": "ListClearedEvent",
+  "functions": [
+    {
+      "function": "clear",
+      "targetSelector": "$.projection.todoList"
     }
   ]
 }
