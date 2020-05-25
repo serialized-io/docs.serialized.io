@@ -120,7 +120,15 @@ Removes an existing key.
 
 ### **clear**
 
-Clear the entire projection or a specific field.
+Clear the entire projection or a specific field, i.e reset it to a default value.
+
+| Data type | Default value |
+| :--- | :--- |
+| String | `""` |
+| Boolean | `false` |
+| Number | `0` |
+| Array | `[]` |
+| Object | `{}` |
 
 | Argument | Evaluated Type | Required |
 | :--- | :--- | :--- |
