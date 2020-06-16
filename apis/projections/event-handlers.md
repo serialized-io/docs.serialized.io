@@ -26,7 +26,9 @@ The structure of a handler using the provided JsonPath templating looks like thi
 
 This example will merge the content of the incoming event by using the JsonPath selector `$.event` with the current state of the projection by targeting the full projection state using the JsonPath selector `$.projection`.
 
-In a handler function you always have access to `$.event` \(the current event being handled\) and `$.projection` \(the current projection state\). Besides that, there is also a `$.metadata` struct containing the fields `aggregateId`, `timestamp`, `createdAt` and `updatedAt`.
+In a handler function you always have access to `$.event` \(the current event being handled\) and `$.projection` \(the current projection state\).
+
+Besides that, there is also a `$.metadata` struct containing the fields `aggregateId`, `timestamp`, `createdAt` and `updatedAt`.
 
 The above example can also be simplified to:
 
