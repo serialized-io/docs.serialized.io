@@ -32,6 +32,7 @@
   * [Basic Usage](apis/feeds/basic-usage.md)
   * [Sequence Numbers](apis/feeds/sequence-numbers.md)
   * [The \_all feed](apis/feeds/using-the-_all-feed.md)
+  * [Partitioned feeding](apis/feeds/partitioned-feeding.md)
   * [API Reference](apis/feeds/reference/README.md)
     * [Get feeds overview](apis/feeds/reference/list-feeds.md)
     * [Get feed of events](apis/feeds/reference/get-feed.md)
