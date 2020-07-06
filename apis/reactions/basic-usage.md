@@ -14,6 +14,10 @@ Currently Serialized offer four pre-defined action types, for [Slack](https://sl
 
 The action type \(`HTTP_POST`\) requires the field `targetUri` to be populated with the address that should receive the POST request. Optionally the field `httpHeaders` can be set, i.e. to handle Basic Authentication etc.
 
+### Request signing
+
+All outgoing HTTP request will automatically be HMAC signed using the reaction name as the signing key. To provide your own signing secret, include the field `signingSecret` in the action payload.
+
 ### Receiving reaction requests
 
 The reaction requests are HTTP POST requests with a JSON body. The JSON has the following format:
@@ -49,6 +53,7 @@ As the end-point specified in the `targetUri` must be exposed to the public inte
   "action": {
     "actionType": "HTTP_POST",
     "targetUri": "https://your-service",
+    "signingSecret": "my-optional-signing-key",
     "httpHeaders": {
       "Authorization": "Basic c2VasXlZdyW2dGsONfM5fD4adleRDgVbDNgRkgFgZUpgoxgNHdsg15QktFcm1ndjI="
     }    
