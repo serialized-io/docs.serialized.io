@@ -88,7 +88,6 @@
 
 ## Tools
 
-* [Projection Tester](https://console.serialized.io/projection-tester)
 * [Swagger API Definition](https://serialized.io/api.json)
 
 ## Advanced
