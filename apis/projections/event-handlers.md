@@ -235,8 +235,8 @@ Removes an existing key or an array element matching filter expression.
 | :--- | :--- | :--- |
 | targetSelector | Any | Yes |
 | eventSelector | _Not used_ | No |
-| eventFilter | _Not used_ | No |
 | targetFilter | Filter expression | Yes |
+| eventFilter | _Not used_ | No |
 | rawData | _Not used_ | No |
 
 ```javascript
@@ -262,8 +262,8 @@ Sums two numbers together.
 | :--- | :--- | :--- |
 | targetSelector | Number | Yes |
 | eventSelector | Number | No |
-| eventFilter | _Not used_ | No |
 | targetFilter | _Not used_ | No |
+| eventFilter | _Not used_ | No |
 | rawData | Number | No |
 
 ```javascript
@@ -287,8 +287,8 @@ Subtracts two numbers.
 | :--- | :--- | :--- |
 | targetSelector | Number | Yes |
 | eventSelector | Number | No |
-| eventFilter | _Not used_ | No |
 | targetFilter | _Not used_ | No |
+| eventFilter | _Not used_ | No |
 | rawData | Number | No |
 
 ```javascript
@@ -313,7 +313,7 @@ Increases a number by one.
 | targetSelector | Number | Yes |
 | eventSelector | _Not used_ | No |
 | targetFilter | Filter expression | No |
-| targetFilter | _Not used_ | No |
+| eventFilter | _Not used_ | No |
 | rawData | _Not used_ | No |
 
 ```javascript
@@ -337,7 +337,7 @@ Decreases a number by one.
 | targetSelector | Number | Yes |
 | eventSelector | _Not used_ | No |
 | targetFilter | Filter expression | No |
-| targetFilter | _Not used_ | No |
+| eventFilter | _Not used_ | No |
 | rawData | _Not used_ | No |
 
 ```javascript
@@ -365,7 +365,7 @@ Marks a projection field as a reference which makes it filterable in the API.
 | targetSelector | String/Number/Date | Yes |
 | eventSelector | _Not used_ | No |
 | targetFilter | _Not used_ | No |
-| targetFilter | _Not used_ | No |
+| eventFilter | _Not used_ | No |
 | rawData | _Not used_ | No |
 
 ```javascript
@@ -389,7 +389,7 @@ Clears the reference for the projection, removing the ability to filter.
 | targetSelector | _Not used_ | No |
 | eventSelector | _Not used_ | No |
 | targetFilter | _Not used_ | No |
-| targetFilter | _Not used_ | No |
+| eventFilter | _Not used_ | No |
 | rawData | _Not used_ | No |
 
 ```javascript
