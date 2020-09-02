@@ -160,7 +160,7 @@ Delete a projection instance entirely. Future requests will result in a 404 Not 
 | :--- | :--- | :--- |
 | targetSelector | _Not used_ | No |
 | eventSelector | _Not used_ | No |
-| targetFilter | Filter expression | No |
+| targetFilter | _Not used_ | No |
 | eventFilter | Filter expression | No |
 | rawData | _Not used_ | No |
 
