@@ -11,7 +11,7 @@ In order to build business-to-business applications where the application serves
 Serialized provides a convenient way of building multi-tenant systems by enabling this feature on project level.
 
 {% hint style="warning" %}
-Multi-tenancy is only supported on our paid plans
+Multi-tenancy is only supported on our B2B plan
 {% endhint %}
 
 See the Tenants API for details on how to use the multi-tenancy support.
