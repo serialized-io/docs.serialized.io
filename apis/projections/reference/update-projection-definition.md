@@ -22,6 +22,10 @@ Serialized secret key
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="signingSecret" type="string" required=false %}
+Secret used in HMAC signing of outgoing request to custom projection function.
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="aggregated" type="boolean" %}
 If true, creates an aggregated Projection. Default: `false`
 {% endapi-method-parameter %}
