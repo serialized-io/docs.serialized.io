@@ -28,6 +28,14 @@ Serialized secret key
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
+{% api-method-parameter name="partitionNumber" type="number" required=false %}
+The partition number to request.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="partitionCount" type="number" required=false %}
+The expected total number of partitions, i.e. the total number of consumers feeding in parallel.
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="since" type="number" required=false %}
 Sequence number to start feeding from
 {% endapi-method-parameter %}
