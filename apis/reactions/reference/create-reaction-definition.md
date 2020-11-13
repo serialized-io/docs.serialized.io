@@ -22,10 +22,6 @@ Serialized secret key
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="signingSecret" type="string" required=false %}
-Used in HMAC signing of outgoing request.
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="reactionName" type="string" required=true %}
 Unique name of the reaction
 {% endapi-method-parameter %}
