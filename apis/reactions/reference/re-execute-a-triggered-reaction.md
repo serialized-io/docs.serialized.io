@@ -1,6 +1,6 @@
 # Re-execute a triggered reaction
 
-{% api-method method="post" host="https://api.serialized.io" path="/reactions/triggered/:reactionId" %}
+{% api-method method="post" host="https://api.serialized.io" path="/reactions/triggered/:reactionId/execute" %}
 {% api-method-summary %}
 Re-execute a triggered reaction
 {% endapi-method-summary %}
