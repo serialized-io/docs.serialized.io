@@ -28,6 +28,10 @@ Serialized secret key
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
+{% api-method-parameter name="reference" type="string" required=false %}
+Reference string to filter on. See JsonPath 'setref' for details.
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="sort" type="number" required=false %}
 Sort string. Any combination of the following fields: `projectionId`, `reference`, `createdAt`, updatedAt. Add '+' and '-' prefixes to indicate ascending/descending sort order. Ascending order is default.
 {% endapi-method-parameter %}
