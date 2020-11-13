@@ -1,6 +1,6 @@
 # Execute a scheduled reaction
 
-{% api-method method="post" host="https://api.serialized.io" path="/reactions/scheduled/:reactionId" %}
+{% api-method method="post" host="https://api.serialized.io" path="/reactions/scheduled/:reactionId/execute" %}
 {% api-method-summary %}
 Execute a scheduled reaction
 {% endapi-method-summary %}
