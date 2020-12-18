@@ -119,6 +119,8 @@ var tenant = new Dictionary<string, Object>
     { "reference", "Acme Inc" }
 };
 
+var client = new RestClient("https://api.serialized.io");
+
 var request = new RestRequest("tenants", Method.POST)
    .AddHeader("Serialized-Access-Key", "<YOUR_ACCESS_KEY>")
    .AddHeader("Serialized-Secret-Access-Key", "<YOUR_SECRET_ACCESS_KEY>");
