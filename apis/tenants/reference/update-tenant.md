@@ -26,6 +26,13 @@ Serialized access key
 Serialized secret key
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="reference" type="string" required=true %}
+
+The new reference
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+
 {% endapi-method-request %}
 
 {% api-method-response %}
