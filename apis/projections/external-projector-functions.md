@@ -86,7 +86,7 @@ The response from the custom function should be the new updated state of the pro
 
 ### Deleting a projection instance
 
-To mark the projection instance for deletion you can set the `delete` _\*\*_flag in the response from your custom function.
+To mark the projection instance for deletion you can set the `delete` flag in the response from your custom function.
 
 {% hint style="info" %}
 Further calls to get this projection will return a 404, just as if the projection never existed.
