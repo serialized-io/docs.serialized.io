@@ -94,7 +94,7 @@ Further calls to get this projection will return a 404, just as if the projectio
 
 ```javascript
 {
-    "markForDeletion": true
+    "delete": true
 }
 ```
 
