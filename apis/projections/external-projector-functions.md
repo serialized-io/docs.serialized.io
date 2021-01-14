@@ -115,5 +115,5 @@ All outgoing HTTP request will automatically be HMAC signed using the projection
 
 ### Sample code
 
-For a full example of an implementation of an external custom function using AWS Lambda see [our Github repository](https://github.com/serialized-io/samples-java/tree/master/event-projector-lambda).
+For a full example of an implementation of an external custom function using AWS Lambda see [our Github repository](https://github.com/serialized-io/samples-java/tree/master/aws-event-projector-lambda).
 
