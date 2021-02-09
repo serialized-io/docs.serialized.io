@@ -4,7 +4,7 @@
 
 A common use-case is collecting some data across all aggregates for a given type. In the example below we want to be able to get a list of all registered Customers from a single query to a Projection.
 
-Let's say two Customers have been registered in our system with the fo
+Let's say two Customers have been registered in our system with the following two events:
 
 ```javascript
   {  
