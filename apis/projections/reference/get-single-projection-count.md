@@ -2,7 +2,7 @@
 
 {% api-method method="get" host="https://api.serialized.io" path="/projections/single/{projectionName}/_count" %}
 {% api-method-summary %}
-Get Single Projection Count
+Get Single Projection
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -16,6 +16,11 @@ Get Single Projection Count
 The name of the Projection type
 {% endapi-method-parameter %}
 
+{% api-method-parameter name="projectionId" type="string" required=true %}
+The id of the Projection instance
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
 {% api-method-headers %}
 {% api-method-parameter name="Serialized-Access-Key" type="string" required=true %}
 Serialized access key
@@ -26,6 +31,11 @@ Serialized secret key
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
+{% api-method-query-parameters %}
+{% api-method-parameter name="awaitCreation" type="integer" required=false %}
+Max number of milliseconds to await the initial creation. Must be between 1 and 60000.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -36,7 +46,7 @@ Projection count successfully received
 
 ```javascript
 {
-  "count": 12345
+  "count": 1234567
 }
 ```
 {% endapi-method-response-example %}
