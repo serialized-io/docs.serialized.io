@@ -70,6 +70,7 @@
     * [List Projection Definitions](apis/projections/reference/list-projection-definitions.md)
     * [Get Projections Overview](apis/projections/reference/get-projections-overview.md)
     * [Get Single Projection](apis/projections/reference/get-single-projection.md)
+    * [Get Single Projection Count](apis/projections/reference/get-single-projection-count.md)
     * [List Single Projections](apis/projections/reference/list-single-projections.md)
     * [Delete/recreate Single Projections](apis/projections/reference/delete-single-projections.md)
     * [Get Aggregated Projection](apis/projections/reference/get-aggregated-projection.md)

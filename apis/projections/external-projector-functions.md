@@ -111,7 +111,7 @@ The endpoints can be secured with Basic Authentication by including user:passwor
 
 ### Request signing
 
-All outgoing HTTP request will automatically be HMAC signed using the projection name as the signing key. To provide your own signing secret, include the field `signingSecret` in the definition payload. 
+All outgoing HTTP request will automatically be HMAC signed using the projection name as the signing key. To provide your own signing secret, include the field `signingSecret` in the definition payload.
 
 ### Sample code
 
