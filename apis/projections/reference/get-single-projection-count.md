@@ -29,7 +29,7 @@ Serialized secret key
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="reference" type="string" required=false %}
-Optional reference
+Optional reference string to filter on
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
