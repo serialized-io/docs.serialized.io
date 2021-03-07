@@ -2,7 +2,7 @@
 
 {% api-method method="get" host="https://api.serialized.io" path="/projections/single/{projectionName}/\_count" %}
 {% api-method-summary %}
-Get Single Projection
+Get Single Projection Count
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -26,6 +26,12 @@ Serialized access key
 Serialized secret key
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="reference" type="string" required=false %}
+Optional reference
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
